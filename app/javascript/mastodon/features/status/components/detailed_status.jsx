@@ -208,7 +208,6 @@ class DetailedStatus extends ImmutablePureComponent {
     } else if (this.context.router) {
       reblogLink = (
         <React.Fragment>
-          <React.Fragment> · </React.Fragment>
           <Link to={`/@${status.getIn(['account', 'acct'])}/${status.get('id')}/reblogs`} className='detailed-status__link'>
             <Icon id={reblogIcon} />
             <span className='detailed-status__reblogs'>
@@ -220,7 +219,6 @@ class DetailedStatus extends ImmutablePureComponent {
     } else {
       reblogLink = (
         <React.Fragment>
-          <React.Fragment> · </React.Fragment>
           <a href={`/interact/${status.get('id')}?type=reblog`} className='detailed-status__link' onClick={this.handleModalLink}>
             <Icon id={reblogIcon} />
             <span className='detailed-status__reblogs'>
@@ -288,8 +286,8 @@ class DetailedStatus extends ImmutablePureComponent {
               <FormattedDate value={new Date(status.get('created_at'))} hour12={false} year='numeric' month='short' day='2-digit' hour='2-digit' minute='2-digit' />
             </a>{edited}{visibilityLink}{applicationLink}
           </div>
-          <div className='detailed-status__meta'>
-            {reblogLink} · {favouriteLink}
+          <div className='detailed-status__meta_2'>
+            {reblogLink}   {favouriteLink}
           </div>
         </div>
       </div>
