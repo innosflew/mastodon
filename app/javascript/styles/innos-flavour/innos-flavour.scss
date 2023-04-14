@@ -726,6 +726,7 @@ a[href*="https://www.reuters.com"] .status-card__content {
     background: linear-gradient(0deg, rgba(250, 100, 0, 0.11528361344537819) 0%, rgba(253, 187, 45, 0) 100%);
 }
 
+a[href*="https://euroefe.euractiv.es"] .status-card__host,
 a[href*="https://www.euractiv.com"] .status-card__host {
     background-image: url(https://i.imgur.com/GX1OkvW.png);
     background-repeat: no-repeat;
@@ -734,6 +735,7 @@ a[href*="https://www.euractiv.com"] .status-card__host {
     height: 16px;
 }
 
+a[href*="https://euroefe.euractiv.es"] .status-card__content,
 a[href*="https://www.euractiv.com"] .status-card__content {
     background: linear-gradient(0deg, rgba(255, 199, 9, 0.13769257703081228) 0%, rgba(253, 187, 45, 0) 100%);
 }
@@ -817,7 +819,29 @@ a[href*="https://apnews.com"] .status-card__host::after {
     margin-left: 20px;
 }
 
+a[href*="https://www.europarl.europa.eu"] .status-card__host {
+    font-size: 0 !important;
+    background-image: url(https://mstodon.eu/system/custom_emojis/images/000/000/101/original/f5ab4fa2b7fc31a5.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 19px;
+}
+
+a[href*="https://www.europarl.europa.eu"] .status-card__content {
+    background: linear-gradient(0deg, rgba(8,60,99,0.5) 0%, rgba(0,0,0,0) 100%);
+}
+
+a[href*="https://www.europarl.europa.eu"] .status-card__host::after {
+    content: "European Parliament";
+    font-size: 14px;
+    margin-left: 22px;
+    color: #fff;
+    font-weight: 500;
+}
+
 /* a[href*=""] .display-name .display-name__html::after, */
+
+a[href*="ZDF@zdf.social"] .display-name .display-name__html::after,
 a[href*="TechDesk@flipboard.social"] .display-name .display-name__html::after,
 a[href*="Flipboard@flipboard.social"] .display-name .display-name__html::after,
 a[href*="MichaelJStern@newsie.social"] .display-name .display-name__html::after,
@@ -1562,6 +1586,7 @@ a[href*="gretathunberg@mastodon.nu"] .display-name .display-name__html::after {
 }
 
 /* .account__header__bar:has(img[alt=""]) .account__header__tabs__name h1 > span:first-child::after, */
+.account__header__bar:has(img[alt="ZDF@zdf.social"]) .account__header__tabs__name h1 > span:first-child::after,
 .account__header__bar:has(img[alt="TechDesk@flipboard.social"]) .account__header__tabs__name h1 > span:first-child::after,
 .account__header__bar:has(img[alt="Flipboard@flipboard.social"]) .account__header__tabs__name h1 > span:first-child::after,
 .account__header__bar:has(img[alt="MichaelJStern@newsie.social"]) .account__header__tabs__name h1 > span:first-child::after,
