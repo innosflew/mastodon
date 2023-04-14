@@ -51,13 +51,10 @@ const messages = defineMessages({
 
 const mapStateToProps = (state, { status }) => ({
   relationship: state.getIn(['relationships', status.getIn(['account', 'id'])]),
+  currentTheme: state.getIn(['settings', 'current_theme']),
 });
 
 class StatusActionBar extends ImmutablePureComponent {
-
-  isDesiredThemeActive() {
-    return document.body.classList.contains('innos-flavour');
-  }
 
   static contextTypes = {
     router: PropTypes.object,
@@ -91,6 +88,7 @@ class StatusActionBar extends ImmutablePureComponent {
     withCounters: PropTypes.bool,
     scrollKey: PropTypes.string,
     intl: PropTypes.object.isRequired,
+    currentTheme: PropTypes.string,
   };
 
   // Avoid checking props that are functions (and whose equality will always
@@ -359,7 +357,7 @@ class StatusActionBar extends ImmutablePureComponent {
       <IconButton className='status__action-bar__button' title={intl.formatMessage(messages.hide)} icon='eye' onClick={this.handleHideClick} />
     );
 
-    if (this.isDesiredThemeActive()) {
+    if (this.props.currentTheme === 'innos-flavour') {
       return (
         <div className='status__action-bar'>
           <IconButton className='status__action-bar__button' title={replyTitle} icon={status.get('in_reply_to_account_id') === status.getIn(['account', 'id']) ? 'reply' : replyIcon} onClick={this.handleReplyClick} counter={status.get('replies_count')} />
