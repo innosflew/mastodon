@@ -55,6 +55,10 @@ const mapStateToProps = (state, { status }) => ({
 
 class StatusActionBar extends ImmutablePureComponent {
 
+  isDesiredThemeActive() {
+    return document.body.classList.contains('innos-flavour');
+  }
+
   static contextTypes = {
     router: PropTypes.object,
     identity: PropTypes.object,
@@ -229,17 +233,17 @@ class StatusActionBar extends ImmutablePureComponent {
     this.props.onFilter();
   };
 
-  render () {
+  render() {
     const { status, relationship, intl, withDismiss, withCounters, scrollKey } = this.props;
     const { signedIn, permissions } = this.context.identity;
 
-    const anonymousAccess    = !signedIn;
-    const publicStatus       = ['public', 'unlisted'].includes(status.get('visibility'));
-    const pinnableStatus     = ['public', 'unlisted', 'private'].includes(status.get('visibility'));
+    const anonymousAccess = !signedIn;
+    const publicStatus = ['public', 'unlisted'].includes(status.get('visibility'));
+    const pinnableStatus = ['public', 'unlisted', 'private'].includes(status.get('visibility'));
     const mutingConversation = status.get('muted');
-    const account            = status.get('account');
-    const writtenByMe        = status.getIn(['account', 'id']) === me;
-    const isRemote           = status.getIn(['account', 'username']) !== status.getIn(['account', 'acct']);
+    const account = status.get('account');
+    const writtenByMe = status.getIn(['account', 'id']) === me;
+    const isRemote = status.getIn(['account', 'username']) !== status.getIn(['account', 'acct']);
 
     let menu = [];
 
@@ -355,31 +359,59 @@ class StatusActionBar extends ImmutablePureComponent {
       <IconButton className='status__action-bar__button' title={intl.formatMessage(messages.hide)} icon='eye' onClick={this.handleHideClick} />
     );
 
-    return (
-      <div className='status__action-bar'>
-        <IconButton className='status__action-bar__button' title={replyTitle} icon={status.get('in_reply_to_account_id') === status.getIn(['account', 'id']) ? 'reply' : replyIcon} onClick={this.handleReplyClick} counter={status.get('replies_count')} />
-        <IconButton className={classNames('status__action-bar__button', { reblogPrivate })} disabled={!publicStatus && !reblogPrivate} active={status.get('reblogged')} title={reblogTitle} icon='retweet' onClick={this.handleReblogClick} counter={status.get('reblogs_count')} />
-        <IconButton className='status__action-bar__button star-icon' animate active={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='star' onClick={this.handleFavouriteClick} counter={status.get('favourites_count')} />
-        <IconButton className='status__action-bar__button bookmark-icon' disabled={!signedIn} active={status.get('bookmarked')} title={intl.formatMessage(messages.bookmark)} icon='bookmark' onClick={this.handleBookmarkClick} />
+    if (this.isDesiredThemeActive()) {
+      return (
+        <div className='status__action-bar'>
+          <IconButton className='status__action-bar__button' title={replyTitle} icon={status.get('in_reply_to_account_id') === status.getIn(['account', 'id']) ? 'reply' : replyIcon} onClick={this.handleReplyClick} counter={status.get('replies_count')} />
+          <IconButton className={classNames('status__action-bar__button', { reblogPrivate })} disabled={!publicStatus && !reblogPrivate} active={status.get('reblogged')} title={reblogTitle} icon='retweet' onClick={this.handleReblogClick} counter={status.get('reblogs_count')} />
+          <IconButton className='status__action-bar__button star-icon' animate active={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='star' onClick={this.handleFavouriteClick} counter={status.get('favourites_count')} />
+          <IconButton className='status__action-bar__button bookmark-icon' disabled={!signedIn} active={status.get('bookmarked')} title={intl.formatMessage(messages.bookmark)} icon='bookmark' onClick={this.handleBookmarkClick} />
 
-        {shareButton}
+          {shareButton}
 
-        {filterButton}
+          {filterButton}
 
-        <div className='status__action-bar__dropdown'>
-          <DropdownMenuContainer
-            scrollKey={scrollKey}
-            disabled={anonymousAccess}
-            status={status}
-            items={menu}
-            icon='ellipsis-h'
-            size={18}
-            direction='right'
-            title={intl.formatMessage(messages.more)}
-          />
+          <div className='status__action-bar__dropdown'>
+            <DropdownMenuContainer
+              scrollKey={scrollKey}
+              disabled={anonymousAccess}
+              status={status}
+              items={menu}
+              icon='ellipsis-h'
+              size={18}
+              direction='right'
+              title={intl.formatMessage(messages.more)}
+            />
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div className='status__action-bar'>
+          <IconButton className='status__action-bar__button' title={replyTitle} icon={status.get('in_reply_to_account_id') === status.getIn(['account', 'id']) ? 'reply' : replyIcon} onClick={this.handleReplyClick} counter={status.get('replies_count')} obfuscateCount />
+          <IconButton className={classNames('status__action-bar__button', { reblogPrivate })} disabled={!publicStatus && !reblogPrivate} active={status.get('reblogged')} title={reblogTitle} icon='retweet' onClick={this.handleReblogClick} counter={withCounters ? status.get('reblogs_count') : undefined} />
+          <IconButton className='status__action-bar__button star-icon' animate active={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='star' onClick={this.handleFavouriteClick} counter={withCounters ? status.get('favourites_count') : undefined} />
+          <IconButton className='status__action-bar__button bookmark-icon' disabled={!signedIn} active={status.get('bookmarked')} title={intl.formatMessage(messages.bookmark)} icon='bookmark' onClick={this.handleBookmarkClick} />
+
+          {shareButton}
+
+          {filterButton}
+
+          <div className='status__action-bar__dropdown'>
+            <DropdownMenuContainer
+              scrollKey={scrollKey}
+              disabled={anonymousAccess}
+              status={status}
+              items={menu}
+              icon='ellipsis-h'
+              size={18}
+              direction='right'
+              title={intl.formatMessage(messages.more)}
+            />
+          </div>
+        </div>
+      );
+    }
   }
 
 }
