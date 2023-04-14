@@ -8900,3 +8900,15 @@ noscript {
     }
   }
 }
+
+.detailed-status__link:before {
+  content: " · ";
+}
+
+.detailed-status__meta {
+  display: inline-block;
+}
+
+.detailed-status__meta_counters {
+  display: inline;
+}
