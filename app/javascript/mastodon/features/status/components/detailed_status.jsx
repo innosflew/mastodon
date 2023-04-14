@@ -286,7 +286,7 @@ class DetailedStatus extends ImmutablePureComponent {
               <FormattedDate value={new Date(status.get('created_at'))} hour12={false} year='numeric' month='short' day='2-digit' hour='2-digit' minute='2-digit' />
             </a>{edited}{visibilityLink}{applicationLink}
           </div>
-          <div className='detailed-status__meta_2'>
+          <div className='detailed-status__meta detailed-status__meta_counters'>
             {reblogLink}   {favouriteLink}
           </div>
         </div>
