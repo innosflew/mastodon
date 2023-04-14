@@ -171,6 +171,8 @@ body {
 
 .detailed-status__action-bar {
     background: transparent;
+    padding: 13px 0;
+    margin: 0 16px;
 }
 
 .column-header__back-button {
@@ -313,6 +315,20 @@ body {
 
 .detailed-status__favorites, .detailed-status__reblogs {
     font-size: 15px;
+}
+
+.icon-button__counter {
+    display: inline-block;
+}
+
+.detailed-status__meta_counters {
+    display: block;
+    border-top: 1px solid #393f4f;
+    padding-top: 15px;
+}
+
+.detailed-status__link:before {
+    content: "   ";
 }
 
 .column-back-button {
