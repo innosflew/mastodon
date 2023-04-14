@@ -1,0 +1,2289 @@
+/* Branding */
+.sidebar {
+    background-image: url(https://innosflew.github.io/Logos/eustarswhite.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 180px;
+}
+
+.navigation-panel .logo {
+    height: auto;
+}
+
+/* Link previews */
+.status-card.interactive,
+.status-card.compact.interactive {
+    background-color: #191b22;
+    border-radius: 10px;
+    border: 1px solid #313543;
+}
+
+a.status-card,
+a.status-card.compact {
+    background-color: #191b22;
+    display: block;
+    border-radius: 10px;
+}
+
+.fa-file-text::before {
+    content: "";
+}
+
+.status-card.interactive .status-card__image-image,
+.status-card.compact.interactive .status-card__image-image,
+a.status-card .status-card__image-image,
+a.status-card .status-card__image-image.compact {
+    height: 275.63px;
+}
+
+.status-card.interactive .status-card__content,
+.status-card.compact.interactive .status-card__content,
+a.status-card .status-card__content,
+a.status-card.compact .status-card__content {
+    padding: 15px;
+}
+
+.status-card.interactive .status-card__title,
+.status-card.compact.interactive .status-card__title,
+a.status-card .status-card__title,
+a.status-card.compact .status-card__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: white;
+    white-space: inherit;
+}
+
+.status-card.interactive .status-card__host,
+.status-card.compact.interactive .status-card__host,
+a.status-card .status-card__host,
+a.status-card.compact .status-card__host {
+    font-size: 14px;
+    color: #71767b;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.status-card.interactive .status-card__description,
+.status-card.compact.interactive .status-card__description,
+a.status-card .status-card__description,
+a.status-card.compact .status-card__description {
+    color: #71767b;
+}
+
+.status-card__image-image,
+.status-card__image-preview {
+    border-radius: 0px;
+}
+
+/* Theming */
+body {
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.column-link {
+    font-size: 18px;
+}
+
+.column-header {
+    font-size: 18px;
+}
+
+.icon-with-badge {
+    font-size: 18px;
+}
+
+.account__header__content {
+    font-size: 15px;
+}
+
+.account__avatar {
+    border-radius: 100px;
+}
+
+.notification,
+.status__wrapper {
+    border-bottom: 1px solid #393f4f;
+}
+
+.media-gallery__item-thumbnail img,
+.media-gallery__preview {
+    border-radius: 10px;
+}
+
+.video-player {
+    border-radius: 10px;
+}
+
+.status {
+    border-bottom: none;
+    margin-left: 56px;
+}
+
+.status__info {
+    margin-left: -56px;
+}
+
+.status__info .status__display-name .display-name__account {
+    display: inline;
+}
+
+.status__info .display-name {
+    margin-top: -28px;
+}
+
+.status-unlisted .status__content,
+.status-public .status__content,
+.status-direct .status__content,
+.status-reply .status__content {
+    margin-top: -32px;
+}
+
+@media screen and (min-width: 1175px) {
+    .columns-area__panels__main {
+        padding: 0px;
+        margin: 0 10px;
+        border-left: 1px solid #393f4f;
+        border-right: 1px solid #393f4f;
+    }
+}
+
+.column>.scrollable {
+    background: transparent;
+}
+
+.column-header {
+    background: transparent;
+}
+
+.column-header__button {
+    background: transparent;
+}
+
+.detailed-status {
+    background: transparent;
+}
+
+.column-header__button.active,
+.column-header__button.active:hover {
+    background: transparent;
+}
+
+.detailed-status__action-bar {
+    background: transparent;
+}
+
+.column-header__back-button {
+    background: transparent;
+    font-size: 18px;
+}
+
+.announcements__item__range {
+    font-size: 20px;
+}
+
+.tabs-bar__wrapper {
+    border-bottom: 1px solid #393f4f;
+}
+
+.notification:hover,
+.status__wrapper:hover {
+    background: #282c37;
+}
+
+@media screen and (min-width: 1450px) {
+    .compose-panel {
+        width: 400px;
+        margin-left: -115px;
+    }
+}
+
+.compose-panel .compose-form__autosuggest-wrapper {
+    background-color: transparent;
+}
+
+.compose-form .autosuggest-textarea__textarea,
+.compose-form .spoiler-input__input {
+    color: #fff;
+    background: #282c37;
+    font-size: 15px;
+}
+
+.compose-form .compose-form__modifiers {
+    color: #fff;
+    background: #282c37;
+}
+
+.compose-form .compose-form__buttons-wrapper {
+    background: transparent;
+    border: 1px solid #282c37;
+}
+
+.compose-form__poll-wrapper {
+    border-top: 1px solid #606984;
+}
+
+.compose-form__poll-wrapper .poll__footer {
+    border-top: 1px solid #606984;
+}
+
+.poll__option input[type=text] {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #606984;
+}
+
+.reply-indicator__content,
+.status__content {
+    line-height: 22px;
+}
+
+.detailed-status .status__content {
+    font-size: 21px;
+    line-height: 28px;
+}
+
+.language-dropdown__dropdown__results__item {
+    color: #fff;
+}
+
+.emoji-mart-search {
+    background: #282c37;
+}
+
+.emoji-mart-scroll {
+    background: #282c37;
+}
+
+.emoji-mart-search input {
+    color: #fff;
+    border: 1px solid #606984;
+}
+
+.language-dropdown__dropdown__results__item:active,
+.language-dropdown__dropdown__results__item:focus,
+.language-dropdown__dropdown__results__item:hover {
+    background: #3b4153;
+}
+
+.emoji-mart-category-label span {
+    background: #282c37;
+    color: #d9e1e8;
+}
+
+.emoji-mart-bar:first-child {
+    background: #282c37;
+}
+
+.emoji-picker-dropdown__menu {
+    background: #282c37;
+}
+
+.emoji-mart-anchor {
+    color: #d9e1e8;
+}
+
+.privacy-dropdown__dropdown {
+    background: #282c37;
+}
+
+.privacy-dropdown__option {
+    color: #d9e1e8;
+}
+
+.privacy-dropdown__option__content strong {
+    color: #d9e1e8;
+}
+
+.compose-form .autosuggest-textarea__suggestions {
+    background: #282c37;
+    color: #fff;
+}
+
+.compose-form .autosuggest-textarea__suggestions__item.selected,
+.compose-form .autosuggest-textarea__suggestions__item:active,
+.compose-form .autosuggest-textarea__suggestions__item:focus,
+.compose-form .autosuggest-textarea__suggestions__item:hover {
+    background: #3b4153;
+}
+
+.detailed-status__meta {
+    font-size: 15px;
+}
+
+.detailed-status__favorites, .detailed-status__reblogs {
+    font-size: 15px;
+}
+
+.column-back-button {
+    background: transparent;
+}
+
+.account__header {
+    background: transparent;
+}
+
+.account__header__image {
+    height: 200px;
+}
+
+.account_header.field_with_hint span.hint:after {
+    content: " (Note: This will be displayed at 598x200px on your profile.)";
+}
+
+.dropdown-menu {
+    background: #282c37;
+}
+
+.dropdown-menu__arrow.top {
+    border-top-color: #282c37;
+}
+
+.dropdown-menu__item a, .dropdown-menu__item button {
+    padding: 8px 14px;
+    background: #282c37;
+}
+
+.dropdown-menu__item {
+    color: #d9e1e8;
+    font-size: 15px;
+}
+
+.actions-modal, .block-modal, .boost-modal, .compare-history-modal, .confirmation-modal, .mute-modal, .report-modal {
+    background: #282c37;
+    color: #d9e1e8; 
+}
+
+.block-modal__action-bar, .boost-modal__action-bar, .confirmation-modal__action-bar, .mute-modal__action-bar {
+    background: #191b22;
+}
+
+.detailed-status__favorites, .detailed-status__reblogs {
+    color: #d9e1e8;
+    font-weight: bolder;
+}
+
+.detailed-status__favorites .animated-number:hover, .detailed-status__reblogs .animated-number:hover {
+    text-decoration: underline;
+}
+
+.detailed-status__reblogs .animated-number span span:after {
+    content: " Boosts";
+    font-weight: normal;
+    color: #606984;
+}
+
+.detailed-status__favorites .animated-number span span:after {
+    content: " Favorites";
+    font-weight: normal;
+    color: #606984;
+}
+
+/* Hashtags */
+.hashtag.status-link {
+    background-color: #898db84f;
+    padding: 0px 5px;
+    border-style: dashed;
+    border-color: #CCC;
+    border-width: 0.5px;
+    border-radius: 6px;
+    font-family: "mastodon-font-sans-serif",sans-serif;
+}
+
+.hashtag.status-link:hover {
+    background-color: #cdd2f54f;
+}
+
+.detailed-status .hashtag.status-link {
+    font-size: 20px;
+}
+
+.u-url.mention.status-link {
+    background-color: #a7aeff4d;
+    padding: 0px 3px;
+    border-radius: 6px;
+    font-family: "mastodon-font-sans-serif",sans-serif;
+}
+
+.u-url.mention.status-link:hover {
+    background-color: #cdd2f54f;
+}
+
+.detailed-status .u-url.mention.status-link {
+    font-size: 20px;
+}
+
+/* Custom logos for articles */
+.status-card__content:has(a.status-card__title[href*="https://www.youtube.com"]) .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/youtube.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 13px;
+}
+
+a[href*="https://sussexbylines.co.uk"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/SussexBylines.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 33px;
+}
+
+a[href*="https://westenglandbylines.co.uk"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/WestEnglandBylinesNew.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 33px;
+}
+
+a[href*="https://bylinesnetwork.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/MqCz98y.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 33px;
+}
+
+a[href*="https://kentbylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/g5vaISq.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 30px;
+}
+
+a[href*="https://centralbylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/sCEXu3Y.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 40px;
+}
+
+a[href*="https://eastangliabylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/3Vh0Kh9.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 40px;
+}
+
+a[href*="https://northeastbylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/iebJbNi.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 20px;
+}
+
+a[href*="https://yorkshirebylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/OPutunb.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 25px;
+}
+
+a[href*="https://northwestbylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/m3A4zU8.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 25px;
+}
+
+a[href*="https://bylines.scot"] .status-card__host {
+    background-image: url(https://i.imgur.com/RwhtmTq.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 25px;
+}
+
+a[href*="https://sussexbylines.co.uk"] .status-card__content,
+a[href*="https://westenglandbylines.co.uk"] .status-card__content,
+a[href*="https://bylinesnetwork.co.uk"] .status-card__content,
+a[href*="https://kentbylines.co.uk"] .status-card__content,
+a[href*="https://centralbylines.co.uk"] .status-card__content,
+a[href*="https://eastangliabylines.co.uk"] .status-card__content,
+a[href*="https://northeastbylines.co.uk"] .status-card__content,
+a[href*="https://yorkshirebylines.co.uk"] .status-card__content,
+a[href*="https://northwestbylines.co.uk"] .status-card__content,
+a[href*="https://bylines.scot"] .status-card__content {
+    background: linear-gradient(0deg, rgba(60, 96, 105, 0.4) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.bbc.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/bbc.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 16px;
+}
+
+a[href*="https://www.bbc.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(185, 1, 0, 0.16) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.nytimes.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/newyorktimes.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 17px;
+}
+
+a[href*="https://www.nytimes.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.independent.co.uk"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/the-independent.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 19px;
+}
+
+a[href*="https://www.independent.co.uk"] .status-card__content {
+    background: linear-gradient(0deg, rgba(226, 13, 37, 0.12) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.bnnbloomberg.ca"] .status-card__host,
+a[href*="https://www.bloomberg.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/Bloomberg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 17px;
+}
+
+a[href*="https://www.bnnbloomberg.ca"] .status-card__content,
+a[href*="https://www.bloomberg.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.barrons.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/barrons.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 14px;
+}
+
+a[href*="https://www.barrons.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.nbcnews.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/nbc-news.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 12px;
+}
+
+a[href*="https://www.nbcnews.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(16, 32, 57, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+a[href*="https://www.politico"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/POLITICO.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 12px;
+}
+
+a[href*="https://www.politico"] .status-card__content {
+    background: linear-gradient(0deg, rgba(230, 50, 36, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+a[href*="https://www.theguardian.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/theguardian.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 25px;
+}
+
+a[href*="https://www.theguardian.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(5, 41, 98, 0.14) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.washingtonpost.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/washingtonpost.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 19px;
+}
+
+a[href*="https://www.washingtonpost.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.wsj.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/WSJ.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 12px;
+}
+
+a[href*="https://www.wsj.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://telex.hu"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/telex.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 13px;
+}
+
+a[href*="https://telex.hu"] .status-card__content {
+    background: linear-gradient(0deg, rgba(0, 255, 187, 0.14) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.euronews.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/euronews.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 20px;
+}
+
+a[href*="https://www.euronews.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(1, 91, 188, 0.12) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.thelocal.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/thelocal.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 16px;
+}
+
+a[href*="https://www.thelocal.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(238, 109, 0, 0.11) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.forbes.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/forbes.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 15px;
+}
+
+a[href*="https://www.forbes.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.defensenews.com"] .status-card__host {
+    background-image: url(https://i.imgur.com/nHnTrvi.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    margin-left: -3px;
+    height: 17px;
+}
+
+a[href*="https://www.defensenews.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(14, 100, 152, 0.10688025210084029) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.reuters.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/Reuters-Logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 25px;
+}
+
+a[href*="https://www.reuters.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(250, 100, 0, 0.11528361344537819) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.euractiv.com"] .status-card__host {
+    background-image: url(https://i.imgur.com/GX1OkvW.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 16px;
+}
+
+a[href*="https://www.euractiv.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(255, 199, 9, 0.13769257703081228) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://foreignpolicy.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/foreignpolicy.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 13px;
+}
+
+a[href*="https://foreignpolicy.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(236, 54, 37, 0.10127801120448177) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.ft.com"] .status-card__host {
+    background-image: url(https://i.imgur.com/1IRIdMt.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    border-radius: 5px;
+    width: 127px;
+    height: 16px;
+}
+
+a[href*="https://www.ft.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(255, 240, 228, 0.14049369747899154) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.france24.com"] .status-card__host {
+    background-image: url(https://i.imgur.com/mvSH8DA.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    border-radius: 5px;
+    width: 90px;
+    height: 25px;
+}
+
+a[href*="https://www.france24.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(0, 173, 230, 0.10407913165266103) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.dw.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/dw-news.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 19px;
+}
+
+a[href*="https://www.dw.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(0, 164, 254, 0.1292892156862745) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://www.dw.com"] .status-card__host::after {
+    content: "News";
+    color: white;
+    font-size: 14px;
+    margin-left: 36px;
+    font-weight: 500;
+}
+
+a[href*="https://apnews.com"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/apnews.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 18px;
+}
+
+a[href*="https://apnews.com"] .status-card__content {
+    background: linear-gradient(0deg, rgba(255, 51, 47, 0.11808473389355745) 0%, rgba(253, 187, 45, 0) 100%);
+}
+
+a[href*="https://apnews.com"] .status-card__host::after {
+    content: "News";
+    color: white;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+/* a[href*=""] .display-name .display-name__html::after, */
+a[href*="TechDesk@flipboard.social"] .display-name .display-name__html::after,
+a[href*="Flipboard@flipboard.social"] .display-name .display-name__html::after,
+a[href*="MichaelJStern@newsie.social"] .display-name .display-name__html::after,
+a[href*="1password@1password.social"] .display-name .display-name__html::after,
+a[href*="MarkRuffalo@mastodon.social"] .display-name .display-name__html::after,
+a[href*="notesfrompoland@mas.to"] .display-name .display-name__html::after,
+a[href*="pcgamesn@mastodon.world"] .display-name .display-name__html::after,
+a[href*="freedomofpress@newsie.social"] .display-name .display-name__html::after,
+a[href*="base@openbiblio.social"] .display-name .display-name__html::after,
+a[href*="atrupar@journa.host"] .display-name .display-name__html::after,
+a[href*="mozilla@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Teri_Kanefield@law-and-politics.online"] .display-name .display-name__html::after,
+a[href*="helmholtzklima@wisskomm.social"] .display-name .display-name__html::after,
+a[href*="minimaxir@sigmoid.social"] .display-name .display-name__html::after,
+a[href*="helmholtz@helmholtz.social"] .display-name .display-name__html::after,
+a[href*="parkermolloy@masto.ai"] .display-name .display-name__html::after,
+a[href*="airlineflyer@mastodon.social"] .display-name .display-name__html::after,
+a[href*="killyourfm@layer8.space"] .display-name .display-name__html::after,
+a[href*="EP_GreensEFA@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="SLagodinsky@gruene.social"] .display-name .display-name__html::after,
+a[href*="anna_cavazzini@gruene.social"] .display-name .display-name__html::after,
+a[href*="JuttaPaulus@mastodon.online"] .display-name .display-name__html::after,
+a[href*="alexandrageese@bonn.social"] .display-name .display-name__html::after,
+a[href*="elementary@mastodon.social"] .display-name .display-name__html::after,
+a[href*="gardiner_bryant@mastodon.online"] .display-name .display-name__html::after,
+a[href*="theintercept@journa.host"] .display-name .display-name__html::after,
+a[href*="gbhnews@mastodon.social"] .display-name .display-name__html::after,
+a[href*="archlinux@fosstodon.org"] .display-name .display-name__html::after,
+a[href*="fedora@fosstodon.org"] .display-name .display-name__html::after,
+a[href*="eirliani@home.social"] .display-name .display-name__html::after,
+a[href*="claesdevreese@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Comey@thecooltable.wtf"] .display-name .display-name__html::after,
+a[href*="RitchieTorres@universeodon.com"] .display-name .display-name__html::after,
+a[href*="CrooksandLiars@journa.host"] .display-name .display-name__html::after,
+a[href*="msfreepress@journa.host"] .display-name .display-name__html::after,
+a[href*="disinfodocket@toot.community"] .display-name .display-name__html::after,
+a[href*="TucsonSentinel@mastodon.tucsonsentinel.com"] .display-name .display-name__html::after,
+a[href*="Chron@newsie.social"] .display-name .display-name__html::after,
+a[href*="TexasObserver@texasobserver.social"] .display-name .display-name__html::after,
+a[href*="sfgate@sfba.social"] .display-name .display-name__html::after,
+a[href*="FAIR@mastodon.world"] .display-name .display-name__html::after,
+a[href*="ProPublica@newsie.social"] .display-name .display-name__html::after,
+a[href*="riffreporter@mastodon.social"] .display-name .display-name__html::after,
+a[href*="goodblue@mstdn.social"] .display-name .display-name__html::after,
+a[href*="netopia@eupolicy.social"] .display-name .display-name__html::after,
+a[href*="democracydocket@mas.to"] .display-name .display-name__html::after,
+a[href*="MAD_democracy@journa.host"] .display-name .display-name__html::after,
+a[href*="restofworld@restof.social"] .display-name .display-name__html::after,
+a[href*="macrumors@mastodon.social"] .display-name .display-name__html::after,
+a[href*="damemagazine@newsie.social"] .display-name .display-name__html::after,
+a[href*="MPDL@social.mpdl.mpg.de"] .display-name .display-name__html::after,
+a[href*="RollingStone@mstdn.social"] .display-name .display-name__html::after,
+a[href*="/@Kraut"] .display-name .display-name__html::after,
+a[href*="baratunde@mastodon.social"] .display-name .display-name__html::after,
+a[href*="TheConversationClimate@newsie.social"] .display-name .display-name__html::after,
+a[href*="TheConversationUK@newsie.social"] .display-name .display-name__html::after,
+a[href*="theconversationau@mastodon.social"] .display-name .display-name__html::after,
+a[href*="TheConversationAfrica@newsie.social"] .display-name .display-name__html::after,
+a[href*="theconversationes@newsie.social"] .display-name .display-name__html::after,
+a[href*="TheConversationUS@newsie.social"] .display-name .display-name__html::after,
+a[href*="PCMag@mastodon.social"] .display-name .display-name__html::after,
+a[href*="maxeddy@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="maxroser@mas.to"] .display-name .display-name__html::after,
+a[href*="ourworldindata@vis.social"] .display-name .display-name__html::after,
+a[href*="rafaelshimunov@mstdn.social"] .display-name .display-name__html::after,
+a[href*="richsignorelli@mstdn.social"] .display-name .display-name__html::after,
+a[href*="elipariser@mastodon.social"] .display-name .display-name__html::after,
+a[href*="marietjeschaake@mastodon.nl"] .display-name .display-name__html::after,
+a[href*="randomwalker@mastodon.social"] .display-name .display-name__html::after,
+a[href*="evangreer@mastodon.online"] .display-name .display-name__html::after,
+a[href*="JonCooper@mstdn.party"] .display-name .display-name__html::after,
+a[href*="schock@mastodon.lol"] .display-name .display-name__html::after,
+a[href*="GermHunterMD@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="ReignOfApril@blacktwitter.io"] .display-name .display-name__html::after,
+a[href*="corintxt@mastodon.social"] .display-name .display-name__html::after,
+a[href*="mahmudasrar@mastodon.art"] .display-name .display-name__html::after,
+a[href*="DrPragyaAgarwal@mastodon.ie"] .display-name .display-name__html::after,
+a[href*="CentralBylines@bylines.social"] .display-name .display-name__html::after,
+a[href*="BylinesNetwork@bylines.social"] .display-name .display-name__html::after,
+a[href*="YorksBylines@bylines.social"] .display-name .display-name__html::after,
+a[href*="NWBylines@bylines.social"] .display-name .display-name__html::after,
+a[href*="NEBylines@bylines.social"] .display-name .display-name__html::after,
+a[href*="WEBylines@bylines.social"] .display-name .display-name__html::after,
+a[href*="BylinesEast@bylines.social"] .display-name .display-name__html::after,
+a[href*="KentBylines@bylines.social"] .display-name .display-name__html::after,
+a[href*="SussexBylines@bylines.social"] .display-name .display-name__html::after,
+a[href*="BylinesScotland@bylines.social"] .display-name .display-name__html::after,
+a[href*="MeidasTouch@mstdn.social"] .display-name .display-name__html::after,
+a[href*="vanbadham@mastodon.social"] .display-name .display-name__html::after,
+a[href*="SeanCasten@mastodon.social"] .display-name .display-name__html::after,
+a[href*="toomas_ilves@mastodon.social"] .display-name .display-name__html::after,
+a[href*="albinokid@nerdculture.de"] .display-name .display-name__html::after,
+a[href*="team@fightforthefuture.org"] .display-name .display-name__html::after,
+a[href*="sixteenthCgirl@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Sharat_Chander@mastodon.social"] .display-name .display-name__html::after,
+a[href*="torproject@mastodon.social"] .display-name .display-name__html::after,
+a[href*="PeteStrzok@mastodon.social"] .display-name .display-name__html::after,
+a[href*="malwaretech@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="mattgreencomedy@mastodonapp.uk"] .display-name .display-name__html::after,
+a[href*="EC_Commissioner_Breton@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="eff@mastodon.social"] .display-name .display-name__html::after,
+a[href*="EEAS@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="FRA@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="Curia_fr@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EC_OSPO@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EC_NGI@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EUIPO@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EC_REA@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="eib@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EDPS@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="ELA@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="ombudsman@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EULISA@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="IHI@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EC_Sanctions@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EC_DIGIT@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="CDT@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EC_DIGIT_director_general@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EDPS_supervisor@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EDPS_director@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EC_Commissioner_Vestager@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="QasimRashid@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Sandrousseau@mastodon.top"] .display-name .display-name__html::after,
+a[href*="rbreich@masto.ai"] .display-name .display-name__html::after,
+a[href*="Julia@journa.host"] .display-name .display-name__html::after,
+a[href*="themarkup@newsie.social"] .display-name .display-name__html::after,
+a[href*="sisiwei@newsie.social"] .display-name .display-name__html::after,
+a[href*="searchliaison@mastodon.social"] .display-name .display-name__html::after,
+a[href*="libreoffice@fosstodon.org"] .display-name .display-name__html::after,
+a[href*="9to5linux@floss.social"] .display-name .display-name__html::after,
+a[href*="itsfoss@mastodon.social"] .display-name .display-name__html::after,
+a[href*="GovTrack@mastodon.social"] .display-name .display-name__html::after,
+a[href*="oatmeal@mastodon.social"] .display-name .display-name__html::after,
+a[href*="aallan@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ktowens@mstdn.social"] .display-name .display-name__html::after,
+a[href*="revoltchat@mastodon.social"] .display-name .display-name__html::after,
+a[href*="EndeavourOS@mastodon.social"] .display-name .display-name__html::after,
+a[href*="scottmstedman@journa.host"] .display-name .display-name__html::after,
+a[href*="arossp@mastodon.social"] .display-name .display-name__html::after,
+a[href*="abbys480@writing.exchange"] .display-name .display-name__html::after,
+a[href*="Acyn@mstdn.social"] .display-name .display-name__html::after,
+a[href*="freelanceastro@octodon.social"] .display-name .display-name__html::after,
+a[href*="adamdavidson@journa.host"] .display-name .display-name__html::after,
+a[href*="adamgurri@mastodon.social"] .display-name .display-name__html::after,
+a[href*="KlasfeldReports@journa.host"] .display-name .display-name__html::after,
+a[href*="byadamrhodes@newsie.social"] .display-name .display-name__html::after,
+a[href*="addyosmani@indieweb.social"] .display-name .display-name__html::after,
+a[href*="ahmetasabanci@mastodon.social"] .display-name .display-name__html::after,
+a[href*="albertochimal@mstdn.mx"] .display-name .display-name__html::after,
+a[href*="alethe@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="Nofiction@mastodon.world"] .display-name .display-name__html::after,
+a[href*="alexwinter@mastodon.social"] .display-name .display-name__html::after,
+a[href*="AVindman@sfba.social"] .display-name .display-name__html::after,
+a[href*="awsamuel@social.coop"] .display-name .display-name__html::after,
+a[href*="ajv@journa.host"] .display-name .display-name__html::after,
+a[href*="aswinn@masthead.social"] .display-name .display-name__html::after,
+a[href*="atoker@mastodon.social"] .display-name .display-name__html::after,
+a[href*="alyssabereznak@journa.host"] .display-name .display-name__html::after,
+a[href*="AlyAlyOutnFree@kolektiva.social"] .display-name .display-name__html::after,
+a[href*="Guinz@journa.host"] .display-name .display-name__html::after,
+a[href*="imtheq@realsocial.life"] .display-name .display-name__html::after,
+a[href*="amberosborne@mastodon.social"] .display-name .display-name__html::after,
+a[href*="0xamit@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="amyfeldman@journa.host"] .display-name .display-name__html::after,
+a[href*="amyspitalnick@mstdn.social"] .display-name .display-name__html::after,
+a[href*="Anandiyermd@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="Strandjunker@mstdn.social"] .display-name .display-name__html::after,
+a[href*="whatescapes@journa.host"] .display-name .display-name__html::after,
+a[href*="andresmh@hci.social"] .display-name .display-name__html::after,
+a[href*="couts@mastodon.social"] .display-name .display-name__html::after,
+a[href*="andrewpdyer@journa.host"] .display-name .display-name__html::after,
+a[href*="andrewfeinberg@journa.host"] .display-name .display-name__html::after,
+a[href*="andrewgregory@mstdn.social"] .display-name .display-name__html::after,
+a[href*="revkin@mastodon.green"] .display-name .display-name__html::after,
+a[href*="andrewstroehlein@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Terrortola@masto.ai"] .display-name .display-name__html::after,
+a[href*="andryou@mstdn.ca"] .display-name .display-name__html::after,
+a[href*="AndyKopsa@journa.host"] .display-name .display-name__html::after,
+a[href*="angelakang@mas.to"] .display-name .display-name__html::after,
+a[href*="shematologist@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="kalhan@mastodon.social"] .display-name .display-name__html::after,
+a[href*="anirvan@mastodon.social"] .display-name .display-name__html::after,
+a[href*="anjansun@mas.to"] .display-name .display-name__html::after,
+a[href*="itsafronomics@econtwitter.net"] .display-name .display-name__html::after,
+a[href*="ahiatt@journa.host"] .display-name .display-name__html::after,
+a[href*="AnniePettit@mas.to"] .display-name .display-name__html::after,
+a[href*="profb@mastodon.social"] .display-name .display-name__html::after,
+a[href*="AriCohn@masto.ai"] .display-name .display-name__html::after,
+a[href*="AriaaJaeger@masto.ai"] .display-name .display-name__html::after,
+a[href*="ariehkovler@journa.host"] .display-name .display-name__html::after,
+a[href*="AshaRangappa@masthead.social"] .display-name .display-name__html::after,
+a[href*="ashleygjovik@mstdn.social"] .display-name .display-name__html::after,
+a[href*="ashton@journa.host"] .display-name .display-name__html::after,
+a[href*="asteris@mastodon.social"] .display-name .display-name__html::after,
+a[href*="aulia@octodon.social"] .display-name .display-name__html::after,
+a[href*="austinchiangmd@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="austinmullen_@newsie.social"] .display-name .display-name__html::after,
+a[href*="Avital@journa.host"] .display-name .display-name__html::after,
+a[href*="badmedicaltakes@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="rustybrick@c.im"] .display-name .display-name__html::after,
+a[href*="lby3@newsie.social"] .display-name .display-name__html::after,
+a[href*="benkendrick@mastodon.social"] .display-name .display-name__html::after,
+a[href*="blefebvre@mastodon.social"] .display-name .display-name__html::after,
+a[href*="bensen@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ben@werd.social"] .display-name .display-name__html::after,
+a[href*="venessb@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="benjaminwittes@mastodon.social"] .display-name .display-name__html::after,
+a[href*="bethlinas@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="bethannepatrick@journa.host"] .display-name .display-name__html::after,
+a[href*="beebrookshire@mastodon.social"] .display-name .display-name__html::after,
+a[href*="bjmendelson@mastodon.social"] .display-name .display-name__html::after,
+a[href*="meyer@mstdn.science"] .display-name .display-name__html::after,
+a[href*="BlackAzizAnansi@mas.to"] .display-name .display-name__html::after,
+a[href*="djspacebunny@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="Itsthebrandi@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Brandi_Buchman@mstdn.social"] .display-name .display-name__html::after,
+a[href*="brendan_fischer@mastodon.social"] .display-name .display-name__html::after,
+a[href*="brendannyhan@mastodon.social"] .display-name .display-name__html::after,
+a[href*="brian_hioe@mastodon.online"] .display-name .display-name__html::after,
+a[href*="briannawu@mstdn.social"] .display-name .display-name__html::after,
+a[href*="somevelvetblog@jawns.club"] .display-name .display-name__html::after,
+a[href*="bcbishop@mastodon.social"] .display-name .display-name__html::after,
+a[href*="cameron@scholar.social"] .display-name .display-name__html::after,
+a[href*="CamilleEsq@noc.social"] .display-name .display-name__html::after,
+a[href*="carl@mastodon.se"] .display-name .display-name__html::after,
+a[href*="Carl_Zimmer@mastodon.social"] .display-name .display-name__html::after,
+a[href*="caroncreighton@sfba.social"] .display-name .display-name__html::after,
+a[href*="caseyjohnellis@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="chanda@blacktwitter.io"] .display-name .display-name__html::after,
+a[href*="charlesgaba@mastodon.social"] .display-name .display-name__html::after,
+a[href*="cqchoi@mastodon.online"] .display-name .display-name__html::after,
+a[href*="cgseife@sciencemastodon.com"] .display-name .display-name__html::after,
+a[href*="charlotteclymer@mastodon.social"] .display-name .display-name__html::after,
+a[href*="cbpolis@fediscience.org"] .display-name .display-name__html::after,
+a[href*="CheriJacobus@mastodon.online"] .display-name .display-name__html::after,
+a[href*="chetwisniewski@securitycafe.ca"] .display-name .display-name__html::after,
+a[href*="byChipBrownlee@journa.host"] .display-name .display-name__html::after,
+a[href*="chris_brockett@mastodon.social"] .display-name .display-name__html::after,
+a[href*="chrisdunker@journa.host"] .display-name .display-name__html::after,
+a[href*="chrisgeidner@journa.host"] .display-name .display-name__html::after,
+a[href*="chrissistrunk@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="christiedietz@mastodonapp.uk"] .display-name .display-name__html::after,
+a[href*="ChristinaBinkley@journa.host"] .display-name .display-name__html::after,
+a[href*="ChrisEliopoulos@mastodon.art"] .display-name .display-name__html::after,
+a[href*="cwnewser@journa.host"] .display-name .display-name__html::after,
+a[href*="chuckwendig@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ProfCiara@mastodon.social"] .display-name .display-name__html::after,
+a[href*="cliffcheney@octodon.social"] .display-name .display-name__html::after,
+a[href*="clipperchip@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="codytoshiro@twit.social"] .display-name .display-name__html::after,
+a[href*="conorpwilliams@journa.host"] .display-name .display-name__html::after,
+a[href*="conradhackett@sciences.social"] .display-name .display-name__html::after,
+a[href*="craigawelch@journa.host"] .display-name .display-name__html::after,
+a[href*="cfarivar@sfba.social"] .display-name .display-name__html::after,
+a[href*="Dahlialith@mstdn.social"] .display-name .display-name__html::after,
+a[href*="dangillmor@mastodon.social"] .display-name .display-name__html::after,
+a[href*="dankennedy_nu@journa.host"] .display-name .display-name__html::after,
+a[href*="dmoren@mastodon.social"] .display-name .display-name__html::after,
+a[href*="danpatterson@mastodon.social"] .display-name .display-name__html::after,
+a[href*="danvanmoll@twit.social"] .display-name .display-name__html::after,
+a[href*="danamlewis@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="DanielMunoz100@mastodon.social"] .display-name .display-name__html::after,
+a[href*="danielschuman@mastodon.social"] .display-name .display-name__html::after,
+a[href*="wfkars@mastodon.social"] .display-name .display-name__html::after,
+a[href*="DanielleBrian@mstdn.social"] .display-name .display-name__html::after,
+a[href*="dannysullivan@mastodon.social"] .display-name .display-name__html::after,
+a[href*="daveofdoom@mastodon.social"] .display-name .display-name__html::after,
+a[href*="profcarroll@federate.social"] .display-name .display-name__html::after,
+a[href*="DavidCorn@mastodon.social"] .display-name .display-name__html::after,
+a[href*="delima@mstdn.social"] .display-name .display-name__html::after,
+a[href*="DavidBFox@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ironicsans@mastodon.social"] .display-name .display-name__html::after,
+a[href*="davidheath@journa.host"] .display-name .display-name__html::after,
+a[href*="dleopold@mastodon.online"] .display-name .display-name__html::after,
+a[href*="davidreevely@mastodon.social"] .display-name .display-name__html::after,
+a[href*="drvolts@journa.host"] .display-name .display-name__html::after,
+a[href*="slack2thefuture@mastodon.online"] .display-name .display-name__html::after,
+a[href*="Davidtoddmccarty@newsie.social"] .display-name .display-name__html::after,
+a[href*="davidvienna@bbq.snoot.com"] .display-name .display-name__html::after,
+a[href*="debsylee@mas.to"] .display-name .display-name__html::after,
+a[href*="dell@journa.host"] .display-name .display-name__html::after,
+a[href*="dennisdiclaudio@mas.to"] .display-name .display-name__html::after,
+a[href*="derekcrim@mastodon.social"] .display-name .display-name__html::after,
+a[href*="derrickrossignol@mastodon.online"] .display-name .display-name__html::after,
+a[href*="DevinCow@mastodon.online"] .display-name .display-name__html::after,
+a[href*="docpop@mastodon.social"] .display-name .display-name__html::after,
+a[href*="donovanh@mastodon.ie"] .display-name .display-name__html::after,
+a[href*="alimattu@sfba.social"] .display-name .display-name__html::after,
+a[href*="avrota@mstdn.social"] .display-name .display-name__html::after,
+a[href*="firefoxx66@mstdn.science"] .display-name .display-name__html::after,
+a[href*="johnbiggan@mstdn.social"] .display-name .display-name__html::after,
+a[href*="DataDrivenMD@mstdn.social"] .display-name .display-name__html::after,
+a[href*="JoyHenningsenMD@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="DrLesterColl@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="luckytran@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="DrScottK@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="timsenior@aus.social"] .display-name .display-name__html::after,
+a[href*="deardrewdixon@mas.to"] .display-name .display-name__html::after,
+a[href*="dsilverman@mastodon.social"] .display-name .display-name__html::after,
+a[href*="edbott@mastodon.social"] .display-name .display-name__html::after,
+a[href*="edenriegel@socel.net"] .display-name .display-name__html::after,
+a[href*="elizaorlins@mstdn.social"] .display-name .display-name__html::after,
+a[href*="ecmclaughlin@mstdn.social"] .display-name .display-name__html::after,
+a[href*="inkfish@mastodon.social"] .display-name .display-name__html::after,
+a[href*="emilyalpertreyes@mas.to"] .display-name .display-name__html::after,
+a[href*="emilylhauser@mstdn.social"] .display-name .display-name__html::after,
+a[href*="Emilynussbaum@mstdn.social"] .display-name .display-name__html::after,
+a[href*="EmmaKennedy@mstdn.social"] .display-name .display-name__html::after,
+a[href*="ericfreyss@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ericabuist@mastodon.online"] .display-name .display-name__html::after,
+a[href*="erikgunn@mastodon.online"] .display-name .display-name__html::after,
+a[href*="eriksherman@mastodon.world"] .display-name .display-name__html::after,
+a[href*="eekshecried@journa.host"] .display-name .display-name__html::after,
+a[href*="ernie@writing.exchange"] .display-name .display-name__html::after,
+a[href*="ethanedward@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ethanfreedman@journa.host"] .display-name .display-name__html::after,
+a[href*="EthanHarp@sfba.social"] .display-name .display-name__html::after,
+a[href*="easternblot@mastodon.social"] .display-name .display-name__html::after,
+a[href*="evanengel@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ezralevin@mstdn.social"] .display-name .display-name__html::after,
+a[href*="faiskap@mas.to"] .display-name .display-name__html::after,
+a[href*="ferrisjabr@mstdn.social"] .display-name .display-name__html::after,
+a[href*="floragaramvolgyi@journa.host"] .display-name .display-name__html::after,
+a[href*="PadreSJ@twit.social"] .display-name .display-name__html::after,
+a[href*="frazerbrown@mas.to"] .display-name .display-name__html::after,
+a[href*="fj@mastodon.social"] .display-name .display-name__html::after,
+a[href*="fumikochino@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="GWillow@mastodon.social"] .display-name .display-name__html::after,
+a[href*="thegarance@mastodon.world"] .display-name .display-name__html::after,
+a[href*="G_y_tri@mas.to"] .display-name .display-name__html::after,
+a[href*="geo_gavalda@piaille.fr"] .display-name .display-name__html::after,
+a[href*="gmusser@mastodon.social"] .display-name .display-name__html::after,
+a[href*="gidmk@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="glennf@twit.social"] .display-name .display-name__html::after,
+a[href*="glynmoody@mastodon.social"] .display-name .display-name__html::after,
+a[href*="gcluley@mastodon.green"] .display-name .display-name__html::after,
+a[href*="grammargirl@mastodon.social"] .display-name .display-name__html::after,
+a[href*="grantmarek@sfba.social"] .display-name .display-name__html::after,
+a[href*="gregdutra@journa.host"] .display-name .display-name__html::after,
+a[href*="gepstein@mastodon.social"] .display-name .display-name__html::after,
+a[href*="gregolear@social.snorklr.com"] .display-name .display-name__html::after,
+a[href*="otto@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="gregpak@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Gsiskind@mastodon.social"] .display-name .display-name__html::after,
+a[href*="gregggonsalves@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="guthrie@mastodon.lol"] .display-name .display-name__html::after,
+a[href*="hannahgais@journa.host"] .display-name .display-name__html::after,
+a[href*="Trailanderror@scicomm.xyz"] .display-name .display-name__html::after,
+a[href*="hdm@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="heath@mastodon.cloud"] .display-name .display-name__html::after,
+a[href*="heidikitrosser@c.im"] .display-name .display-name__html::after,
+a[href*="HelenBranswell@scicomm.xyz"] .display-name .display-name__html::after,
+a[href*="HelenKennedy@mastodon.social"] .display-name .display-name__html::after,
+a[href*="hharteveldt@mastodon.world"] .display-name .display-name__html::after,
+a[href*="ian@hachyderm.io"] .display-name .display-name__html::after,
+a[href*="kwokytalky@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="mackayim2022@mastodon.social"] .display-name .display-name__html::after,
+a[href*="EckerleIsabella@mstdn.science"] .display-name .display-name__html::after,
+a[href*="izavarise@journa.host"] .display-name .display-name__html::after,
+a[href*="ishmaeldaro@mastodon.world"] .display-name .display-name__html::after,
+a[href*="isik5@mastodon.social"] .display-name .display-name__html::after,
+a[href*="jaspar@mastodon.online"] .display-name .display-name__html::after,
+a[href*="jackmjenkins@mastodon.online"] .display-name .display-name__html::after,
+a[href*="jackturban@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ejacqui@lgtm.systems"] .display-name .display-name__html::after,
+a[href*="jameeljaffer@mastodon.social"] .display-name .display-name__html::after,
+a[href*="simsjames@mastodon.social"] .display-name .display-name__html::after,
+a[href*="jamieBGN@hci.social"] .display-name .display-name__html::after,
+a[href*="janehong@mastodon.social"] .display-name .display-name__html::after,
+a[href*="wongmjane@macaw.social"] .display-name .display-name__html::after,
+a[href*="drfreeride@sfba.social"] .display-name .display-name__html::after,
+a[href*="cyberlyra@mastodon.social"] .display-name .display-name__html::after,
+a[href*="janinegibson@mastodon.me.uk"] .display-name .display-name__html::after,
+a[href*="cardamomaddict@mstdn.ca"] .display-name .display-name__html::after,
+a[href*="mrcippy@mastodon.social"] .display-name .display-name__html::after,
+a[href*="KindrachukJason@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="jasonkint@mstdn.social"] .display-name .display-name__html::after,
+a[href*="JasonLeopold@journa.host"] .display-name .display-name__html::after,
+a[href*="jasonpaladino@journa.host"] .display-name .display-name__html::after,
+a[href*="jperlow@journa.host"] .display-name .display-name__html::after,
+a[href*="jayarnold@mastodon.cloud"] .display-name .display-name__html::after,
+a[href*="jayrosen_nyu@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Jedshug@mastodon.social"] .display-name .display-name__html::after,
+a[href*="jeffjarvis@mastodon.social"] .display-name .display-name__html::after,
+a[href*="jbmatthews@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="jefftiedrich@mastodon.social"] .display-name .display-name__html::after,
+a[href*="originalspin@mas.to"] .display-name .display-name__html::after,
+a[href*="jenmercieca@journa.host"] .display-name .display-name__html::after,
+a[href*="jentaub@mstdn.social"] .display-name .display-name__html::after,
+a[href*="jeremyscahill@journa.host"] .display-name .display-name__html::after,
+a[href*="jessicacalarco@mastodon.social"] .display-name .display-name__html::after,
+a[href*="JesseScheckner@mastodon.online"] .display-name .display-name__html::after,
+a[href*="LevinsonJessica@mstdn.social"] .display-name .display-name__html::after,
+a[href*="ohheyjesssager@mstdn.party"] .display-name .display-name__html::after,
+a[href*="JillianMHurley@mastodon.social"] .display-name .display-name__html::after,
+a[href*="joanmccarter@mastodon.online"] .display-name .display-name__html::after,
+a[href*="jbf1755@mastodon.social"] .display-name .display-name__html::after,
+a[href*="jodyhouser@mastodon.social"] .display-name .display-name__html::after,
+a[href*="JoelN@newsie.social"] .display-name .display-name__html::after,
+a[href*="JoeyVanDeurzen@mstdn.social"] .display-name .display-name__html::after,
+a[href*="aravosis@mastodon.social"] .display-name .display-name__html::after,
+a[href*="johnbiehler@mastodon.social"] .display-name .display-name__html::after,
+a[href*="johnbrougher@mastodon.social"] .display-name .display-name__html::after,
+a[href*="mrjoncryer@mastodon.world"] .display-name .display-name__html::after,
+a[href*="johngramlich@mstdn.social"] .display-name .display-name__html::after,
+a[href*="jsrailton@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Jojofromjerz@mastodon.social"] .display-name .display-name__html::after,
+a[href*="jonchristian@mastodon.social"] .display-name .display-name__html::after,
+a[href*="jonlevy@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="akjakalope@mastodon.social"] .display-name .display-name__html::after,
+a[href*="jman@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="jlori@mastodon.cloud"] .display-name .display-name__html::after,
+a[href*="joshtpm@journa.host"] .display-name .display-name__html::after,
+a[href*="jrdorkin@mastodon.social"] .display-name .display-name__html::after,
+a[href*="joshua_eaton@journa.host"] .display-name .display-name__html::after,
+a[href*="joshuafrank@journa.host"] .display-name .display-name__html::after,
+a[href*="JoshuaGrubbsPhD@mastodon.online"] .display-name .display-name__html::after,
+a[href*="theJoshMeister@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="joycekaram@journa.host"] .display-name .display-name__html::after,
+a[href*="JoyceVance@mstdn.social"] .display-name .display-name__html::after,
+a[href*="jr@twit.social"] .display-name .display-name__html::after,
+a[href*="juddlegum@journa.host"] .display-name .display-name__html::after,
+a[href*="jgcarpenter@mastodon.world"] .display-name .display-name__html::after,
+a[href*="justinhendrix@mastodon.social"] .display-name .display-name__html::after,
+a[href*="justinling@mastodon.online"] .display-name .display-name__html::after,
+a[href*="myersjustinc@mastodon.sdf.org"] .display-name .display-name__html::after,
+a[href*="kakape@mas.to"] .display-name .display-name__html::after,
+a[href*="kairyssdal@mastodon.world"] .display-name .display-name__html::after,
+a[href*="karacarlson@journa.host"] .display-name .display-name__html::after,
+a[href*="karenattiah@journa.host"] .display-name .display-name__html::after,
+a[href*="klonick@mastodon.social"] .display-name .display-name__html::after,
+a[href*="katherinehawkins@mastodon.social"] .display-name .display-name__html::after,
+a[href*="KathyGori@sfba.social"] .display-name .display-name__html::after,
+a[href*="kathygriffin@mstdn.social"] .display-name .display-name__html::after,
+a[href*="msmacb@awscommunity.social"] .display-name .display-name__html::after,
+a[href*="AstroKatie@mastodon.social"] .display-name .display-name__html::after,
+a[href*="katiephang@mstdn.social"] .display-name .display-name__html::after,
+a[href*="keith@bbq.snoot.com"] .display-name .display-name__html::after,
+a[href*="KeithDevlin@fediscience.org"] .display-name .display-name__html::after,
+a[href*="NatlSecCnslrs@mstdn.social"] .display-name .display-name__html::after,
+a[href*="kellypreedy@mastodonapp.uk"] .display-name .display-name__html::after,
+a[href*="KELLYWEILL@mastodon.social"] .display-name .display-name__html::after,
+a[href*="kennwhite@mastodon.social"] .display-name .display-name__html::after,
+a[href*="keram@mastodon.social"] .display-name .display-name__html::after,
+a[href*="squawkfox@mastodon.cloud"] .display-name .display-name__html::after,
+a[href*="gossithedog@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="kevinctofel@mastodon.world"] .display-name .display-name__html::after,
+a[href*="Kim@masto.ai"] .display-name .display-name__html::after,
+a[href*="KiraNewmanMDPhD@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="kitoconnell@kolektiva.social"] .display-name .display-name__html::after,
+a[href*="lcdavis@mastodonapp.uk"] .display-name .display-name__html::after,
+a[href*="miblogestublog@mastodon.social"] .display-name .display-name__html::after,
+a[href*="lpackard@mastodon.online"] .display-name .display-name__html::after,
+a[href*="LRozen@journa.host"] .display-name .display-name__html::after,
+a[href*="LeahLitman@mastodon.social"] .display-name .display-name__html::after,
+a[href*="leahmcelrath@mstdn.social"] .display-name .display-name__html::after,
+a[href*="hypatia@octodon.social"] .display-name .display-name__html::after,
+a[href*="lennyzeltser@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="leo@social.leoji.codes"] .display-name .display-name__html::after,
+a[href*="hacks4pancakes@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="laseletzky@mastodon.online"] .display-name .display-name__html::after,
+a[href*="levisu@sfba.social"] .display-name .display-name__html::after,
+a[href*="dillonliam@mas.to"] .display-name .display-name__html::after,
+a[href*="lguterman@mastodon.online"] .display-name .display-name__html::after,
+a[href*="mom101@mastodon.cloud"] .display-name .display-name__html::after,
+a[href*="loisparshley@journa.host"] .display-name .display-name__html::after,
+a[href*="loreleiking@mstdn.social"] .display-name .display-name__html::after,
+a[href*="manlius@mathstodon.xyz"] .display-name .display-name__html::after,
+a[href*="cj@chaos.social"] .display-name .display-name__html::after,
+a[href*="marccox@mastodonapp.uk"] .display-name .display-name__html::after,
+a[href*="marcelias@mas.to"] .display-name .display-name__html::after,
+a[href*="MAArgentino@fediscience.org"] .display-name .display-name__html::after,
+a[href*="marcidale@mastodon.social"] .display-name .display-name__html::after,
+a[href*="MarcusReports@mastodon.world"] .display-name .display-name__html::after,
+a[href*="emptywheel@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Quasimondo@mastodon.social"] .display-name .display-name__html::after,
+a[href*="meharris@freeradical.zone"] .display-name .display-name__html::after,
+a[href*="markhertling@mstdn.social"] .display-name .display-name__html::after,
+a[href*="marklittle@mastodon.social"] .display-name .display-name__html::after,
+a[href*="markpotts@mastodon.social"] .display-name .display-name__html::after,
+a[href*="msimmonds@mastodon.social"] .display-name .display-name__html::after,
+a[href*="shrinkthinks@mstdn.social"] .display-name .display-name__html::after,
+a[href*="martin@openedtech.social"] .display-name .display-name__html::after,
+a[href*="martin_hamilton@fosstodon.org"] .display-name .display-name__html::after,
+a[href*="mathewi@journa.host"] .display-name .display-name__html::after,
+a[href*="mattedgar@mastodon.me.uk"] .display-name .display-name__html::after,
+a[href*="mattgemmell@mastodon.scot"] .display-name .display-name__html::after,
+a[href*="MattGertz@journa.host"] .display-name .display-name__html::after,
+a[href*="mkarolian@mastodon.social"] .display-name .display-name__html::after,
+a[href*="mattortega@mstdn.social"] .display-name .display-name__html::after,
+a[href*="mattshuham@journa.host"] .display-name .display-name__html::after,
+a[href*="matttwood@mastodon.gamedev.place"] .display-name .display-name__html::after,
+a[href*="Pwnallthethings@mastodon.social"] .display-name .display-name__html::after,
+a[href*="maxkennerly@mstdn.social"] .display-name .display-name__html::after,
+a[href*="medpagetoday@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="meghann@mastodon.social"] .display-name .display-name__html::after,
+a[href*="MeganKelleyHall@mstdn.social"] .display-name .display-name__html::after,
+a[href*="meghin@journa.host"] .display-name .display-name__html::after,
+a[href*="Davlin@journa.host"] .display-name .display-name__html::after,
+a[href*="MelissaJPeltier@tooting.ch"] .display-name .display-name__html::after,
+a[href*="ProfMichelson@mastodon.social"] .display-name .display-name__html::after,
+a[href*="melissacwalker@mindly.social"] .display-name .display-name__html::after,
+a[href*="micahflee@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="bolden@mastodon.social"] .display-name .display-name__html::after,
+a[href*="mgeist@mas.to"] .display-name .display-name__html::after,
+a[href*="Slaby@mastodon.cloud"] .display-name .display-name__html::after,
+a[href*="msignorile@mstdn.social"] .display-name .display-name__html::after,
+a[href*="whoisbobbparris@toad.social"] .display-name .display-name__html::after,
+a[href*="michelle@journa.host"] .display-name .display-name__html::after,
+a[href*="cephira@sfba.social"] .display-name .display-name__html::after,
+a[href*="Microsiervos@mastodon.cloud"] .display-name .display-name__html::after,
+a[href*="miguelhernan@fediscience.org"] .display-name .display-name__html::after,
+a[href*="MikeDenison@mastodon.social"] .display-name .display-name__html::after,
+a[href*="MikeDiGirolamo@journa.host"] .display-name .display-name__html::after,
+a[href*="mikemadrid@c.im"] .display-name .display-name__html::after,
+a[href*="MikeMathia@ioc.exchange"] .display-name .display-name__html::after,
+a[href*="Mimirocah1@mstdn.social"] .display-name .display-name__html::after,
+a[href*="laminda@mastodon.social"] .display-name .display-name__html::after,
+a[href*="mirandayaver@mastodon.social"] .display-name .display-name__html::after,
+a[href*="molliekatzen@gensokyo.social"] .display-name .display-name__html::after,
+a[href*="mckra1g@mastodon.social"] .display-name .display-name__html::after,
+a[href*="mollyjongfast@journa.host"] .display-name .display-name__html::after,
+a[href*="MollyMcKew@journa.host"] .display-name .display-name__html::after,
+a[href*="mrbrown@kopiti.am"] .display-name .display-name__html::after,
+a[href*="mynette@bbq.snoot.com"] .display-name .display-name__html::after,
+a[href*="naomiohreally@mastodon.world"] .display-name .display-name__html::after,
+a[href*="nathan@breakpoint.cafe"] .display-name .display-name__html::after,
+a[href*="nedstaebler@a2mi.social"] .display-name .display-name__html::after,
+a[href*="neilhimself@mastodon.social"] .display-name .display-name__html::after,
+a[href*="NellSco@mastodon.social"] .display-name .display-name__html::after,
+a[href*="netblocks@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Nick_Craver@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="schwellenbach@journa.host"] .display-name .display-name__html::after,
+a[href*="nicolesjchung@mstdn.social"] .display-name .display-name__html::after,
+a[href*="GottaLaff@mastodon.social"] .display-name .display-name__html::after,
+a[href*="NicoletteGlazer@masthead.social"] .display-name .display-name__html::after,
+a[href*="seenigel@fashionviz.xyz"] .display-name .display-name__html::after,
+a[href*="nilikm@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ncoca@social.coop"] .display-name .display-name__html::after,
+a[href*="noahshachtman@mstdn.social"] .display-name .display-name__html::after,
+a[href*="ethicistforhire@mastodon.social"] .display-name .display-name__html::after,
+a[href*="normornstein@mstdn.social"] .display-name .display-name__html::after,
+a[href*="OctaviaNasr@mastodon.social"] .display-name .display-name__html::after,
+a[href*="owillis@mastodon.online"] .display-name .display-name__html::after,
+a[href*="openrightsgroup@mastodon.social"] .display-name .display-name__html::after,
+a[href*="oriana0214@mastodon.world"] .display-name .display-name__html::after,
+a[href*="parents4future@climatejustice.global"] .display-name .display-name__html::after,
+a[href*="parker@journa.host"] .display-name .display-name__html::after,
+a[href*="pjcasey@bbq.snoot.com"] .display-name .display-name__html::after,
+a[href*="pboehler@mastodon.social"] .display-name .display-name__html::after,
+a[href*="pdehello@mastodon.social"] .display-name .display-name__html::after,
+a[href*="howelloneill@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="palafo@mstdn.social"] .display-name .display-name__html::after,
+a[href*="LeapingRobot@mstdn.social"] .display-name .display-name__html::after,
+a[href*="pattysullivan@mstdn.ca"] .display-name .display-name__html::after,
+a[href*="paulbae@mastodon.lol"] .display-name .display-name__html::after,
+a[href*="pkrugman@mastodon.online"] .display-name .display-name__html::after,
+a[href*="peg@mastodon.social"] .display-name .display-name__html::after,
+a[href*="petergleick@fediscience.org"] .display-name .display-name__html::after,
+a[href*="morethanmySLE@mstdn.social"] .display-name .display-name__html::after,
+a[href*="provenself@journa.host"] .display-name .display-name__html::after,
+a[href*="petersterne@mastodon.social"] .display-name .display-name__html::after,
+a[href*="pbump@journa.host"] .display-name .display-name__html::after,
+a[href*="philipncohen@mastodon.social"] .display-name .display-name__html::after,
+a[href*="phillipdewet@mastodonapp.uk"] .display-name .display-name__html::after,
+a[href*="pogowatchdog@journa.host"] .display-name .display-name__html::after,
+a[href*="qjurecic@mastodon.social"] .display-name .display-name__html::after,
+a[href*="TheRaDR@mstdn.social"] .display-name .display-name__html::after,
+a[href*="rabbijill@sfba.social"] .display-name .display-name__html::after,
+a[href*="RachelFriend@mstdn.social"] .display-name .display-name__html::after,
+a[href*="rachelmetz@mstdn.social"] .display-name .display-name__html::after,
+a[href*="rwidome@mastodon.social"] .display-name .display-name__html::after,
+a[href*="rajivpant@mastodon.social"] .display-name .display-name__html::after,
+a[href*="rmayemsinger@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Yokoda@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="raywert@mastodon.social"] .display-name .display-name__html::after,
+a[href*="miss604@mastodon.social"] .display-name .display-name__html::after,
+a[href*="siegel@mastodon.social"] .display-name .display-name__html::after,
+a[href*="richvn@mastodon.social"] .display-name .display-name__html::after,
+a[href*="rklau@mastodon.cloud"] .display-name .display-name__html::after,
+a[href*="robxlii@mstdn.social"] .display-name .display-name__html::after,
+a[href*="RHJameson@mastodon.coffee"] .display-name .display-name__html::after,
+a[href*="roberttsai@mstdn.social"] .display-name .display-name__html::after,
+a[href*="rosjordan@mastodon.social"] .display-name .display-name__html::after,
+a[href*="rjgianfortune@metalhead.club"] .display-name .display-name__html::after,
+a[href*="hawaii@mastodon.social"] .display-name .display-name__html::after,
+a[href*="acetum@mstdn.social"] .display-name .display-name__html::after,
+a[href*="samisage@mstdn.social"] .display-name .display-name__html::after,
+a[href*="samueloakford@journa.host"] .display-name .display-name__html::after,
+a[href*="sandyguti@mstdn.social"] .display-name .display-name__html::after,
+a[href*="sarahburris@c.im"] .display-name .display-name__html::after,
+a[href*="design_law@mastodon.social"] .display-name .display-name__html::after,
+a[href*="sarahposner@mastodon.social"] .display-name .display-name__html::after,
+a[href*="summerray@socel.net"] .display-name .display-name__html::after,
+a[href*="pallenberg@mastodon.social"] .display-name .display-name__html::after,
+a[href*="saschasegan@mastodon.online"] .display-name .display-name__html::after,
+a[href*="queersprings@mas.to"] .display-name .display-name__html::after,
+a[href*="ScottGilmore@mastodon.world"] .display-name .display-name__html::after,
+a[href*="DrScottHadland@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="seamusblackley@gensokyo.social"] .display-name .display-name__html::after,
+a[href*="SerenaSonoma@eightpoint.app"] .display-name .display-name__html::after,
+a[href*="serghei@mastodon.social"] .display-name .display-name__html::after,
+a[href*="smotus@mstdn.party"] .display-name .display-name__html::after,
+a[href*="shanehuntley@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="shannonrwatts@mstdn.social"] .display-name .display-name__html::after,
+a[href*="idoubtit@mstdn.social"] .display-name .display-name__html::after,
+a[href*="shayne@mastodon.online"] .display-name .display-name__html::after,
+a[href*="sheilarfoster@mstdn.social"] .display-name .display-name__html::after,
+a[href*="ifilljustice@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ShikhaJainMD@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="siruihua@techhub.social"] .display-name .display-name__html::after,
+a[href*="souris@saturation.social"] .display-name .display-name__html::after,
+a[href*="STAT@newsie.social"] .display-name .display-name__html::after,
+a[href*="stephtait@robot.rodeo"] .display-name .display-name__html::after,
+a[href*="stephenhui@mstdn.ca"] .display-name .display-name__html::after,
+a[href*="stshank@mstdn.social"] .display-name .display-name__html::after,
+a[href*="SteveGarfield@mastodon.social"] .display-name .display-name__html::after,
+a[href*="w7voa@journa.host"] .display-name .display-name__html::after,
+a[href*="SteveHofstetter@mastodon.social"] .display-name .display-name__html::after,
+a[href*="marmel@mastodon.social"] .display-name .display-name__html::after,
+a[href*="BySteveReilly@journa.host"] .display-name .display-name__html::after,
+a[href*="stevevladeck@mas.to"] .display-name .display-name__html::after,
+a[href*="StevenBeschloss@toot.community"] .display-name .display-name__html::after,
+a[href*="siw@journa.host"] .display-name .display-name__html::after,
+a[href*="sgwoods@mstdn.social"] .display-name .display-name__html::after,
+a[href*="stopfundinghate@mastodon.social"] .display-name .display-name__html::after,
+a[href*="stuartcantrill@mastodon.social"] .display-name .display-name__html::after,
+a[href*="susieneilson@mas.to"] .display-name .display-name__html::after,
+a[href*="skrishna@mastodon.social"] .display-name .display-name__html::after,
+a[href*="swordsjew@mstdn.social"] .display-name .display-name__html::after,
+a[href*="aetiology@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="tarahaelle@mastodon.social"] .display-name .display-name__html::after,
+a[href*="taylorlorenz@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Tnicholsmd@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="Teri_Kanefield@mstdn.social"] .display-name .display-name__html::after,
+a[href*="terrawellington@toad.social"] .display-name .display-name__html::after,
+a[href*="thenation@newsie.social"] .display-name .display-name__html::after,
+a[href*="PetrieFlom@mas.to"] .display-name .display-name__html::after,
+a[href*="tdp@mastodon.social"] .display-name .display-name__html::after,
+a[href*="thomasdang@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="tiffanycli@mastodon.social"] .display-name .display-name__html::after,
+a[href*="timnitGebru@dair-community.social"] .display-name .display-name__html::after,
+a[href*="tinu@mastodon.social"] .display-name .display-name__html::after,
+a[href*="tod@hci.social"] .display-name .display-name__html::after,
+a[href*="tlee@journa.host"] .display-name .display-name__html::after,
+a[href*="antonioserrata@masto.ai"] .display-name .display-name__html::after,
+a[href*="TNLNYC@mastodon.social"] .display-name .display-name__html::after,
+a[href*="tuthanhha@mastodon.world"] .display-name .display-name__html::after,
+a[href*="TheTyJager@universeodon.com"] .display-name .display-name__html::after,
+a[href*="ushamcfarling@sfba.social"] .display-name .display-name__html::after,
+a[href*="riovictoire@infosec.exchange"] .display-name .display-name__html::after,
+a[href*="vmontori@med-mastodon.com"] .display-name .display-name__html::after,
+a[href*="virginiaheffernan@journa.host"] .display-name .display-name__html::after,
+a[href*="virtualastro@mstdn.social"] .display-name .display-name__html::after,
+a[href*="vishnu_prasad@mastodon.social"] .display-name .display-name__html::after,
+a[href*="walkerbragman@journa.host"] .display-name .display-name__html::after,
+a[href*="WalterShaub@journa.host"] .display-name .display-name__html::after,
+a[href*="wendysiegelman@mastodon.social"] .display-name .display-name__html::after,
+a[href*="wikimediaitalia@framapiaf.org"] .display-name .display-name__html::after,
+a[href*="willoremus@mastodon.social"] .display-name .display-name__html::after,
+a[href*="will@mastodon.content.town"] .display-name .display-name__html::after,
+a[href*="williambibbiani@bbq.snoot.com"] .display-name .display-name__html::after,
+a[href*="Wwwhatsnew@mastodon.cloud"] .display-name .display-name__html::after,
+a[href*="yaneerbaryam@forall.social"] .display-name .display-name__html::after,
+a[href*="ylitvinenko@journa.host"] .display-name .display-name__html::after,
+a[href*="z_everson@journa.host"] .display-name .display-name__html::after,
+a[href*="ZulmaCucunuba@mstdn.science"] .display-name .display-name__html::after,
+a[href*="maxplanckgesellschaft@wisskomm.social"] .display-name .display-name__html::after,
+a[href*="daniel_freund@mastodon.world"] .display-name .display-name__html::after,
+a[href*="rferl@mastodon.social"] .display-name .display-name__html::after,
+a[href*="auschwitzmuseum@mastodon.world"] .display-name .display-name__html::after,
+a[href*="foreignpolicy@mastodon.world"] .display-name .display-name__html::after,
+a[href*="mullvadnet@mastodon.online"] .display-name .display-name__html::after,
+a[href*="Tutanota@mastodon.social"] .display-name .display-name__html::after,
+a[href*="mailbox_org@mastodon.social"] .display-name .display-name__html::after,
+a[href*="plausible@fosstodon.org"] .display-name .display-name__html::after,
+a[href*="startmail@mastodon.social"] .display-name .display-name__html::after,
+a[href*="StartpageSearch@mastodon.social"] .display-name .display-name__html::after,
+a[href*="wideangle@mastodon.online"] .display-name .display-name__html::after,
+a[href*="threemaapp@mastodon.social"] .display-name .display-name__html::after,
+a[href*="cryptpad@fosstodon.org"] .display-name .display-name__html::after,
+a[href*="nextcloud@mastodon.xyz"] .display-name .display-name__html::after,
+a[href*="Vivaldi@vivaldi.net"] .display-name .display-name__html::after,
+a[href*="passbolt@mastodon.social"] .display-name .display-name__html::after,
+a[href*="bitwarden@fosstodon.org"] .display-name .display-name__html::after,
+a[href*="xeovo@mastodon.social"] .display-name .display-name__html::after,
+a[href*="ONLYOFFICE@fosstodon.org"] .display-name .display-name__html::after,
+a[href*="hellomailo@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Codeberg@social.anoxinon.de"] .display-name .display-name__html::after,
+a[href*="european_alternatives@mastodon.social"] .display-name .display-name__html::after,
+a[href*="gpuopen@mastodon.gamedev.place"] .display-name .display-name__html::after,
+a[href*="georgetakei@universeodon.com"] .display-name .display-name__html::after,
+a[href*="MuellerSheWrote@mastodon.online"] .display-name .display-name__html::after,
+a[href*="reutersinstitute@mas.to"] .display-name .display-name__html::after,
+a[href*="thelinuxEXP@mastodon.social"] .display-name .display-name__html::after,
+a[href*="AdamParkhomenko@mstdn.social"] .display-name .display-name__html::after,
+a[href*="euractiv@masto.ai"] .display-name .display-name__html::after,
+a[href*="Krita@mastodon.art"] .display-name .display-name__html::after,
+a[href*="thunderbird@mastodon.online"] .display-name .display-name__html::after,
+a[href*="gnome@floss.social"] .display-name .display-name__html::after,
+a[href*="kde@floss.social"] .display-name .display-name__html::after,
+a[href*="GIMP@floss.social"] .display-name .display-name__html::after,
+a[href*="gamingonlinux@mastodon.social"] .display-name .display-name__html::after,
+a[href*="Curia@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="inkscape@mastodon.art"] .display-name .display-name__html::after,
+a[href*="FlatpakApps@fosstodon.org"] .display-name .display-name__html::after,
+a[href*="profbriancox@universeodon.com"] .display-name .display-name__html::after,
+a[href*="ed_hawkins@fediscience.org"] .display-name .display-name__html::after,
+a[href*="stephenfry@mastodonapp.uk"] .display-name .display-name__html::after,
+a[href*="guyverhofstadt@mastodon.world"] .display-name .display-name__html::after,
+a[href*="mollyjongfast@journa.host"] .display-name .display-name__html::after,
+a[href*="kathygriffin@mstdn.social"] .display-name .display-name__html::after,
+a[href*="EUSPA@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="EU_Commission@social.network.europa.eu"] .display-name .display-name__html::after,
+a[href*="mikegalsworthy@mas.to"] .display-name .display-name__html::after,
+a[href*="Gargron@mastodon.social"] .display-name .display-name__html::after,
+a[href*="simonstalenhag@mastodon.art"] .display-name .display-name__html::after,
+a[href*="Raspberry_Pi@raspberrypi.social"] .display-name .display-name__html::after,
+a[href*="euobserver@eupolicy.social"] .display-name .display-name__html::after,
+a[href*="Mastodon@mastodon.social"] .display-name .display-name__html::after,
+a[href*="erictopol@mstdn.social"] .display-name .display-name__html::after,
+a[href*="humanrightswatch@mastodon.online"] .display-name .display-name__html::after,
+a[href*="gretathunberg@mastodon.nu"] .display-name .display-name__html::after {
+    content: "Verified";
+    background-color: #181b23;
+    border-radius: 8px;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 5px;
+    color: white;
+    font-size: 12px;
+    background-image: url(https://innosflew.github.io/Logos/small-check-mark-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position-x: 5px;
+    background-position-y: center;
+    margin-left: 7px;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    border: white 1px solid;
+}
+
+/* .account__header__bar:has(img[alt=""]) .account__header__tabs__name h1 span::after, */
+.account__header__bar:has(img[alt="TechDesk@flipboard.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Flipboard@flipboard.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MichaelJStern@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="1password@1password.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MarkRuffalo@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="notesfrompoland@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="pcgamesn@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="freedomofpress@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="base@openbiblio.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="atrupar@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mozilla@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Teri_Kanefield@law-and-politics.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="helmholtzklima@wisskomm.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="minimaxir@sigmoid.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="helmholtz@helmholtz.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="parkermolloy@masto.ai"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="airlineflyer@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="killyourfm@layer8.space"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EP_GreensEFA@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="SLagodinsky@gruene.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="anna_cavazzini@gruene.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JuttaPaulus@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="alexandrageese@bonn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="elementary@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gardiner_bryant@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="theintercept@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gbhnews@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="archlinux@fosstodon.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="fedora@fosstodon.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="eirliani@home.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="claesdevreese@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Comey@thecooltable.wtf"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="RitchieTorres@universeodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="CrooksandLiars@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="msfreepress@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="disinfodocket@toot.community"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="TucsonSentinel@mastodon.tucsonsentinel.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Chron@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="TexasObserver@texasobserver.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="sfgate@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="FAIR@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ProPublica@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="riffreporter@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="goodblue@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="netopia@eupolicy.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="democracydocket@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MAD_democracy@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="restofworld@restof.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="macrumors@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="damemagazine@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MPDL@social.mpdl.mpg.de"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="RollingStone@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Kraut"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="baratunde@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="TheConversationClimate@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="TheConversationUK@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="theconversationau@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="TheConversationAfrica@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="theconversationes@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="TheConversationUS@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="PCMag@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="maxeddy@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="maxroser@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ourworldindata@vis.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rafaelshimunov@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="richsignorelli@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="elipariser@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="marietjeschaake@mastodon.nl"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="randomwalker@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="evangreer@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JonCooper@mstdn.party"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="schock@mastodon.lol"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="GermHunterMD@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ReignOfApril@blacktwitter.io"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="corintxt@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mahmudasrar@mastodon.art"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DrPragyaAgarwal@mastodon.ie"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="CentralBylines@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="BylinesNetwork@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="YorksBylines@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="NWBylines@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="NEBylines@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="WEBylines@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="BylinesEast@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="KentBylines@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="SussexBylines@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="BylinesScotland@bylines.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MeidasTouch@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="vanbadham@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="SeanCasten@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="toomas_ilves@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="albinokid@nerdculture.de"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="team@fightforthefuture.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="sixteenthCgirl@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Sharat_Chander@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="torproject@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="PeteStrzok@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="malwaretech@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mattgreencomedy@mastodonapp.uk"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EC_Commissioner_Breton@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="eff@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EEAS@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="FRA@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Curia_fr@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EC_OSPO@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EC_NGI@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EUIPO@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EC_REA@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="eib@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EDPS@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ELA@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ombudsman@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EULISA@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="IHI@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EC_Sanctions@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EC_DIGIT@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="CDT@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EC_DIGIT_director_general@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EDPS_supervisor@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EDPS_director@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EC_Commissioner_Vestager@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="QasimRashid@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Sandrousseau@mastodon.top"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rbreich@masto.ai"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Julia@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="themarkup@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="sisiwei@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="searchliaison@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="libreoffice@fosstodon.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="9to5linux@floss.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="itsfoss@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="GovTrack@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="oatmeal@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="aallan@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ktowens@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="revoltchat@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EndeavourOS@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="scottmstedman@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="arossp@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="abbys480@writing.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Acyn@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="freelanceastro@octodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="adamdavidson@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="adamgurri@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="KlasfeldReports@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="byadamrhodes@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="addyosmani@indieweb.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ahmetasabanci@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="albertochimal@mstdn.mx"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="alethe@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Nofiction@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="alexwinter@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="AVindman@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="awsamuel@social.coop"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ajv@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="aswinn@masthead.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="atoker@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="alyssabereznak@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="AlyAlyOutnFree@kolektiva.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Guinz@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="imtheq@realsocial.life"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="amberosborne@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="0xamit@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="amyfeldman@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="amyspitalnick@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Anandiyermd@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Strandjunker@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="whatescapes@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="andresmh@hci.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="couts@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="andrewpdyer@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="andrewfeinberg@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="andrewgregory@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="revkin@mastodon.green"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="andrewstroehlein@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Terrortola@masto.ai"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="andryou@mstdn.ca"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="AndyKopsa@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="angelakang@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="shematologist@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kalhan@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="anirvan@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="anjansun@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="itsafronomics@econtwitter.net"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ahiatt@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="AnniePettit@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="profb@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="AriCohn@masto.ai"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="AriaaJaeger@masto.ai"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ariehkovler@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="AshaRangappa@masthead.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ashleygjovik@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ashton@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="asteris@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="aulia@octodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="austinchiangmd@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="austinmullen_@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Avital@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="badmedicaltakes@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rustybrick@c.im"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="lby3@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="benkendrick@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="blefebvre@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="bensen@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ben@werd.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="venessb@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="benjaminwittes@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="bethlinas@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="bethannepatrick@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="beebrookshire@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="bjmendelson@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="meyer@mstdn.science"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="BlackAzizAnansi@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="djspacebunny@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Itsthebrandi@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Brandi_Buchman@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="brendan_fischer@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="brendannyhan@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="brian_hioe@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="briannawu@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="somevelvetblog@jawns.club"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="bcbishop@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cameron@scholar.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="CamilleEsq@noc.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="carl@mastodon.se"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Carl_Zimmer@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="caroncreighton@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="caseyjohnellis@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="chanda@blacktwitter.io"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="charlesgaba@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cqchoi@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cgseife@sciencemastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="charlotteclymer@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cbpolis@fediscience.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="CheriJacobus@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="chetwisniewski@securitycafe.ca"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="byChipBrownlee@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="chris_brockett@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="chrisdunker@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="chrisgeidner@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="chrissistrunk@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="christiedietz@mastodonapp.uk"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ChristinaBinkley@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ChrisEliopoulos@mastodon.art"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cwnewser@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="chuckwendig@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ProfCiara@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cliffcheney@octodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="clipperchip@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="codytoshiro@twit.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="conorpwilliams@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="conradhackett@sciences.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="craigawelch@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cfarivar@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Dahlialith@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="dangillmor@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="dankennedy_nu@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="dmoren@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="danpatterson@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="danvanmoll@twit.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="danamlewis@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DanielMunoz100@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="danielschuman@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="wfkars@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DanielleBrian@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="dannysullivan@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="daveofdoom@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="profcarroll@federate.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DavidCorn@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="delima@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DavidBFox@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ironicsans@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="davidheath@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="dleopold@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="davidreevely@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="drvolts@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="slack2thefuture@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Davidtoddmccarty@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="davidvienna@bbq.snoot.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="debsylee@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="dell@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="dennisdiclaudio@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="derekcrim@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="derrickrossignol@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DevinCow@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="docpop@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="donovanh@mastodon.ie"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="alimattu@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="avrota@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="firefoxx66@mstdn.science"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="johnbiggan@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DataDrivenMD@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JoyHenningsenMD@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DrLesterColl@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="luckytran@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DrScottK@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="timsenior@aus.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="deardrewdixon@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="dsilverman@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="edbott@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="edenriegel@socel.net"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="elizaorlins@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ecmclaughlin@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="inkfish@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="emilyalpertreyes@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="emilylhauser@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Emilynussbaum@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EmmaKennedy@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ericfreyss@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ericabuist@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="erikgunn@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="eriksherman@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="eekshecried@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ernie@writing.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ethanedward@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ethanfreedman@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EthanHarp@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="easternblot@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="evanengel@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ezralevin@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="faiskap@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ferrisjabr@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="floragaramvolgyi@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="PadreSJ@twit.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="frazerbrown@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="fj@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="fumikochino@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="GWillow@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="thegarance@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="G_y_tri@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="geo_gavalda@piaille.fr"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gmusser@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gidmk@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="glennf@twit.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="glynmoody@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gcluley@mastodon.green"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="grammargirl@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="grantmarek@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gregdutra@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gepstein@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gregolear@social.snorklr.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="otto@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gregpak@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Gsiskind@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gregggonsalves@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="guthrie@mastodon.lol"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="hannahgais@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Trailanderror@scicomm.xyz"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="hdm@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="heath@mastodon.cloud"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="heidikitrosser@c.im"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="HelenBranswell@scicomm.xyz"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="HelenKennedy@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="hharteveldt@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ian@hachyderm.io"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kwokytalky@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mackayim2022@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EckerleIsabella@mstdn.science"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="izavarise@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ishmaeldaro@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="isik5@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jaspar@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jackmjenkins@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jackturban@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ejacqui@lgtm.systems"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jameeljaffer@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="simsjames@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jamieBGN@hci.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="janehong@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="wongmjane@macaw.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="drfreeride@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cyberlyra@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="janinegibson@mastodon.me.uk"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cardamomaddict@mstdn.ca"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mrcippy@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="KindrachukJason@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jasonkint@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JasonLeopold@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jasonpaladino@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jperlow@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jayarnold@mastodon.cloud"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jayrosen_nyu@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Jedshug@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jeffjarvis@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jbmatthews@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jefftiedrich@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="originalspin@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jenmercieca@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jentaub@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jeremyscahill@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jessicacalarco@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JesseScheckner@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="LevinsonJessica@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ohheyjesssager@mstdn.party"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JillianMHurley@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="joanmccarter@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jbf1755@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jodyhouser@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JoelN@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JoeyVanDeurzen@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="aravosis@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="johnbiehler@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="johnbrougher@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mrjoncryer@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="johngramlich@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jsrailton@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Jojofromjerz@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jonchristian@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jonlevy@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="akjakalope@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jman@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jlori@mastodon.cloud"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="joshtpm@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jrdorkin@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="joshua_eaton@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="joshuafrank@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JoshuaGrubbsPhD@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="theJoshMeister@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="joycekaram@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="JoyceVance@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jr@twit.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="juddlegum@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="jgcarpenter@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="justinhendrix@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="justinling@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="myersjustinc@mastodon.sdf.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kakape@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kairyssdal@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="karacarlson@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="karenattiah@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="klonick@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="katherinehawkins@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="KathyGori@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kathygriffin@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="msmacb@awscommunity.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="AstroKatie@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="katiephang@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="keith@bbq.snoot.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="KeithDevlin@fediscience.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="NatlSecCnslrs@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kellypreedy@mastodonapp.uk"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="KELLYWEILL@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kennwhite@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="keram@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="squawkfox@mastodon.cloud"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gossithedog@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kevinctofel@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Kim@masto.ai"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="KiraNewmanMDPhD@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kitoconnell@kolektiva.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="lcdavis@mastodonapp.uk"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="miblogestublog@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="lpackard@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="LRozen@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="LeahLitman@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="leahmcelrath@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="hypatia@octodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="lennyzeltser@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="leo@social.leoji.codes"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="hacks4pancakes@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="laseletzky@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="levisu@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="dillonliam@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="lguterman@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mom101@mastodon.cloud"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="loisparshley@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="loreleiking@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="manlius@mathstodon.xyz"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cj@chaos.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="marccox@mastodonapp.uk"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="marcelias@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MAArgentino@fediscience.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="marcidale@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MarcusReports@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="emptywheel@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Quasimondo@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="meharris@freeradical.zone"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="markhertling@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="marklittle@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="markpotts@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="msimmonds@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="shrinkthinks@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="martin@openedtech.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="martin_hamilton@fosstodon.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mathewi@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mattedgar@mastodon.me.uk"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mattgemmell@mastodon.scot"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MattGertz@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mkarolian@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mattortega@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mattshuham@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="matttwood@mastodon.gamedev.place"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Pwnallthethings@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="maxkennerly@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="medpagetoday@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="meghann@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MeganKelleyHall@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="meghin@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Davlin@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MelissaJPeltier@tooting.ch"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ProfMichelson@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="melissacwalker@mindly.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="micahflee@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="bolden@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mgeist@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Slaby@mastodon.cloud"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="msignorile@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="whoisbobbparris@toad.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="michelle@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cephira@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Microsiervos@mastodon.cloud"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="miguelhernan@fediscience.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MikeDenison@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MikeDiGirolamo@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mikemadrid@c.im"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MikeMathia@ioc.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Mimirocah1@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="laminda@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mirandayaver@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="molliekatzen@gensokyo.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mckra1g@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mollyjongfast@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MollyMcKew@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mrbrown@kopiti.am"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mynette@bbq.snoot.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="naomiohreally@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="nathan@breakpoint.cafe"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="nedstaebler@a2mi.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="neilhimself@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="NellSco@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="netblocks@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Nick_Craver@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="schwellenbach@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="nicolesjchung@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="GottaLaff@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="NicoletteGlazer@masthead.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="seenigel@fashionviz.xyz"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="nilikm@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ncoca@social.coop"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="noahshachtman@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ethicistforhire@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="normornstein@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="OctaviaNasr@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="owillis@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="openrightsgroup@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="oriana0214@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="parents4future@climatejustice.global"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="parker@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="pjcasey@bbq.snoot.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="pboehler@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="pdehello@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="howelloneill@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="palafo@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="LeapingRobot@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="pattysullivan@mstdn.ca"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="paulbae@mastodon.lol"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="pkrugman@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="peg@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="petergleick@fediscience.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="morethanmySLE@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="provenself@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="petersterne@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="pbump@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="philipncohen@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="phillipdewet@mastodonapp.uk"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="pogowatchdog@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="qjurecic@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="TheRaDR@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rabbijill@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="RachelFriend@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rachelmetz@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rwidome@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rajivpant@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rmayemsinger@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Yokoda@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="raywert@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="miss604@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="siegel@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="richvn@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rklau@mastodon.cloud"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="robxlii@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="RHJameson@mastodon.coffee"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="roberttsai@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rosjordan@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rjgianfortune@metalhead.club"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="hawaii@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="acetum@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="samisage@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="samueloakford@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="sandyguti@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="sarahburris@c.im"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="design_law@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="sarahposner@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="summerray@socel.net"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="pallenberg@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="saschasegan@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="queersprings@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ScottGilmore@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="DrScottHadland@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="seamusblackley@gensokyo.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="SerenaSonoma@eightpoint.app"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="serghei@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="smotus@mstdn.party"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="shanehuntley@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="shannonrwatts@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="idoubtit@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="shayne@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="sheilarfoster@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ifilljustice@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ShikhaJainMD@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="siruihua@techhub.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="souris@saturation.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="STAT@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="stephtait@robot.rodeo"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="stephenhui@mstdn.ca"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="stshank@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="SteveGarfield@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="w7voa@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="SteveHofstetter@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="marmel@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="BySteveReilly@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="stevevladeck@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="StevenBeschloss@toot.community"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="siw@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="sgwoods@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="stopfundinghate@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="stuartcantrill@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="susieneilson@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="skrishna@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="swordsjew@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="aetiology@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="tarahaelle@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="taylorlorenz@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Tnicholsmd@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Teri_Kanefield@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="terrawellington@toad.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="thenation@newsie.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="PetrieFlom@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="tdp@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="thomasdang@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="tiffanycli@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="timnitGebru@dair-community.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="tinu@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="tod@hci.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="tlee@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="antonioserrata@masto.ai"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="TNLNYC@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="tuthanhha@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="TheTyJager@universeodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ushamcfarling@sfba.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="riovictoire@infosec.exchange"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="vmontori@med-mastodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="virginiaheffernan@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="virtualastro@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="vishnu_prasad@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="walkerbragman@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="WalterShaub@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="wendysiegelman@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="wikimediaitalia@framapiaf.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="willoremus@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="will@mastodon.content.town"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="williambibbiani@bbq.snoot.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Wwwhatsnew@mastodon.cloud"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="yaneerbaryam@forall.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ylitvinenko@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="z_everson@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ZulmaCucunuba@mstdn.science"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="maxplanckgesellschaft@wisskomm.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="daniel_freund@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="rferl@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="auschwitzmuseum@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="foreignpolicy@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="european_alternatives@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Codeberg@social.anoxinon.de"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="hellomailo@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ONLYOFFICE@fosstodon.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="xeovo@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="bitwarden@fosstodon.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="passbolt@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Vivaldi@vivaldi.net"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="nextcloud@mastodon.xyz"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="cryptpad@fosstodon.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="threemaapp@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="wideangle@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="StartpageSearch@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="startmail@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="plausible@fosstodon.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mailbox_org@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Tutanota@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mullvadnet@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gpuopen@mastodon.gamedev.place"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="georgetakei@universeodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="MuellerSheWrote@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="reutersinstitute@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="thelinuxEXP@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="AdamParkhomenko@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="euractiv@masto.ai"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Krita@mastodon.art"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="thunderbird@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gnome@floss.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kde@floss.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="GIMP@floss.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gamingonlinux@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Curia@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="inkscape@mastodon.art"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="FlatpakApps@fosstodon.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="profbriancox@universeodon.com"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="ed_hawkins@fediscience.org"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="stephenfry@mastodonapp.uk"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="guyverhofstadt@mastodon.world"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mollyjongfast@journa.host"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="kathygriffin@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EUSPA@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="EU_Commission@social.network.europa.eu"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="mikegalsworthy@mas.to"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Gargron@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="simonstalenhag@mastodon.art"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Raspberry_Pi@raspberrypi.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="euobserver@eupolicy.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="Mastodon@mastodon.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="erictopol@mstdn.social"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="humanrightswatch@mastodon.online"]) .account__header__tabs__name h1 span::after,
+.account__header__bar:has(img[alt="gretathunberg@mastodon.nu"]) .account__header__tabs__name h1 span::after {
+    content: "Verified";
+    background-color: #181b23;
+    border-radius: 8px;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: white;
+    font-size: 12px;
+    background-image: url(https://innosflew.github.io/Logos/small-check-mark-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position-x: 5px;
+    background-position-y: center;
+    margin-left: 7px;
+    border: white 1px solid;
+}
