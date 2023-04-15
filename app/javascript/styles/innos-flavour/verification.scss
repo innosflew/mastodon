@@ -1,16 +1,19 @@
-$verified-accounts: "ZDF@zdf.social",
-    "@social.bund.de", // This is the mastodon server of the German Federal Commissioner for Data Protection and Freedom of Information (BfDI).
-    "TechDesk@flipboard.social",
-    "Flipboard@flipboard.social",
-    "MichaelJStern@newsie.social",
-    "1password@1password.social",
-    "MarkRuffalo@mastodon.social",
-    "notesfrompoland@mas.to",
-    "pcgamesn@mastodon.world",
-    "freedomofpress@newsie.social",
-    "base@openbiblio.social",
-    "atrupar@journa.host",
-    "mozilla@mastodon.social",
+$verified-accounts: "ZDF@zdf.social", // ZDF is a German public-service television broadcaster based in Mainz, Rhineland-Palatinate.
+    "@social.bund.de", // This is the official mastodon server of the German Federal Commissioner for Data Protection and Freedom of Information (BfDI).
+    "@social.network.europa.eu", // This is the official mastodon server of the EU institutions.
+    "TechDesk@flipboard.social", // Flipboard Tech Desk - Flipboard is a news aggregator and social network aggregation company.
+    "Flipboard@flipboard.social", // Flipboard - Flipboard is a news aggregator and social network aggregation company.
+    "NewsDesk@flipboard.social", // Flipboard News Desk - Flipboard is a news aggregator and social network aggregation company.
+    "mike@flipboard.social", // Co-founder and CEO of Flipboard - Flipboard is a news aggregator and social network aggregation company.
+    "MichaelJStern@newsie.social", // Op-ed writer for the Guardian, Chicago Tribune, USA Today, HuffPost, Slate, NY Daily News, the Hill, Boston Globe, and other news outlets. Known as @MichaelJStern1 on Twitter
+    "1password@1password.social", // 1Password is a password manager developed by AgileBits Inc.
+    "MarkRuffalo@mastodon.social", // Mark Alan Ruffalo - American actor and producer. Ruffalo gained international recognition for playing Bruce Banner / Hulk since 2012 in the superhero franchise of the Marvel Cinematic Universe.
+    "notesfrompoland@mas.to", // Notes from Poland - Independent and informed news and insight on Polish current affairs, politics, culture, business and history.
+    "pcgamesn@mastodon.world", // PCGamesN is a British online video game magazine focusing on PC gaming and hardware.
+    "freedomofpress@newsie.social", // Freedom of the Press Foundation (FPF) is a non-profit organization founded in 2012 to fund and support free speech and freedom of the press.
+    "base@openbiblio.social", // BASE (Bielefeld Academic Search Engine) is a multi-disciplinary search engine to scholarly internet resources, created by Bielefeld University Library in Bielefeld, Germany.
+    "atrupar@journa.host", // Aaron Rupar - Independent journalist and publisher of the Public Notice newsletter. Known as @atrupar on Twitter.
+    "mozilla@mastodon.social", // Mozilla is a non-profit organization that exists to support and develop free and open-source projects.
     "Teri_Kanefield@law-and-politics.online",
     "helmholtzklima@wisskomm.social",
     "minimaxir@sigmoid.social",
@@ -18,7 +21,6 @@ $verified-accounts: "ZDF@zdf.social",
     "parkermolloy@masto.ai",
     "airlineflyer@mastodon.social",
     "killyourfm@layer8.space",
-    "EP_GreensEFA@social.network.europa.eu",
     "SLagodinsky@gruene.social",
     "anna_cavazzini@gruene.social",
     "JuttaPaulus@mastodon.online",
@@ -77,16 +79,16 @@ $verified-accounts: "ZDF@zdf.social",
     "corintxt@mastodon.social",
     "mahmudasrar@mastodon.art",
     "DrPragyaAgarwal@mastodon.ie",
-    "CentralBylines@bylines.social",
-    "BylinesNetwork@bylines.social",
-    "YorksBylines@bylines.social",
-    "NWBylines@bylines.social",
-    "NEBylines@bylines.social",
-    "WEBylines@bylines.social",
-    "BylinesEast@bylines.social",
-    "KentBylines@bylines.social",
-    "SussexBylines@bylines.social",
-    "BylinesScotland@bylines.social",
+    "BylinesNetwork@mastodon.social", // Bylines Network, part of the Bylines Network, which is a network of online British newspapers
+    "CentralBylines@mastodon.social", // Central Bylines, part of the Bylines Network, which is a network of online British newspapers
+    "YorksBylines@mastodon.social", // Yorkshire Bylines, part of the Bylines Network, which is a network of online British newspapers
+    "NWBylines@mastodon.social", // North West Bylines, part of the Bylines Network, which is a network of online British newspapers
+    "NEBylines@mastodon.social", // North East Bylines, part of the Bylines Network, which is a network of online British newspapers
+    "WEBylines@mastodon.social", // West England Bylines, part of the Bylines Network, which is a network of online British newspapers
+    "BylinesEast@mastodon.social", // East Anglia Bylines, part of the Bylines Network, which is a network of online British newspapers
+    "KentBylines@mastodon.social", // Kent Bylines, part of the Bylines Network, which is a network of online British newspapers
+    "SussexBylines@mastodon.social", // Sussex Bylines, part of the Bylines Network, which is a network of online British newspapers
+    "BylinesScotland@mastodon.social", // Bylines Scotland, part of the Bylines Network, which is a network of online British newspapers
     "MeidasTouch@mstdn.social",
     "vanbadham@mastodon.social",
     "SeanCasten@mastodon.social",
@@ -99,28 +101,7 @@ $verified-accounts: "ZDF@zdf.social",
     "PeteStrzok@mastodon.social",
     "malwaretech@infosec.exchange",
     "mattgreencomedy@mastodonapp.uk",
-    "EC_Commissioner_Breton@social.network.europa.eu",
     "eff@mastodon.social",
-    "EEAS@social.network.europa.eu",
-    "FRA@social.network.europa.eu",
-    "Curia_fr@social.network.europa.eu",
-    "EC_OSPO@social.network.europa.eu",
-    "EC_NGI@social.network.europa.eu",
-    "EUIPO@social.network.europa.eu",
-    "EC_REA@social.network.europa.eu",
-    "eib@social.network.europa.eu",
-    "EDPS@social.network.europa.eu",
-    "ELA@social.network.europa.eu",
-    "ombudsman@social.network.europa.eu",
-    "EULISA@social.network.europa.eu",
-    "IHI@social.network.europa.eu",
-    "EC_Sanctions@social.network.europa.eu",
-    "EC_DIGIT@social.network.europa.eu",
-    "CDT@social.network.europa.eu",
-    "EC_DIGIT_director_general@social.network.europa.eu",
-    "EDPS_supervisor@social.network.europa.eu",
-    "EDPS_director@social.network.europa.eu",
-    "EC_Commissioner_Vestager@social.network.europa.eu",
     "QasimRashid@mastodon.social",
     "Sandrousseau@mastodon.top",
     "rbreich@masto.ai",
