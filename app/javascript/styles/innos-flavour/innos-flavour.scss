@@ -875,7 +875,7 @@ a[href*="https://www.europarl.europa.eu"] .status-card__host::after {
         border: white 1px solid;
     }
 
-    .account__header__bar:has(img[alt="#{$verified-account}"]) .account__header__tabs__name h1>span:first-child::after {
+    .account__header__bar:has(img[alt*="#{$verified-account}"]) .account__header__tabs__name h1>span:first-child::after {
         content: "Verified";
         background-color: #181b23;
         border-radius: 8px;
