@@ -524,38 +524,6 @@ a[href*="https://bylines.scot"] .status-card__host {
     height: 25px;
 }
 
-a[href*="https://www.defensenews.com"] .status-card__host {
-    background-image: url(https://i.imgur.com/nHnTrvi.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    font-size: 0 !important;
-    margin-left: -3px;
-    height: 17px;
-}
-
-a[href*="https://www.defensenews.com"] .status-card__content {
-    background: linear-gradient(0deg, rgba(14, 100, 152, 0.10688025210084029) 0%, rgba(253, 187, 45, 0) 100%);
-}
-
-a[href*="https://www.europarl.europa.eu"] .status-card__host {
-    font-size: 0 !important;
-    background-image: url(https://mstodon.eu/system/custom_emojis/images/000/000/101/original/f5ab4fa2b7fc31a5.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 19px;
-}
-
-a[href*="https://www.europarl.europa.eu"] .status-card__content {
-    background: linear-gradient(0deg, rgba(8, 60, 99, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-a[href*="https://www.europarl.europa.eu"] .status-card__host::after {
-    content: "European Parliament";
-    font-size: 14px;
-    margin-left: 22px;
-    color: #fff;
-    font-weight: 500;
-}
 */
 // Embed card colors and logos
 @each $url, $values in $logos {
