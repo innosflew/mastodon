@@ -442,15 +442,6 @@ body {
     font-size: 20px;
 }
 
-/* Custom logos for articles */
-.status-card__content:has(a.status-card__title[href*="https://www.youtube.com"]) .status-card__host {
-    background-image: url(https://innosflew.github.io/Logos/youtube.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    font-size: 0 !important;
-    height: 13px;
-}
-
 /*
 a[href*="https://westenglandbylines.co.uk"] .status-card__host {
     background-image: url(https://innosflew.github.io/Logos/WestEnglandBylinesNew.png);
@@ -526,22 +517,35 @@ a[href*="https://bylines.scot"] .status-card__host {
 
 */
 // Embed card colors and logos
-@each $url, $values in $logos {
+@each $url,
+$values in $logos {
     $logo-path: map-get($values, "logo-path");
     $background: map-get($values, "background");
-  
+
     a[href*="#{$url}"] .status-card__content {
-      background: $background;
+        background: $background;
     }
-  
+
     a[href*="#{$url}"] .status-card__host {
-      font-size: 0 !important;
-      background-image: url(#{$logo-path});
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 30px;
+        font-size: 0 !important;
+        background-image: url(#{$logo-path});
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 30px;
     }
-  }
+}
+
+.status-card__content:has(a.status-card__title[href*="https://www.youtube.com"]) .status-card__host {
+    background-image: url(https://mstodon.eu/logos/youtube.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 13px;
+}
+
+.status-card__content:has(a.status-card__title[href*="https://www.youtube.com"]) {
+    background: linear-gradient(0deg, rgba(255, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
 
 // Verification
 @each $verified-account in $verified-accounts {
@@ -586,4 +590,3 @@ a[href*="https://bylines.scot"] .status-card__host {
         border: white 1px solid;
     }
 }
-
