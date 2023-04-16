@@ -9,7 +9,7 @@ $logos: (
   ),
   "https://www.nytimes.com": (
     "logo-path": "https://mstodon.eu/logos/newyorktimes.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://www.independent.co.uk": (
     "logo-path": "https://mstodon.eu/logos/independent.svg",
@@ -17,15 +17,15 @@ $logos: (
   ),
   "https://www.bnnbloomberg.ca": (
     "logo-path": "https://mstodon.eu/logos/bloomberg.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://www.bloomberg.com": (
     "logo-path": "https://mstodon.eu/logos/bloomberg.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://www.barrons.com": (
     "logo-path": "https://mstodon.eu/logos/barrons.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://www.nbcnews.com": (
     "logo-path": "https://mstodon.eu/logos/nbc.svg",
@@ -45,11 +45,11 @@ $logos: (
   ),
   "https://www.washingtonpost.com": (
     "logo-path": "https://mstodon.eu/logos/washingtonpost.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://www.wsj.com": (
     "logo-path": "https://mstodon.eu/logos/wallstreetjournal.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://telex.hu": (
     "logo-path": "https://mstodon.eu/logos/telex.svg",
@@ -65,7 +65,7 @@ $logos: (
   ),
   "https://www.forbes.com": (
     "logo-path": "https://mstodon.eu/logos/forbes.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://www.reuters.com": (
     "logo-path": "https://mstodon.eu/logos/reuters.svg",
@@ -101,11 +101,11 @@ $logos: (
   ),
   "https://www.insider.com": (
     "logo-path": "https://mstodon.eu/logos/insider.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://www.businessinsider.com": (
     "logo-path": "https://mstodon.eu/logos/insider.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://www.axios.com": (
     "logo-path": "https://mstodon.eu/logos/axios.svg",
@@ -121,7 +121,7 @@ $logos: (
   ),
   "https://www.msn.com": (
     "logo-path": "https://mstodon.eu/logos/msn.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://reliefweb.int": (
     "logo-path": "https://mstodon.eu/logos/reliefweb.svg",
@@ -133,7 +133,7 @@ $logos: (
   ),
   "https://www.thetimes.co.uk": (
     "logo-path": "https://mstodon.eu/logos/thetimes.svg",
-    "background": linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(253, 187, 45, 0) 100%)
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   ),
   "https://time.com": (
     "logo-path": "https://mstodon.eu/logos/TIME.svg",
@@ -142,6 +142,14 @@ $logos: (
   "https://news.yahoo.com": (
     "logo-path": "https://mstodon.eu/logos/yahoo.svg",
     "background": linear-gradient(0deg, rgba(96,1,210,0.4) 0%, rgba(0,0,0,0) 100%)
+  ),
+  "https://www.abc.net.au": (
+    "logo-path": "https://mstodon.eu/logos/abcAUS.svg",
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
+  ),
+  "https://abcnews.go.com": (
+    "logo-path": "https://mstodon.eu/logos/abcnews.svg",
+    "background": linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(0,0,0,0) 100%)
   )
 );
 
