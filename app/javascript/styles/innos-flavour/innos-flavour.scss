@@ -532,6 +532,7 @@ $values in $logos {
         background-repeat: no-repeat;
         background-size: contain;
         height: 30px;
+        margin-bottom: 5px;
     }
 }
 
@@ -540,7 +541,8 @@ $values in $logos {
     background-repeat: no-repeat;
     background-size: contain;
     font-size: 0 !important;
-    height: 13px;
+    height: 35px;
+    margin-bottom: 0px;
 }
 
 .status-card__content:has(a.status-card__title[href*="https://www.youtube.com"]) {
