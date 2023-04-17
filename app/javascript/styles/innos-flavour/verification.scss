@@ -1,4 +1,4 @@
-$verified-accounts: "ZDF@zdf.social", // ZDF is a German public-service television broadcaster based in Mainz, Rhineland-Palatinate.
+$verified-accounts: "ZDF@zdf.social", // Wikipedia: https://en.wikipedia.org/wiki/ZDF
     "@social.bund.de", // This is the official mastodon server of the German Federal Commissioner for Data Protection and Freedom of Information (BfDI).
     "@social.network.europa.eu", // This is the official mastodon server of the EU institutions.
     "TechDesk@flipboard.social", // Flipboard Tech Desk - Flipboard is a news aggregator and social network aggregation company.
@@ -19,7 +19,12 @@ $verified-accounts: "ZDF@zdf.social", // ZDF is a German public-service televisi
     "minimaxir@sigmoid.social", // AMax Woolf is currently a Data Scientist at BuzzFeed in San Francisco. Twitter: @minimaxir
     "medium@me.dm", // Medium is an American online publishing platform developed by Evan Williams.
     "TechCrunch@mstdn.social", // TechCrunch is an American online newspaper focusing on high tech and startup companies.
-    "chrismessina@mastodon.xyz", // Christopher Reaves Messina (born January 7, 1981) is an American blogger, product consultant and speaker who is the inventor of the hashtag as it is currently used on social media platforms. Wikipedia: https://en.wikipedia.org/wiki/Chris_Messina_(open-source_advocate)
+    "chrismessina@mastodon.xyz", // Wikipedia: https://en.wikipedia.org/wiki/Chris_Messina_(open-source_advocate)
+    "wikipedia@wikis.world", // Wikipedia: https://en.wikipedia.org/wiki/Wikipedia
+    "mediawiki@wikis.world", // Wikipedia: https://en.wikipedia.org/wiki/MediaWiki
+    "wikidata@wikis.world", // Wikipedia: https://en.wikipedia.org/wiki/Wikidata
+    "wikicite@wikis.world", // WikiCite is an ongoing initiative to improve the data ecosystem around Wikimedia and the sources they rely on. A series of community events and the projects to come from those events. https://meta.wikimedia.org/wiki/WikiCite
+    "wikifunctions@wikis.world", // Wikipedia: https://en.wikipedia.org/wiki/Wikifunctions
     "parkermolloy@masto.ai",
     "airlineflyer@mastodon.social",
     "killyourfm@layer8.space",
@@ -664,44 +669,44 @@ $verified-accounts: "ZDF@zdf.social", // ZDF is a German public-service televisi
     "wideangle@mastodon.online",
     "threemaapp@mastodon.social",
     "cryptpad@fosstodon.org",
-    "nextcloud@mastodon.xyz",
-    "Vivaldi@vivaldi.net", // Vivaldi is a freeware, cross-platform web browser with a built-in email client developed by Vivaldi Technologies.
-    "passbolt@mastodon.social",
-    "bitwarden@fosstodon.org",
-    "xeovo@mastodon.social",
-    "ONLYOFFICE@fosstodon.org",
-    "hellomailo@mastodon.social",
-    "Codeberg@social.anoxinon.de",
-    "european_alternatives@mastodon.social",
-    "gpuopen@mastodon.gamedev.place",
-    "georgetakei@universeodon.com",
-    "MuellerSheWrote@mastodon.online",
-    "reutersinstitute@mas.to",
-    "thelinuxEXP@mastodon.social", // The Linux Experiment is a YouTube channel that creates content about Linux, privacy, and gaming.
-    "thelinuxexperiment@tilvids.com", // The PeerTube channel of The Linux Experiment that creates content about Linux, privacy, and gaming.
-    "AdamParkhomenko@mstdn.social",
-    "euractiv@masto.ai",
-    "Krita@mastodon.art",
-    "thunderbird@mastodon.online",
-    "gnome@floss.social",
-    "kde@floss.social",
-    "GIMP@floss.social",
+    "nextcloud@mastodon.xyz", // Wikipedia: https://en.wikipedia.org/wiki/Nextcloud
+    "Vivaldi@vivaldi.net", // Wikipedia: https://en.wikipedia.org/wiki/Vivaldi_(web_browser)
+    "passbolt@mastodon.social", // Passbolt is a secure and open-source password manager for teams and organizations.
+    "bitwarden@fosstodon.org", // Wikipedia: https://en.wikipedia.org/wiki/Bitwarden
+    "xeovo@mastodon.social", // Xeovo VPN is a Virtual Private Network and privacy management tool that protects users from ISP tracking and third-party spying.
+    "ONLYOFFICE@fosstodon.org", // Wikipedia: https://en.wikipedia.org/wiki/OnlyOffice
+    "hellomailo@mastodon.social", // Mailo is a service of web-based email, cloud storage, calendar and photo albums, based in France and formerly known as Net-C or NetCourrier.
+    "Codeberg@social.anoxinon.de", // Codeberg is a community-driven, non-profit software development platform.
+    "european_alternatives@mastodon.social", // This site is called European Alternatives and it helps you find European alternatives for digital service and products, like cloud services and SaaS products.
+    "gpuopen@mastodon.gamedev.place", // Wikipedia: https://en.wikipedia.org/wiki/GPUOpen
+    "georgetakei@universeodon.com", // Wikipedia: https://en.wikipedia.org/wiki/George_Takei
+    "MuellerSheWrote@mastodon.online", // Wikipedia: https://en.wikipedia.org/wiki/Mueller,_She_Wrote
+    "reutersinstitute@mas.to", // Wikipedia: https://en.wikipedia.org/wiki/Reuters_Institute_for_the_Study_of_Journalism
+    "thelinuxEXP@mastodon.social", // The Linux Experiment is a YouTube channel that creates content about Linux, privacy, and gaming. YouTube channel: https://www.youtube.com/@TheLinuxEXP
+    "thelinuxexperiment@tilvids.com", // The PeerTube channel of The Linux Experiment that creates content about Linux, privacy, and gaming. YouTube channel: https://www.youtube.com/@TheLinuxEXP
+    "AdamParkhomenko@mstdn.social", // Wikipedia: https://en.wikipedia.org/wiki/Adam_Parkhomenko
+    "euractiv@masto.ai", // Wikipedia: https://en.wikipedia.org/wiki/Euractiv
+    "Krita@mastodon.art", // Wikipedia: https://en.wikipedia.org/wiki/Krita
+    "thunderbird@mastodon.online", // Wikipedia: https://en.wikipedia.org/wiki/Mozilla_Thunderbird
+    "gnome@floss.social", // Wikipedia: https://en.wikipedia.org/wiki/GNOME
+    "kde@floss.social", // Wikipedia: https://en.wikipedia.org/wiki/KDE
+    "GIMP@floss.social", // Wikipedia: https://en.wikipedia.org/wiki/GIMP
     "gamingonlinux@mastodon.social", // GamingOnLinux is a website that provides news and information about gaming on Linux, SteamOS, and Steam Deck.
-    "inkscape@mastodon.art",
-    "FlatpakApps@fosstodon.org",
-    "profbriancox@universeodon.com",
-    "ed_hawkins@fediscience.org",
-    "stephenfry@mastodonapp.uk",
-    "guyverhofstadt@mastodon.world",
-    "mollyjongfast@journa.host", // Molly Jong-Fast (born August 19, 1978) is an American writer, journalist, author, political commentator, and podcaster. Vanity Fair special correspondent. Known as @MollyJongFast on Twitter.
-    "kathygriffin@mstdn.social", // Kathleen Mary Griffin (born November 4, 1960) is an American comedian and actress who has starred in television comedy specials and has released comedy albums.
-    "mikegalsworthy@mas.to",
-    "Gargron@mastodon.social", // Eugen Rochko is a German software developer, who is the Founder, CEO and lead developer of Mastodon.
-    "simonstalenhag@mastodon.art", // Simon Stålenhag (born 20 January 1984) is a Swedish artist, musician, and designer specialising in retro-futuristic digital images focused on nostalgic Swedish countryside alternate history environments. Known as @simonstalenhag on Twitter.
-    "Raspberry_Pi@raspberrypi.social",
-    "euobserver@eupolicy.social", // EUobserver is a European online newspaper, launched in 2000 by a Brussels-based organisation. The newspaper provides both daily reports and in-depth coverage on international affairs related to the European Union.
-    "Mastodon@mastodon.social", // Official account of the Mastodon project.
-    "erictopol@mstdn.social",
+    "inkscape@mastodon.art", // Wikipedia: https://en.wikipedia.org/wiki/Inkscape
+    "FlatpakApps@fosstodon.org", // Wikipedia: https://en.wikipedia.org/wiki/Flatpak
+    "profbriancox@universeodon.com", // Wikipedia: https://en.wikipedia.org/wiki/Brian_Cox_(physicist)
+    "ed_hawkins@fediscience.org", // Wikipedia: https://en.wikipedia.org/wiki/Ed_Hawkins_(climatologist)
+    "stephenfry@mastodonapp.uk", // Wikipedia: https://en.wikipedia.org/wiki/Stephen_Fry
+    "guyverhofstadt@mastodon.world", // Wikipedia: https://en.wikipedia.org/wiki/Guy_Verhofstadt
+    "mollyjongfast@journa.host", // Wikipedia: https://en.wikipedia.org/wiki/Molly_Jong-Fast
+    "kathygriffin@mstdn.social", // Wikipedia: https://en.wikipedia.org/wiki/Kathy_Griffin
+    "mikegalsworthy@mas.to", // Wikipedia: https://en.wikipedia.org/wiki/Mike_Galsworthy
+    "Gargron@mastodon.social", // Wikipedia: https://en.wikipedia.org/wiki/Eugen_Rochko
+    "simonstalenhag@mastodon.art", // Wikipedia: https://en.wikipedia.org/wiki/Simon_St%C3%A5lenhag
+    "Raspberry_Pi@raspberrypi.social", // Wikipedia: https://en.wikipedia.org/wiki/Raspberry_Pi
+    "euobserver@eupolicy.social", // Wikipedia: https://en.wikipedia.org/wiki/EUobserver
+    "Mastodon@mastodon.social", // Wikipedia: https://en.wikipedia.org/wiki/Mastodon_(social_network)
+    "erictopol@mstdn.social", // Wikipedia: https://en.wikipedia.org/wiki/Eric_Topol
     "geerlingguy@mastodon.social", // Raspberry Pi and tech YouTuber. YouTube channel: https://www.youtube.com/@JeffGeerling
-    "humanrightswatch@mastodon.online", // Human Rights Watch (HRW) is an international non-governmental organization that conducts research and advocacy on human rights.
-    "gretathunberg@mastodon.nu"; // Greta Thunberg (born 3 January 2003) is a Swedish environmental activist who is known for challenging world leaders to take immediate action for climate change mitigation.
+    "humanrightswatch@mastodon.online", // Wikipedia: https://en.wikipedia.org/wiki/Human_Rights_Watch
+    "gretathunberg@mastodon.nu"; // Wikipedia: https://en.wikipedia.org/wiki/Greta_Thunberg
