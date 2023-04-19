@@ -1,13 +1,24 @@
-/* Branding */
+// This add the EU stars to the preferences
 .sidebar {
-    background-image: url(https://innosflew.github.io/Logos/eustarswhite.svg);
+    background-image: url(https://mastoeuropa.eu/logos/European_stars.svg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: 180px;
 }
 
+// This is the Wordmark logo above the navigation bar
 .navigation-panel .logo {
-    height: auto;
+    height: 90px;
+}
+
+// This is the Wordmark logo in mobile view
+.ui__header__logo .logo {
+    height: 50px;
+}
+
+// This is the Wordmark logo in the login screen
+.logo-container h1 .logo {
+    height: 120px;
 }
 
 // Link previews
@@ -537,7 +548,7 @@ $values in $logos {
 }
 
 .status-card__content:has(a.status-card__title[href*="https://www.youtube.com"]) .status-card__host {
-    background-image: url(https://mstodon.eu/logos/youtube.svg);
+    background-image: url(https://mastoeuropa.eu/logos/youtube.svg);
     background-repeat: no-repeat;
     background-size: contain;
     font-size: 0 !important;
