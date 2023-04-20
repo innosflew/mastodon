@@ -428,13 +428,13 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'sidekiq_status', to: 'sidekiq_status#show'
+
   get '/admin', to: redirect('/admin/dashboard', status: 302)
 
   namespace :api, format: false do
     # OEmbed
     get '/oembed', to: 'oembed#show', as: :oembed
-
-    get 'sidekiq_status', to: 'sidekiq_status#show'
 
     # JSON / REST API
     namespace :v1 do
