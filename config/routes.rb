@@ -434,6 +434,8 @@ Rails.application.routes.draw do
     # OEmbed
     get '/oembed', to: 'oembed#show', as: :oembed
 
+    get 'sidekiq_status', to: 'sidekiq_status#show'
+
     # JSON / REST API
     namespace :v1 do
       resources :statuses, only: [:create, :show, :update, :destroy] do
