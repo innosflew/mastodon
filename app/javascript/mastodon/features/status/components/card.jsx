@@ -25,16 +25,6 @@ const getHostname = url => {
   return parser.hostname;
 };
 
-const trim = (text, len) => {
-  const cut = text.indexOf(' ', len);
-
-  if (cut === -1) {
-    return text;
-  }
-
-  return text.slice(0, cut) + (text.length > len ? '…' : '');
-};
-
 const domParser = new DOMParser();
 
 const addAutoPlay = html => {
@@ -62,7 +52,6 @@ export default class Card extends React.PureComponent {
 
   static propTypes = {
     card: ImmutablePropTypes.map,
-    maxDescription: PropTypes.number,
     onOpenMedia: PropTypes.func.isRequired,
     compact: PropTypes.bool,
     defaultWidth: PropTypes.number,
@@ -71,7 +60,6 @@ export default class Card extends React.PureComponent {
   };
 
   static defaultProps = {
-    maxDescription: 50,
     compact: false,
   };
 
@@ -184,7 +172,7 @@ export default class Card extends React.PureComponent {
   }
 
   render () {
-    const { card, maxDescription, compact } = this.props;
+    const { card, compact } = this.props;
     const { width, embedded, revealed } = this.state;
 
     if (card === null) {
@@ -201,10 +189,10 @@ export default class Card extends React.PureComponent {
     const height      = (compact && !embedded) ? (width / (16 / 9)) : (width / ratio);
 
     const description = (
-      <div className='status-card__content'>
+      <div className='status-card__content' lang={language}>
         <span className='status-card__host'>{provider}</span>
         {title}
-        {<p className='status-card__description'>{trim(card.get('description') || '', 300)}</p>}
+        {<p className='status-card__description' title={card.get('description')}>{card.get('description')}</p>}
       </div>
     );
 
