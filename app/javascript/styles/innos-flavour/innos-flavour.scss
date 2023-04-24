@@ -128,12 +128,19 @@ body {
 
 .status {
     border-bottom: none;
-    //margin-left: 56px;
+    margin-left: 56px;
 }
 
-// .status__info {
-    //margin-left: -56px;
-//}
+.status__info {
+    margin-left: -56px;
+}
+
+.status--in-thread {
+    margin-left: 0px;
+}
+.status--in-thread .status__info {
+    margin-left: 0px;
+}
 
 .status__avatar {
     box-shadow: none;
