@@ -1614,6 +1614,7 @@ en-GB:
     contrast: Mastodon (High contrast)
     default: Mastodon (Dark)
     mastodon-light: Mastodon (Light)
+    innos-flavour: Innos Flavour
   time:
     formats:
       default: "%b %d, %Y, %H:%M"

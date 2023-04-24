@@ -70,7 +70,7 @@ class DetailedStatus extends ImmutablePureComponent {
     this.props.onToggleHidden(this.props.status);
   };
 
-  _measureHeight (heightJustChanged) {
+  _measureHeight(heightJustChanged) {
     if (this.props.measureHeight && this.node) {
       scheduleIdleTask(() => this.node && this.setState({ height: Math.ceil(this.node.scrollHeight) + 1 }));
 
@@ -85,7 +85,7 @@ class DetailedStatus extends ImmutablePureComponent {
     this._measureHeight();
   };
 
-  componentDidUpdate (prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
     this._measureHeight(prevState.height !== this.state.height);
   }
 
@@ -108,7 +108,7 @@ class DetailedStatus extends ImmutablePureComponent {
     onTranslate(status);
   };
 
-  render () {
+  render() {
     const status = (this.props.status && this.props.status.get('reblog')) ? this.props.status.get('reblog') : this.props.status;
     const outerStyle = { boxSizing: 'border-box' };
     const { intl, compact, pictureInPicture } = this.props;
@@ -117,7 +117,7 @@ class DetailedStatus extends ImmutablePureComponent {
       return null;
     }
 
-    let media           = '';
+    let media = '';
     let applicationLink = '';
     let reblogLink = '';
     let reblogIcon = 'retweet';
@@ -208,7 +208,6 @@ class DetailedStatus extends ImmutablePureComponent {
     } else if (this.context.router) {
       reblogLink = (
         <React.Fragment>
-          <React.Fragment> · </React.Fragment>
           <Link to={`/@${status.getIn(['account', 'acct'])}/${status.get('id')}/reblogs`} className='detailed-status__link'>
             <Icon id={reblogIcon} />
             <span className='detailed-status__reblogs'>
@@ -220,7 +219,6 @@ class DetailedStatus extends ImmutablePureComponent {
     } else {
       reblogLink = (
         <React.Fragment>
-          <React.Fragment> · </React.Fragment>
           <a href={`/interact/${status.get('id')}?type=reblog`} className='detailed-status__link' onClick={this.handleModalLink}>
             <Icon id={reblogIcon} />
             <span className='detailed-status__reblogs'>
@@ -286,7 +284,10 @@ class DetailedStatus extends ImmutablePureComponent {
           <div className='detailed-status__meta'>
             <a className='detailed-status__datetime' href={`/@${status.getIn(['account', 'acct'])}/${status.get('id')}`} target='_blank' rel='noopener noreferrer'>
               <FormattedDate value={new Date(status.get('created_at'))} hour12={false} year='numeric' month='short' day='2-digit' hour='2-digit' minute='2-digit' />
-            </a>{edited}{visibilityLink}{applicationLink}{reblogLink} · {favouriteLink}
+            </a>{edited}{visibilityLink}{applicationLink}
+          </div>
+          <div className='detailed-status__meta detailed-status__meta_counters'>
+            {reblogLink}   {favouriteLink}
           </div>
         </div>
       </div>

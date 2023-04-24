@@ -428,6 +428,9 @@ Rails.application.routes.draw do
     end
   end
 
+  # This line was added by Innos. It provides the sidekiq ruote for the "sidekiq_status_controller.rb" file in the "app/controllers" directory.
+  get 'sidekiq_status', to: 'sidekiq_status#show'
+
   get '/admin', to: redirect('/admin/dashboard', status: 302)
 
   namespace :api, format: false do

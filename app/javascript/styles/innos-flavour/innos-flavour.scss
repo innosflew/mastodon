@@ -1,0 +1,605 @@
+// This add the EU stars to the preferences
+.sidebar {
+    background-image: url(https://mastoeuropa.eu/logos/European_stars.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 180px;
+}
+
+// This is the Wordmark logo above the navigation bar
+.navigation-panel .logo {
+    height: 90px;
+}
+
+// This is the Wordmark logo in mobile view
+.ui__header__logo .logo {
+    height: 50px;
+}
+
+// This is the Wordmark logo in the login screen
+.logo-container h1 .logo {
+    height: 120px;
+}
+
+// Link previews
+.status-card.interactive,
+.status-card.compact.interactive {
+    background-color: #191b22;
+    border-radius: 10px;
+    border: 1px solid #313543;
+}
+
+a.status-card,
+a.status-card.compact {
+    background-color: #191b22;
+    display: block;
+    border-radius: 10px;
+}
+
+.fa-file-text::before {
+    content: "";
+}
+
+.status-card.interactive .status-card__image-image,
+.status-card.compact.interactive .status-card__image-image,
+a.status-card .status-card__image-image,
+a.status-card .status-card__image-image.compact {
+    height: 275.63px;
+}
+
+.status-card.interactive .status-card__content,
+.status-card.compact.interactive .status-card__content,
+a.status-card .status-card__content,
+a.status-card.compact .status-card__content {
+    padding: 15px;
+}
+
+.status-card.interactive .status-card__title,
+.status-card.compact.interactive .status-card__title,
+a.status-card .status-card__title,
+a.status-card.compact .status-card__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: white;
+    white-space: inherit;
+}
+
+.status-card.interactive .status-card__host,
+.status-card.compact.interactive .status-card__host,
+a.status-card .status-card__host,
+a.status-card.compact .status-card__host {
+    font-size: 14px;
+    color: #71767b;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.status-card.interactive .status-card__description,
+.status-card.compact.interactive .status-card__description,
+a.status-card .status-card__description,
+a.status-card.compact .status-card__description {
+    color: #71767b;
+}
+
+.status-card__image-image,
+.status-card__image-preview {
+    border-radius: 0px;
+}
+
+/* Theming */
+body {
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.column-link {
+    font-size: 18px;
+}
+
+.column-header {
+    font-size: 18px;
+}
+
+.icon-with-badge {
+    font-size: 18px;
+}
+
+.account__header__content {
+    font-size: 15px;
+}
+
+.account__avatar {
+    border-radius: 100px;
+}
+
+.notification,
+.status__wrapper {
+    border-bottom: 1px solid #393f4f;
+}
+
+.media-gallery__item-thumbnail img,
+.media-gallery__preview {
+    border-radius: 10px;
+}
+
+.video-player {
+    border-radius: 10px;
+}
+
+.status {
+    border-bottom: none;
+    margin-left: 56px;
+}
+
+.status__info {
+    margin-left: -56px;
+}
+
+.status__info .status__display-name .display-name__account {
+    display: inline;
+}
+
+.status__info .display-name {
+    margin-top: -28px;
+}
+
+.status-unlisted .status__content,
+.status-public .status__content,
+.status-direct .status__content,
+.status-reply .status__content {
+    margin-top: -32px;
+}
+
+@media screen and (min-width: 1175px) {
+    .columns-area__panels__main {
+        padding: 0px;
+        margin: 0 10px;
+        border-left: 1px solid #393f4f;
+        border-right: 1px solid #393f4f;
+    }
+}
+
+.column>.scrollable {
+    background: transparent;
+}
+
+.column-header {
+    background: transparent;
+}
+
+.column-header__button {
+    background: transparent;
+}
+
+.detailed-status {
+    background: transparent;
+}
+
+.column-header__button.active,
+.column-header__button.active:hover {
+    background: transparent;
+}
+
+.detailed-status__action-bar {
+    background: transparent;
+    padding: 13px 0;
+    margin: 0 16px;
+}
+
+.column-header__back-button {
+    background: transparent;
+    font-size: 18px;
+}
+
+.announcements__item__range {
+    font-size: 20px;
+}
+
+.tabs-bar__wrapper {
+    border-bottom: 1px solid #393f4f;
+}
+
+.notification:hover,
+.status__wrapper:hover {
+    background: #282c37;
+}
+
+@media screen and (min-width: 1450px) {
+    .compose-panel {
+        width: 400px;
+        margin-left: -115px;
+    }
+}
+
+.compose-panel .compose-form__autosuggest-wrapper {
+    background-color: transparent;
+}
+
+.compose-form .autosuggest-textarea__textarea,
+.compose-form .spoiler-input__input {
+    color: #fff;
+    background: #282c37;
+    font-size: 15px;
+}
+
+.compose-form .compose-form__modifiers {
+    color: #fff;
+    background: #282c37;
+}
+
+.compose-form .compose-form__buttons-wrapper {
+    background: transparent;
+    border: 1px solid #282c37;
+}
+
+.compose-form__poll-wrapper {
+    border-top: 1px solid #606984;
+}
+
+.compose-form__poll-wrapper .poll__footer {
+    border-top: 1px solid #606984;
+}
+
+.poll__option input[type=text] {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #606984;
+}
+
+.reply-indicator__content,
+.status__content {
+    line-height: 22px;
+}
+
+.detailed-status .status__content {
+    font-size: 21px;
+    line-height: 28px;
+}
+
+.language-dropdown__dropdown__results__item {
+    color: #fff;
+}
+
+.emoji-mart-search {
+    background: #282c37;
+}
+
+.emoji-mart-scroll {
+    background: #282c37;
+}
+
+.emoji-mart-search input {
+    color: #fff;
+    border: 1px solid #606984;
+}
+
+.language-dropdown__dropdown__results__item:active,
+.language-dropdown__dropdown__results__item:focus,
+.language-dropdown__dropdown__results__item:hover {
+    background: #3b4153;
+}
+
+.emoji-mart-category-label span {
+    background: #282c37;
+    color: #d9e1e8;
+}
+
+.emoji-mart-bar:first-child {
+    background: #282c37;
+}
+
+.emoji-picker-dropdown__menu {
+    background: #282c37;
+}
+
+.emoji-mart-anchor {
+    color: #d9e1e8;
+}
+
+.privacy-dropdown__dropdown {
+    background: #282c37;
+}
+
+.privacy-dropdown__option {
+    color: #d9e1e8;
+}
+
+.privacy-dropdown__option__content strong {
+    color: #d9e1e8;
+}
+
+.compose-form .autosuggest-textarea__suggestions {
+    background: #282c37;
+    color: #fff;
+}
+
+.compose-form .autosuggest-textarea__suggestions__item.selected,
+.compose-form .autosuggest-textarea__suggestions__item:active,
+.compose-form .autosuggest-textarea__suggestions__item:focus,
+.compose-form .autosuggest-textarea__suggestions__item:hover {
+    background: #3b4153;
+}
+
+.detailed-status__meta {
+    font-size: 15px;
+}
+
+.detailed-status__favorites,
+.detailed-status__reblogs {
+    font-size: 15px;
+}
+
+.icon-button__counter {
+    display: inline-block;
+}
+
+.detailed-status__meta_counters {
+    display: block;
+    border-top: 1px solid #393f4f;
+    padding-top: 15px;
+}
+
+.detailed-status__link:before {
+    content: "   ";
+}
+
+.column-back-button {
+    background: transparent;
+}
+
+.account__header {
+    background: transparent;
+}
+
+.account__header__image {
+    height: 200px;
+}
+
+.account_header.field_with_hint span.hint:after {
+    content: " (Note: This will be displayed at 598x200px on your profile.)";
+}
+
+.dropdown-menu {
+    background: #282c37;
+}
+
+.dropdown-menu__arrow.top {
+    border-top-color: #282c37;
+}
+
+.dropdown-menu__item a,
+.dropdown-menu__item button {
+    padding: 8px 14px;
+    background: #282c37;
+}
+
+.dropdown-menu__item {
+    color: #d9e1e8;
+    font-size: 15px;
+}
+
+.actions-modal,
+.block-modal,
+.boost-modal,
+.compare-history-modal,
+.confirmation-modal,
+.mute-modal,
+.report-modal {
+    background: #282c37;
+    color: #d9e1e8;
+}
+
+.block-modal__action-bar,
+.boost-modal__action-bar,
+.confirmation-modal__action-bar,
+.mute-modal__action-bar {
+    background: #191b22;
+}
+
+.detailed-status__favorites,
+.detailed-status__reblogs {
+    color: #d9e1e8;
+    font-weight: bolder;
+}
+
+.detailed-status__favorites .animated-number:hover,
+.detailed-status__reblogs .animated-number:hover {
+    text-decoration: underline;
+}
+
+.detailed-status__reblogs .animated-number span span:after {
+    content: " Boosts";
+    font-weight: normal;
+    color: #606984;
+}
+
+.detailed-status__favorites .animated-number span span:after {
+    content: " Favorites";
+    font-weight: normal;
+    color: #606984;
+}
+
+/* Hashtags */
+.hashtag.status-link {
+    background-color: #898db84f;
+    padding: 0px 5px;
+    border-style: dashed;
+    border-color: #CCC;
+    border-width: 0.5px;
+    border-radius: 6px;
+    font-family: "mastodon-font-sans-serif", sans-serif;
+}
+
+.hashtag.status-link:hover {
+    background-color: #cdd2f54f;
+}
+
+.detailed-status .hashtag.status-link {
+    font-size: 20px;
+}
+
+.u-url.mention.status-link {
+    background-color: #a7aeff4d;
+    padding: 0px 3px;
+    border-radius: 6px;
+    font-family: "mastodon-font-sans-serif", sans-serif;
+}
+
+.u-url.mention.status-link:hover {
+    background-color: #cdd2f54f;
+}
+
+.detailed-status .u-url.mention.status-link {
+    font-size: 20px;
+}
+
+/*
+a[href*="https://westenglandbylines.co.uk"] .status-card__host {
+    background-image: url(https://innosflew.github.io/Logos/WestEnglandBylinesNew.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 33px;
+}
+
+a[href*="https://bylinesnetwork.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/MqCz98y.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 33px;
+}
+
+a[href*="https://kentbylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/g5vaISq.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 30px;
+}
+
+a[href*="https://centralbylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/sCEXu3Y.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 40px;
+}
+
+a[href*="https://eastangliabylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/3Vh0Kh9.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 40px;
+}
+
+a[href*="https://northeastbylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/iebJbNi.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 20px;
+}
+
+a[href*="https://yorkshirebylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/OPutunb.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 25px;
+}
+
+a[href*="https://northwestbylines.co.uk"] .status-card__host {
+    background-image: url(https://i.imgur.com/m3A4zU8.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 25px;
+}
+
+a[href*="https://bylines.scot"] .status-card__host {
+    background-image: url(https://i.imgur.com/RwhtmTq.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 25px;
+}
+
+*/
+// Embed card colors and logos
+@each $url,
+$values in $logos {
+    $logo-path: map-get($values, "logo-path");
+    $background: map-get($values, "background");
+
+    a[href*="#{$url}"] .status-card__content {
+        background: $background;
+    }
+
+    a[href*="#{$url}"] .status-card__host {
+        font-size: 0 !important;
+        background-image: url(#{$logo-path});
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+}
+
+.status-card__content:has(a.status-card__title[href*="https://www.youtube.com"]) .status-card__host {
+    background-image: url(https://mastoeuropa.eu/logos/youtube.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0 !important;
+    height: 35px;
+    margin-bottom: 0px;
+}
+
+.status-card__content:has(a.status-card__title[href*="https://www.youtube.com"]) {
+    background: linear-gradient(0deg, rgba(255, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+// Verification
+@each $verified-account in $verified-accounts {
+    a[href*="#{$verified-account}"] .display-name .display-name__html::after {
+        content: "Verified";
+        background-color: #181b23;
+        border-radius: 8px;
+        font-weight: 500;
+        padding-left: 20px;
+        padding-right: 5px;
+        color: white;
+        font-size: 12px;
+        background-image: url(https://innosflew.github.io/Logos/small-check-mark-icon.svg);
+        background-repeat: no-repeat;
+        background-size: 12px;
+        background-position-x: 5px;
+        background-position-y: center;
+        margin-left: 7px;
+        display: inline-block;
+        height: 18px;
+        line-height: 18px;
+        border: white 1px solid;
+    }
+
+    .account__header__bar:has(img[alt*="#{$verified-account}"]) .account__header__tabs__name h1>span:first-child::after {
+        content: "Verified";
+        background-color: #181b23;
+        border-radius: 8px;
+        font-weight: 500;
+        padding-left: 20px;
+        padding-right: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        color: white;
+        font-size: 12px;
+        background-image: url(https://innosflew.github.io/Logos/small-check-mark-icon.svg);
+        background-repeat: no-repeat;
+        background-size: 12px;
+        background-position-x: 5px;
+        background-position-y: center;
+        margin-left: 7px;
+        border: white 1px solid;
+    }
+}
