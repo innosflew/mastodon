@@ -122,8 +122,9 @@ body {
 }
 
 .status {
-    border-bottom: none;
-    margin-left: 56px;
+    //border-bottom: none;
+    //margin-left: 56px;
+    padding: 16px 16px 16px 72px;
 }
 
 .status__info {
@@ -131,7 +132,7 @@ body {
 }
 
 .status--in-thread {
-    margin-left: 0px;
+    padding-left: 16px;
 }
 .status--in-thread .status__info {
     margin-left: 0px;
