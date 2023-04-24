@@ -128,11 +128,15 @@ body {
 
 .status {
     border-bottom: none;
-    margin-left: 56px;
+    //margin-left: 56px;
 }
 
-.status__info {
-    margin-left: -56px;
+// .status__info {
+    //margin-left: -56px;
+//}
+
+.status__avatar {
+    box-shadow: none;
 }
 
 .status__info .status__display-name .display-name__account {
