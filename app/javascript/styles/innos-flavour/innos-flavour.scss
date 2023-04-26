@@ -1,6 +1,6 @@
 // This add the EU stars to the preferences
 .sidebar {
-    background-image: url(https://mastoeuropa.eu/logos/European_stars.svg);
+    background-image: url(https://fedieuropa.eu/logos/European_stars.svg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: 180px;
@@ -466,7 +466,7 @@ body {
 
 /*
 a[href*="https://westenglandbylines.co.uk"] .status-card__host {
-    background-image: url(https://mastoeuropa.eu/logos/WestEnglandBylinesNew.png);
+    background-image: url(https://fedieuropa.eu/logos/WestEnglandBylinesNew.png);
     background-repeat: no-repeat;
     background-size: contain;
     font-size: 0 !important;
@@ -559,7 +559,7 @@ $values in $logos {
 }
 
 .status-card__content:has(a.status-card__title[href*="https://www.youtube.com"]) .status-card__host {
-    background-image: url(https://mastoeuropa.eu/logos/youtube.svg);
+    background-image: url(https://fedieuropa.eu/logos/youtube.svg);
     background-repeat: no-repeat;
     background-size: contain;
     font-size: 0 !important;
@@ -582,7 +582,7 @@ $values in $logos {
         padding-right: 5px;
         color: white;
         font-size: 12px;
-        background-image: url(https://mastoeuropa.eu/logos/small-check-mark-icon.svg);
+        background-image: url(https://fedieuropa.eu/logos/small-check-mark-icon.svg);
         background-repeat: no-repeat;
         background-size: 12px;
         background-position-x: 5px;
@@ -605,7 +605,7 @@ $values in $logos {
         padding-bottom: 2px;
         color: white;
         font-size: 12px;
-        background-image: url(https://mastoeuropa.eu/logos/small-check-mark-icon.svg);
+        background-image: url(https://fedieuropa.eu/logos/small-check-mark-icon.svg);
         background-repeat: no-repeat;
         background-size: 12px;
         background-position-x: 5px;
