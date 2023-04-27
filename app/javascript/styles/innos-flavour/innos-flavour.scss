@@ -1,3 +1,9 @@
+// Color variables
+$ec-blue: #004494;
+$ec-blue-mid-light: #0566d9;
+$ec-blue-full-light: #0075ff;
+$greyish-white: #d9e1e8;
+
 // This add the EU stars to the preferences
 .sidebar {
     background-image: url(https://fedieuropa.eu/logos/European_stars.svg);
@@ -28,6 +34,128 @@
     border-radius: 10px;
     border: 1px solid #313543;
 }
+
+// This is to color buttons, like "Publish!" button
+.button {
+    background-color: $ec-blue-mid-light;
+}
+.button:active,
+.button:focus,
+.button:hover {
+    background-color: $ec-blue-full-light;
+}
+
+// Poll button colors
+.icon-button.inverted.active {
+    color: $ec-blue-mid-light;
+}
+.icon-button.active {
+    color: $ec-blue-mid-light;
+}
+
+// Poll text area highlight when focused
+.poll__option input[type=text]:focus {
+    border-color: $ec-blue-mid-light;
+}
+
+// Poll selector highlight when focused
+.compose-form__poll-wrapper .poll__footer button:focus,
+.compose-form__poll-wrapper .poll__footer select:focus {
+    border-color: $ec-blue-mid-light;
+}
+
+// Post visibility selector
+.privacy-dropdown.active .privacy-dropdown__value.active {
+    background: $ec-blue-mid-light;
+}
+.privacy-dropdown__option.active,
+.privacy-dropdown__option:hover {
+    background: $ec-blue-full-light;
+}
+.privacy-dropdown__option.active:hover {
+    background: $ec-blue-full-light;
+}
+.privacy-dropdown__option {
+    color: $greyish-white;
+}
+.privacy-dropdown__option__content strong {
+    color: $greyish-white;
+}
+.privacy-dropdown__dropdown {
+    background: #282c37;
+}
+
+// Content warning button
+.text-icon-button.active {
+    color: $ec-blue-mid-light;
+}
+
+// Post language selector
+.language-dropdown__dropdown__results__item.active {
+    background: $ec-blue-mid-light;
+}
+.language-dropdown__dropdown__results__item.active:hover {
+    background: $ec-blue-mid-light;
+}
+.language-dropdown__dropdown__results__item {
+    color: #fff;
+}
+.language-dropdown__dropdown__results__item:active,
+.language-dropdown__dropdown__results__item:focus,
+.language-dropdown__dropdown__results__item:hover {
+    background: #3b4153;
+}
+
+// Notification message icon
+.notification__message .fa {
+    color: $ec-blue-mid-light;
+}
+
+// Links
+.reply-indicator__content a.unhandled-link,
+.status__content a.unhandled-link {
+    color: $ec-blue-mid-light;
+}
+
+// About page selection titles
+.about__section__title {
+    color: $ec-blue-mid-light;
+}
+
+// Rules
+.rules-list li:before {
+    background: $ec-blue-mid-light;
+    color: #fff;
+}
+
+// Hashtags
+.hashtag.status-link {
+    padding: 0px 5px;
+    border-style: solid;
+    border-color: $ec-blue-full-light;
+    border-width: 0.5px;
+    border-radius: 6px;
+    font-family: "mastodon-font-sans-serif", sans-serif;
+}
+.hashtag.status-link:hover {
+    background-color: #898db84f;
+}
+.hashtag.status-link:hover span {
+    text-decoration: none;
+}
+
+// Mentions
+.u-url.mention.status-link {
+    font-weight: bold;
+}
+
+// Hashtag and mention color
+.reply-indicator__content a,
+.status__content a {
+    color: $ec-blue-mid-light;
+}
+
+//
 
 a.status-card,
 a.status-card.compact {
@@ -267,10 +395,6 @@ body {
     line-height: 28px;
 }
 
-.language-dropdown__dropdown__results__item {
-    color: #fff;
-}
-
 .emoji-mart-search {
     background: #282c37;
 }
@@ -284,11 +408,6 @@ body {
     border: 1px solid #606984;
 }
 
-.language-dropdown__dropdown__results__item:active,
-.language-dropdown__dropdown__results__item:focus,
-.language-dropdown__dropdown__results__item:hover {
-    background: #3b4153;
-}
 
 .emoji-mart-category-label span {
     background: #282c37;
@@ -307,17 +426,8 @@ body {
     color: #d9e1e8;
 }
 
-.privacy-dropdown__dropdown {
-    background: #282c37;
-}
 
-.privacy-dropdown__option {
-    color: #d9e1e8;
-}
 
-.privacy-dropdown__option__content strong {
-    color: #d9e1e8;
-}
 
 .compose-form .autosuggest-textarea__suggestions {
     background: #282c37;
@@ -428,40 +538,6 @@ body {
     content: " Favorites";
     font-weight: normal;
     color: #606984;
-}
-
-/* Hashtags */
-.hashtag.status-link {
-    background-color: #898db84f;
-    padding: 0px 5px;
-    border-style: dashed;
-    border-color: #CCC;
-    border-width: 0.5px;
-    border-radius: 6px;
-    font-family: "mastodon-font-sans-serif", sans-serif;
-}
-
-.hashtag.status-link:hover {
-    background-color: #cdd2f54f;
-}
-
-.detailed-status .hashtag.status-link {
-    font-size: 20px;
-}
-
-.u-url.mention.status-link {
-    background-color: #a7aeff4d;
-    padding: 0px 3px;
-    border-radius: 6px;
-    font-family: "mastodon-font-sans-serif", sans-serif;
-}
-
-.u-url.mention.status-link:hover {
-    background-color: #cdd2f54f;
-}
-
-.detailed-status .u-url.mention.status-link {
-    font-size: 20px;
 }
 
 /*
