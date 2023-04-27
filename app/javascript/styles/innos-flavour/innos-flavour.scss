@@ -3,6 +3,7 @@ $ec-blue: #004494;
 $ec-blue-mid-light: #0566d9;
 $ec-blue-full-light: #0075ff;
 $greyish-white: #d9e1e8;
+$muted: #606984;
 
 // This add the EU stars to the preferences
 .sidebar {
@@ -64,6 +65,11 @@ $greyish-white: #d9e1e8;
     border-color: $ec-blue-mid-light;
 }
 
+// Poll add new options button
+.compose-form__poll-wrapper .button.button-secondary {
+    color: white;
+}
+
 // Post visibility selector
 .privacy-dropdown.active .privacy-dropdown__value.active {
     background: $ec-blue-mid-light;
@@ -116,6 +122,10 @@ $greyish-white: #d9e1e8;
 .status__content a.unhandled-link {
     color: $ec-blue-mid-light;
 }
+.muted .reply-indicator__content a.unhandled-link,
+.muted .status__content a.unhandled-link {
+    color: $muted;
+}
 
 // About page selection titles
 .about__section__title {
@@ -143,6 +153,9 @@ $greyish-white: #d9e1e8;
 .hashtag.status-link:hover span {
     text-decoration: none;
 }
+.muted .hashtag.status-link {
+    border-color: $muted;
+}
 
 // Mentions
 .u-url.mention.status-link {
@@ -152,6 +165,66 @@ $greyish-white: #d9e1e8;
 // Hashtag and mention color
 .reply-indicator__content a,
 .status__content a {
+    color: $ec-blue-mid-light;
+}
+
+// Navigation bar currently selected page
+.column-link--transparent.active {
+    color: $ec-blue-mid-light;
+}
+
+// Preferences page seleted menu
+.admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
+    background-color: $ec-blue-mid-light;
+}
+
+// Admin dashboard buttons
+.dashboard__quick-access {
+    background: $ec-blue-mid-light;
+}
+.admin-wrapper .content__heading__tabs a.selected {
+    background: $ec-blue-mid-light;
+}
+.simple_form .block-button,
+.simple_form .button,
+.simple_form button {
+    background: $ec-blue-mid-light;
+}
+
+// Admin dashboard links
+.simple_form .hint a {
+    color: $ec-blue-mid-light;
+}
+.filters .filter-subset a.selected {
+    border-bottom: 2px solid $ec-blue-mid-light;
+    color: $ec-blue-mid-light;
+}
+
+// Admin dashboard account arrows
+.accounts-table .fa.active {
+    color: $ec-blue-mid-light;
+}
+
+// Active or focused text area
+.simple_form input[type=datetime-local]:active,
+.simple_form input[type=datetime-local]:focus,
+.simple_form input[type=email]:active,
+.simple_form input[type=email]:focus,
+.simple_form input[type=number]:active,
+.simple_form input[type=number]:focus,
+.simple_form input[type=password]:active,
+.simple_form input[type=password]:focus,
+.simple_form input[type=text]:active,
+.simple_form input[type=text]:focus,
+.simple_form input[type=url]:active,
+.simple_form input[type=url]:focus,
+.simple_form textarea:active,
+.simple_form textarea:focus {
+    border-color: $ec-blue-mid-light;
+}
+
+// Status read more button
+.status__content__read-more-button {
     color: $ec-blue-mid-light;
 }
 
@@ -336,11 +409,6 @@ body {
 
 .tabs-bar__wrapper {
     border-bottom: 1px solid #393f4f;
-}
-
-.notification:hover,
-.status__wrapper:hover {
-    background: #282c37;
 }
 
 @media screen and (min-width: 1450px) {
