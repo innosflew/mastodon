@@ -771,7 +771,7 @@ $values in $logos {
 @each $verified-account in $verified-accounts {
     a[href*="#{$verified-account}"] .display-name .display-name__html::after {
         content: "Verified";
-        background-color: #181b23;
+        background-color: #054085;
         border-radius: 8px;
         font-weight: 500;
         padding-left: 20px;
@@ -787,12 +787,12 @@ $values in $logos {
         display: inline-block;
         height: 18px;
         line-height: 18px;
-        border: white 1px solid;
+        //border: white 1px solid;
     }
 
     .account__header__bar:has(img[alt*="#{$verified-account}"]) .account__header__tabs__name h1>span:first-child::after {
         content: "Verified";
-        background-color: #181b23;
+        background-color: #054085;
         border-radius: 8px;
         font-weight: 500;
         padding-left: 20px;
@@ -807,6 +807,6 @@ $values in $logos {
         background-position-x: 5px;
         background-position-y: center;
         margin-left: 7px;
-        border: white 1px solid;
+        //border: white 1px solid;
     }
 }
