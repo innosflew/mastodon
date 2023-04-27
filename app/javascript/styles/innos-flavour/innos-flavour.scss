@@ -2,6 +2,7 @@
 $ec-blue: #004494;
 $ec-blue-mid-light: #3479c9;
 $ec-blue-full-light: #0075ff;
+$verified-color: #1056a7;
 $greyish-white: #d9e1e8;
 $muted: #606984;
 
@@ -295,6 +296,11 @@ body .muted-hint a {
 .dropdown-menu__item {
     color: #d9e1e8;
     font-size: 15px;
+}
+
+// Boost icon
+button.icon-button i.fa-retweet {
+    background-image: url(https://fedieuropa.eu/logos/boost.svg);
 }
 
 //
@@ -771,7 +777,7 @@ $values in $logos {
 @each $verified-account in $verified-accounts {
     a[href*="#{$verified-account}"] .display-name .display-name__html::after {
         content: "Verified";
-        background-color: #1056a7;
+        background-color: $verified-color
         border-radius: 8px;
         font-weight: 500;
         padding-left: 20px;
@@ -792,7 +798,7 @@ $values in $logos {
 
     .account__header__bar:has(img[alt*="#{$verified-account}"]) .account__header__tabs__name h1>span:first-child::after {
         content: "Verified";
-        background-color: #1056a7;
+        background-color: $verified-color
         border-radius: 8px;
         font-weight: 500;
         padding-left: 20px;
