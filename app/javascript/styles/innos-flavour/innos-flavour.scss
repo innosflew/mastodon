@@ -386,8 +386,6 @@ body {
 }
 
 .status {
-    //border-bottom: none;
-    //margin-left: 56px;
     padding: 16px 16px 16px 72px;
 }
 
@@ -402,7 +400,11 @@ body {
     margin-left: 0px;
 }
 
-.status--in-thread .status-card.compact {
+.status--in-thread .status-card.compact,
+.status--in-thread .status .attachment-list,
+.status--in-thread .status .audio-player,
+.status--in-thread .status .media-gallery,
+.status--in-thread .status .video-player {
     margin-left: 56px;
 }
 
