@@ -1,6 +1,6 @@
 // Color variables
 $ec-blue: #004494;
-$ec-blue-mid-light: #3875bb;
+$ec-blue-mid-light: #3479c9;
 $ec-blue-full-light: #0075ff;
 $greyish-white: #d9e1e8;
 $muted: #606984;
@@ -191,6 +191,9 @@ $muted: #606984;
 // Preferences page seleted menu
 .admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
     background-color: $ec-blue-mid-light;
+}
+.admin-wrapper .sidebar ul .simple-navigation-active-leaf a:hover {
+    background-color: $ec-blue-full-light;
 }
 
 // Admin dashboard buttons
