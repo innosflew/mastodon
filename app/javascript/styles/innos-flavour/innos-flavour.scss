@@ -45,6 +45,14 @@ $muted: #606984;
 .button:hover {
     background-color: $ec-blue-full-light;
 }
+.button.logo-button {
+    background: $ec-blue-mid-light;
+}
+.button.logo-button:active,
+.button.logo-button:focus,
+.button.logo-button:hover {
+    background: $ec-blue-full-light;
+}
 
 // Poll button colors
 .icon-button.inverted.active {
@@ -126,6 +134,9 @@ $muted: #606984;
 .muted .status__content a.unhandled-link {
     color: $muted;
 }
+.prose a {
+    color: $ec-blue-mid-light;
+}
 
 // About page selection titles
 .about__section__title {
@@ -190,6 +201,17 @@ $muted: #606984;
 .simple_form button {
     background: $ec-blue-mid-light;
 }
+.simple_form .block-button:active,
+.simple_form .block-button:focus,
+.simple_form .block-button:hover,
+.simple_form .button:active,
+.simple_form .button:focus,
+.simple_form .button:hover,
+.simple_form button:active,
+.simple_form button:focus,
+.simple_form button:hover {
+    background-color: $ec-blue-full-light;
+}
 
 // Admin dashboard links
 .simple_form .hint a {
@@ -199,10 +221,22 @@ $muted: #606984;
     border-bottom: 2px solid $ec-blue-mid-light;
     color: $ec-blue-mid-light;
 }
+.admin-wrapper .content .muted-hint a,
+body .muted-hint a {
+    color: $ec-blue-mid-light;
+}
+.table a {
+    color: $ec-blue-mid-light;
+}
 
 // Admin dashboard account arrows
 .accounts-table .fa.active {
     color: $ec-blue-mid-light;
+}
+
+// Admin dashboard dots
+.dimension__item__indicator {
+    background: $ec-blue-mid-light;
 }
 
 // Active or focused text area
@@ -226,6 +260,31 @@ $muted: #606984;
 // Status read more button
 .status__content__read-more-button {
     color: $ec-blue-mid-light;
+}
+
+// Dropdown menu
+.dropdown-menu__item a:active,
+.dropdown-menu__item a:focus,
+.dropdown-menu__item a:hover,
+.dropdown-menu__item button:active,
+.dropdown-menu__item button:focus,
+.dropdown-menu__item button:hover {
+    background: $ec-blue-mid-light;
+}
+.dropdown-menu {
+    background: #282c37;
+}
+.dropdown-menu__arrow.top {
+    border-top-color: #282c37;
+}
+.dropdown-menu__item a,
+.dropdown-menu__item button {
+    padding: 8px 14px;
+    background: #282c37;
+}
+.dropdown-menu__item {
+    color: #d9e1e8;
+    font-size: 15px;
 }
 
 //
@@ -546,25 +605,6 @@ body {
 
 .account_header.field_with_hint span.hint:after {
     content: " (Note: This will be displayed at 598x200px on your profile.)";
-}
-
-.dropdown-menu {
-    background: #282c37;
-}
-
-.dropdown-menu__arrow.top {
-    border-top-color: #282c37;
-}
-
-.dropdown-menu__item a,
-.dropdown-menu__item button {
-    padding: 8px 14px;
-    background: #282c37;
-}
-
-.dropdown-menu__item {
-    color: #d9e1e8;
-    font-size: 15px;
 }
 
 .actions-modal,
