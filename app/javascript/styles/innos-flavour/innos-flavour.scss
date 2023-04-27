@@ -83,6 +83,11 @@ $muted: #606984;
     color: white;
 }
 
+// Poll bar color
+.poll__chart.leading {
+    background: $ec-blue-full-light;
+}
+
 // Post visibility selector
 .privacy-dropdown.active .privacy-dropdown__value.active {
     background: $ec-blue-mid-light;
