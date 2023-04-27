@@ -1,6 +1,6 @@
 // Color variables
 $ec-blue: #004494;
-$ec-blue-mid-light: #0566d9;
+$ec-blue-mid-light: #3875bb;
 $ec-blue-full-light: #0075ff;
 $greyish-white: #d9e1e8;
 $muted: #606984;
@@ -132,19 +132,19 @@ $muted: #606984;
 // Links
 .reply-indicator__content a.unhandled-link,
 .status__content a.unhandled-link {
-    color: $ec-blue-full-light;
+    color: $ec-blue-mid-light;
 }
 .muted .reply-indicator__content a.unhandled-link,
 .muted .status__content a.unhandled-link {
     color: $muted;
 }
 .prose a {
-    color: $ec-blue-full-light;
+    color: $ec-blue-mid-light;
 }
 
 // About page selection titles
 .about__section__title {
-    color: $ec-blue-full-light;
+    color: $ec-blue-mid-light;
 }
 
 // Rules
@@ -157,7 +157,7 @@ $muted: #606984;
 .hashtag.status-link {
     padding: 0px 5px;
     border-style: solid;
-    border-color: $ec-blue-full-light;
+    border-color: $ec-blue-mid-light;
     border-width: 0.5px;
     border-radius: 6px;
     font-family: "mastodon-font-sans-serif", sans-serif;
@@ -180,7 +180,7 @@ $muted: #606984;
 // Hashtag and mention color
 .reply-indicator__content a,
 .status__content a {
-    color: $ec-blue-full-light;
+    color: $ec-blue-mid-light;
 }
 
 // Navigation bar currently selected page
@@ -219,18 +219,18 @@ $muted: #606984;
 
 // Admin dashboard links
 .simple_form .hint a {
-    color: $ec-blue-full-light;
+    color: $ec-blue-mid-light;
 }
 .filters .filter-subset a.selected {
-    border-bottom: 2px solid $ec-blue-full-light;
-    color: $ec-blue-full-light;
+    border-bottom: 2px solid $ec-blue-mid-light;
+    color: $ec-blue-mid-light;
 }
 .admin-wrapper .content .muted-hint a,
 body .muted-hint a {
-    color: $ec-blue-full-light;
+    color: $ec-blue-mid-light;
 }
 .table a {
-    color: $ec-blue-full-light;
+    color: $ec-blue-mid-light;
 }
 
 // Admin dashboard account arrows
@@ -263,10 +263,10 @@ body .muted-hint a {
 
 // Status read more button
 .status__content__read-more-button {
-    color: $ec-blue-full-light;
+    color: $ec-blue-mid-light;
 }
 .link-button {
-    color: $ec-blue-full-light;
+    color: $ec-blue-mid-light;
 }
 
 // Dropdown menu
