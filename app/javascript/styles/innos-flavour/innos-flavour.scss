@@ -7,6 +7,7 @@ $hashtag-backgound: #002550;
 $hashtag-hover: #004697;
 
 $greyish-white: #d9e1e8;
+$grey-border-color: #393f4f;
 $muted: #606984;
 
 // This add the EU stars to the preferences
@@ -166,7 +167,7 @@ $muted: #606984;
 .hashtag.status-link {
     padding: 0px 5px;
     border-style: solid;
-    border-color: $ec-blue-mid-light;
+    border-color: $grey-border-color;
     border-width: 1px;
     border-radius: 6px;
     font-family: "mastodon-font-sans-serif", sans-serif;
