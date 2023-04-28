@@ -3,6 +3,9 @@ $ec-blue: #004494;
 $ec-blue-mid-light: #3479c9;
 $ec-blue-full-light: #0075ff;
 $verified-color: #1056a7;
+$hashtag-backgound: #002550;
+$hashtag-hover: #004697;
+
 $greyish-white: #d9e1e8;
 $muted: #606984;
 
@@ -164,15 +167,16 @@ $muted: #606984;
     padding: 0px 5px;
     border-style: solid;
     border-color: $ec-blue-mid-light;
-    border-width: 0.5px;
+    border-width: 1px;
     border-radius: 6px;
     font-family: "mastodon-font-sans-serif", sans-serif;
+    background-color: $hashtag-backgound;
 }
 .hashtag.status-link:hover {
-    background-color: #898db84f;
+    background-color: $hashtag-hover
 }
 .hashtag.status-link:hover span {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .muted .hashtag.status-link {
     border-color: $muted;
