@@ -3372,7 +3372,8 @@ $values in $logos {
 }
 
 // Title for youtube video preview cards
-a.status-card__title[href*="https://www.youtube.com"] {
+.status-card.compact a.status-card__title[href*="https://www.youtube.com"],
+.status-card.horizontal a.status-card__title[href*="https://www.youtube.com"] {
     color: var(--color-fg);
     font-size: 18px;
     font-weight: 400;
