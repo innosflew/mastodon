@@ -794,7 +794,6 @@ $values in $logos {
         display: inline-block;
         height: 18px;
         line-height: 18px;
-        //border: white 1px solid;
     }
 
     .account__header__bar:has(img[alt*="#{$verified-account}"]) .account__header__tabs__name h1>span:first-child::after {
@@ -814,6 +813,5 @@ $values in $logos {
         background-position-x: 5px;
         background-position-y: center;
         margin-left: 7px;
-        //border: white 1px solid;
     }
 }
