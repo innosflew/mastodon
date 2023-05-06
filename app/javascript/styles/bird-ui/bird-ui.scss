@@ -3345,3 +3345,12 @@ body.embed .entry .detailed-status {
    * Heart animation micro-interactions end
    */
 
+/* To show the button counters */
+.icon-button__counter {
+    display: unset;
+}
+
+/* Get rid of the box shadows under thje avatars. It makes them looks weird when they are circualr. */
+.status__avatar {
+    box-shadow: none;
+}
