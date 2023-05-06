@@ -3417,8 +3417,11 @@ body.embed .entry .detailed-status {
     }
 }
 
-// Drop down menu colors
-div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="10"] {
+// Post delete button colors 
+.layout-single-column:has(.detailed-status) div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="8"],
+.layout-single-column:has(.detailed-status) div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="9"],
+.layout-single-column div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="10"],
+.layout-single-column div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="11"] {
     color: var(--color-red);
 }
 // Embed card colors and logos
