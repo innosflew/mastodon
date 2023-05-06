@@ -3392,7 +3392,7 @@ $values in $logos {
 @each $verified-account in $verified-accounts {
     a[href*="#{$verified-account}"] .display-name .display-name__html::after {
         content: "Verified";
-        background-color: $verified-color;
+        background-color: var(--color-accent-dark);
         border-radius: 8px;
         font-weight: 500;
         padding-left: 20px;
@@ -3412,7 +3412,7 @@ $values in $logos {
 
     .account__header__bar:has(img[alt*="#{$verified-account}"]) .account__header__tabs__name h1>span:first-child::after {
         content: "Verified";
-        background-color: $verified-color;
+        background-color: var(--color-accent-dark);
         border-radius: 8px;
         font-weight: 500;
         padding-left: 20px;
