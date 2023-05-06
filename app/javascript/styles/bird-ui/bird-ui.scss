@@ -3165,11 +3165,13 @@ body.embed .entry .detailed-status {
 }
 
 /* If we don't have threads support yet, just use borders */
+/*
 .layout-single-column .scrollable>div:not(:has(.status__thread)) .status.status-reply {
     border-color: var(--color-border);
 }
-
+*/
 /* Always have border-bottom in threads on main level to separate the discussions */
+/*
 .layout-single-column .scrollable>div>div.status__thread,
 .layout-single-column .scrollable>div>div.status__thread:has(.status__thread)>div.status__thread:not(.status__thread--last-item),
 .layout-single-column .scrollable>div>div:not([class])>div.status__thread {
@@ -3179,8 +3181,9 @@ body.embed .entry .detailed-status {
 .layout-single-column .scrollable>div>div.status__thread>div.status__thread:not(.status__thread--last-item):not(:has(.status__thread--last-item)) {
     border-bottom: 0;
 }
-
+*/
 /* If we don't have threads support yet, hide faux lines */
+/*
 .layout-single-column .scrollable>div:not(:has(.status__thread)) .status.status-reply .status__avatar::before {
     background-color: transparent;
     width: 0;
@@ -3201,8 +3204,9 @@ body.embed .entry .detailed-status {
     top: 24px;
     width: 2px;
 }
-
+*/
 /* Hide thread lines from the last items for at least 10 levels */
+/*
 .layout-single-column .scrollable>div>div.status__thread:not(:has(.status__thread)) .status.status-reply .status__avatar::before,
 .layout-single-column .scrollable>div>.status__thread:not(:has(.status__thread)).status__thread--last-item .status.status-reply .status__avatar::before,
 .layout-single-column .scrollable>div>.status__thread:has(.status__thread--last-item)>.status__thread--last-item:not(:has(.status__thread)) .status.status-reply .status__avatar::before,
@@ -3214,13 +3218,14 @@ body.embed .entry .detailed-status {
 .layout-single-column .scrollable>div>.status__thread>.status__thread:has(.status__thread--last-item)>.status__thread--last-item:has(.status__thread--last-item)>.status__thread--last-item:has(.status__thread--last-item)>.status__thread--last-item:has(.status__thread--last-item)>.status__thread--last-item:not(:has(.status__thread)) .status.status-reply .status__avatar::before,
 .layout-single-column .scrollable>div>.status__thread>.status__thread:has(.status__thread--last-item)>.status__thread--last-item:has(.status__thread--last-item)>.status__thread--last-item:has(.status__thread--last-item)>.status__thread--last-item:has(.status__thread--last-item)>.status__thread--last-item:has(.status__thread--last-item)>.status__thread--last-item:not(:has(.status__thread)) .status.status-reply .status__avatar::before {
     /* stylelint-disable-next-line */
-    background-color: transparent !important;
+    // background-color: transparent !important;
+    /*
 }
 
 .layout-single-column .scrollable>div>.status__thread.status__thread--first-item .status.status-reply .status__avatar::before {
     top: 60px;
 }
-
+*/
 /* Scrollbars */
 .layout-single-column textarea::-webkit-scrollbar,
 .layout-single-column .autosuggest-textarea__textarea::-webkit-scrollbar,
