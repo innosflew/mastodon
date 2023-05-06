@@ -1165,7 +1165,7 @@ body.embed .detailed-status,
 }
 
 /* Status update in threads resets */
-.layout-single-column .status--in-thread .status .status__content {
+.layout-single-column .status.status--in-thread .status__content {
     padding-left: 0;
 }
 
