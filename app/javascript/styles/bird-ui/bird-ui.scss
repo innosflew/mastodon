@@ -20,6 +20,8 @@
     --color-brand-mastodon-threaded-line: #434264;
     --color-brand-mastodon-text-light: #8493a7;
 
+    --trends-backgroound: rgb(18 100 209 / 25%)!important;
+
     /* Colors */
     /* Note: Remember to search for the DIM hex
        and replace it inside the SVG icons if you decide to change it */
@@ -733,6 +735,19 @@ body.embed .status__content a,
     /* It's inlined so we have to use !important */
     /* stylelint-disable-next-line */
     stroke: var(--color-accent) !important;
+}
+
+/* Trends colors */
+.layout-single-column .trends__item__sparkline path:first-child {
+    fill: var(--trends-backgroound);
+}
+
+.sparkline__graph path:last-child {
+    stroke: var(--color-accent) !important;
+}
+
+.sparkline__graph path:first-child {
+    fill: var(--trends-backgroound);
 }
 
 /* Mud background colors */
