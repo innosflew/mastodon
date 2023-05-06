@@ -3418,7 +3418,7 @@ body.embed .entry .detailed-status {
 }
 
 // Drop down menu colors
-div[style="position: absolute; left: 0px; transform: translate(56px, 0px);"] .dropdown-menu__item a[data-index="10"] {
+div[style="position: fixed; inset: 0px auto auto 0px; transform: translate(988px, 476px);"] .dropdown-menu__item a[data-index="10"] {
     color: var(--color-red);
 }
 // Embed card colors and logos
