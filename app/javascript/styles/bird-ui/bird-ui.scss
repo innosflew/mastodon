@@ -734,7 +734,7 @@ body.embed .status__content a,
 .layout-single-column .trends__item__sparkline path:last-child {
     /* It's inlined so we have to use !important */
     /* stylelint-disable-next-line */
-    stroke: var(--color-accent) !important;
+    stroke: var(--color-accent-dark) !important;
 }
 
 /* Trends colors */
@@ -743,7 +743,7 @@ body.embed .status__content a,
 }
 
 .sparkline__graph path:last-child {
-    stroke: var(--color-accent) !important;
+    stroke: var(--color-accent-dark) !important;
 }
 
 .sparkline__graph path:first-child {
