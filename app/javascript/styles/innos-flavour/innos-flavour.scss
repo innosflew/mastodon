@@ -597,7 +597,7 @@ body {
     background: #3b4153;
 }
 
-.detailed-status__meta {
+.detailed-status__ {
     font-size: 15px;
 }
 
@@ -608,16 +608,6 @@ body {
 
 .icon-button__counter {
     display: inline-block;
-}
-
-.detailed-status__meta_counters {
-    display: block;
-    border-top: 1px solid #393f4f;
-    padding-top: 15px;
-}
-
-.detailed-status__link:before {
-    content: "   ";
 }
 
 .column-back-button {
