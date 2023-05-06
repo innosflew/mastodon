@@ -20,7 +20,7 @@
     --color-brand-mastodon-threaded-line: #434264;
     --color-brand-mastodon-text-light: #8493a7;
 
-    --trends-backgroound: rgb(18 100 209 / 25%)!important;
+    --trends-backgroound: rgb(18 100 209 / 25%);
 
     /* Colors */
     /* Note: Remember to search for the DIM hex
@@ -739,7 +739,7 @@ body.embed .status__content a,
 
 /* Trends colors */
 .layout-single-column .trends__item__sparkline path:first-child {
-    fill: var(--trends-backgroound);
+    fill: var(--trends-backgroound) !important;
 }
 
 .sparkline__graph path:last-child {
@@ -747,7 +747,7 @@ body.embed .status__content a,
 }
 
 .sparkline__graph path:first-child {
-    fill: var(--trends-backgroound);
+    fill: var(--trends-backgroound) !important;
 }
 
 /* Mud background colors */
