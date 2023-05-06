@@ -1165,8 +1165,10 @@ body.embed .detailed-status,
 }
 
 /* Status update in threads resets */
+.layout-single-column .status.status--in-thread .status__action-bar,
 .layout-single-column .status.status--in-thread .status__content {
     padding-left: 0;
+    margin-left: calc(var(--size-avatar) + var(--gap-default));
 }
 
 /* Translate link and other padding resets */
