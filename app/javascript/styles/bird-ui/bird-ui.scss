@@ -669,6 +669,10 @@ a.status-card.compact .status-card__host {
 }
 
 /* Accented items like links */
+.admin-wrapper .content .muted-hint a,
+body .muted-hint a,
+.simple_form .hint a,
+.layout-single-column .prose a,
 .layout-single-column .about__section__title,
 .layout-single-column .account__header__bio .account__header__fields a,
 .layout-single-column .column-back-button,
@@ -3334,6 +3338,57 @@ body.embed .entry .detailed-status {
 /* Get rid of the box shadows under thje avatars. It makes them looks weird when they are circualr. */
 .status__avatar {
     box-shadow: none;
+}
+
+// Button colors
+.admin-wrapper .content__heading__tabs a.selected,
+.dashboard__quick-access,
+.button,
+.simple_form .block-button,
+.simple_form .button,
+.simple_form button {
+    background-color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+    color: var(--color-button-text);
+    transition: all .2s;
+}
+
+.admin-wrapper .content__heading__tabs a.selected:active,
+.admin-wrapper .content__heading__tabs a.selected:focus,
+.admin-wrapper .content__heading__tabs a.selected:hover,
+.dashboard__quick-access:active,
+.dashboard__quick-access:focus,
+.dashboard__quick-access:hover,
+.button:active,
+.button:focus,
+.button:hover,
+.simple_form .block-button:active,
+.simple_form .block-button:focus,
+.simple_form .block-button:hover,
+.simple_form .button:active,
+.simple_form .button:focus,
+.simple_form .button:hover,
+.simple_form button:active,
+.simple_form button:focus,
+.simple_form button:hover {
+    background-color: var(--color-brand-mastodon-links);
+    border-color: var(--color-brand-mastodon-links);
+    color: var(--color-button-text);
+}
+
+// Settings colors
+.admin-wrapper .sidebar ul .simple-navigation-active-leaf a {
+    background-color: var(--color-accent-dark);
+}
+
+.admin-wrapper .sidebar ul .simple-navigation-active-leaf a:hover {
+    background-color: var(--color-brand-mastodon-links);
+}
+
+// Settings filter buttons
+.filters .filter-subset a.selected {
+    border-bottom: 2px solid var(--color-accent-dark);
+    color: var(--color-brand-mastodon-links);
 }
 
 // Embed card colors and logos
