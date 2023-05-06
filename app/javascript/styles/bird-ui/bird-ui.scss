@@ -1164,6 +1164,11 @@ body.embed .detailed-status,
     padding-top: 0;
 }
 
+/* Status update in threads resets */
+.layout-single-column .status--in-thread .status .status__content {
+    padding-left: 0;
+}
+
 /* Translate link and other padding resets */
 .layout-single-column .conversation .attachment-list,
 .layout-single-column .translate~.status__content__read-more-button {
