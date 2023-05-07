@@ -3497,6 +3497,11 @@ $values in $logos {
     border-color: #313543;
 }
 
+// This is to show the verification marks everywhere, by default the overflow hides it
+.status__info .status__display-name .display-name bdi {
+    overflow: visible;
+}
+
 // Verification
 @each $verified-account in $verified-accounts {
     a[href*="#{$verified-account}"] .display-name .display-name__html::after {
