@@ -3431,18 +3431,6 @@ body.embed .entry .detailed-status {
     }
 }
 
-// Post delete button colors 
-.layout-single-column:has(.detailed-status) div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="8"],
-.layout-single-column:has(.detailed-status) div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="9"],
-.layout-single-column div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="10"],
-.layout-single-column div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="11"] {
-    color: var(--color-red);
-}
-
-.layout-single-column div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__container__list .dropdown-menu__item a[data-index="9"] {
-    color: var(--color-light-text);
-}
-
 // Embed card colors and logos
 @each $url,
 $values in $logos {
