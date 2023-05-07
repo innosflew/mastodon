@@ -3439,7 +3439,7 @@ body.embed .entry .detailed-status {
     color: var(--color-red);
 }
 
-.layout-single-column div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__item a[data-index="9"] {
+.layout-single-column div:has(.dropdown-menu__arrow[style="position: absolute; left: 0px; transform: translate(56px, 0px);"]) .dropdown-menu__container__list .dropdown-menu__item a[data-index="9"] {
     color: var(--color-light-text);
 }
 
