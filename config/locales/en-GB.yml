@@ -1615,7 +1615,6 @@ en-GB:
     default: Mastodon (Dark)
     mastodon-light: Mastodon (Light)
     innos-flavour: Innos Flavour
-    bird-ui: Bird UI
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
