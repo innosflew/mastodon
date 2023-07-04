@@ -1,12 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-
-import noop from 'lodash/noop';
-
-import Bundle from 'mastodon/features/ui/components/bundle';
 import { MediaGallery, Video, Audio } from 'mastodon/features/ui/util/async-components';
+import Bundle from 'mastodon/features/ui/components/bundle';
+import noop from 'lodash/noop';
 
 export default class MediaAttachments extends ImmutablePureComponent {
 
@@ -51,9 +49,8 @@ export default class MediaAttachments extends ImmutablePureComponent {
   };
 
   render () {
-    const { status, width, height } = this.props;
+    const { status, lang, width, height } = this.props;
     const mediaAttachments = status.get('media_attachments');
-    const language = status.getIn(['language', 'translation']) || status.get('language') || this.props.lang;
 
     if (mediaAttachments.size === 0) {
       return null;
@@ -61,15 +58,14 @@ export default class MediaAttachments extends ImmutablePureComponent {
 
     if (mediaAttachments.getIn([0, 'type']) === 'audio') {
       const audio = mediaAttachments.get(0);
-      const description = audio.getIn(['translation', 'description']) || audio.get('description');
 
       return (
         <Bundle fetchComponent={Audio} loading={this.renderLoadingAudioPlayer} >
           {Component => (
             <Component
               src={audio.get('url')}
-              alt={description}
-              lang={language}
+              alt={audio.get('description')}
+              lang={lang || status.get('language')}
               width={width}
               height={height}
               poster={audio.get('preview_url') || status.getIn(['account', 'avatar_static'])}
@@ -83,7 +79,6 @@ export default class MediaAttachments extends ImmutablePureComponent {
       );
     } else if (mediaAttachments.getIn([0, 'type']) === 'video') {
       const video = mediaAttachments.get(0);
-      const description = video.getIn(['translation', 'description']) || video.get('description');
 
       return (
         <Bundle fetchComponent={Video} loading={this.renderLoadingVideoPlayer} >
@@ -93,8 +88,8 @@ export default class MediaAttachments extends ImmutablePureComponent {
               frameRate={video.getIn(['meta', 'original', 'frame_rate'])}
               blurhash={video.get('blurhash')}
               src={video.get('url')}
-              alt={description}
-              lang={language}
+              alt={video.get('description')}
+              lang={lang || status.get('language')}
               width={width}
               height={height}
               inline
@@ -110,7 +105,7 @@ export default class MediaAttachments extends ImmutablePureComponent {
           {Component => (
             <Component
               media={mediaAttachments}
-              lang={language}
+              lang={lang || status.get('language')}
               sensitive={status.get('sensitive')}
               defaultWidth={width}
               height={height}

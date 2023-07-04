@@ -1,11 +1,11 @@
-import { createRoot } from 'react-dom/client';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { setupBrowserNotifications } from 'mastodon/actions/notifications';
-import Mastodon from 'mastodon/containers/mastodon';
+import Mastodon, { store } from 'mastodon/containers/mastodon';
 import { me } from 'mastodon/initial_state';
-import * as perf from 'mastodon/performance';
 import ready from 'mastodon/ready';
-import { store } from 'mastodon/store';
+
+const perf = require('mastodon/performance');
 
 /**
  * @returns {Promise<void>}
@@ -17,8 +17,7 @@ function main() {
     const mountNode = document.getElementById('mastodon');
     const props = JSON.parse(mountNode.getAttribute('data-props'));
 
-    const root = createRoot(mountNode);
-    root.render(<Mastodon {...props} />);
+    ReactDOM.render(<Mastodon {...props} />, mountNode);
     store.dispatch(setupBrowserNotifications());
 
     if (process.env.NODE_ENV === 'production' && me && 'serviceWorker' in navigator) {

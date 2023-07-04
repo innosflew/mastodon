@@ -1,33 +1,21 @@
-import { createRoot }  from 'react-dom/client';
-
 import './public-path';
-
-import { IntlMessageFormat }  from 'intl-messageformat';
-import { defineMessages } from 'react-intl';
-
-import { delegate }  from '@rails/ujs';
-import axios from 'axios';
 import escapeTextContentForBrowser from 'escape-html';
-import { createBrowserHistory }  from 'history';
-import { throttle } from 'lodash';
-
-import { start } from '../mastodon/common';
-import { timeAgoString }  from '../mastodon/components/relative_timestamp';
-import emojify  from '../mastodon/features/emoji/emoji';
-import loadKeyboardExtensions from '../mastodon/load_keyboard_extensions';
-import { loadLocale, getLocale } from '../mastodon/locales';
-import { loadPolyfills } from '../mastodon/polyfills';
+import loadPolyfills from '../mastodon/load_polyfills';
 import ready from '../mastodon/ready';
-
+import { start } from '../mastodon/common';
+import loadKeyboardExtensions from '../mastodon/load_keyboard_extensions';
 import 'cocoon-js-vanilla';
-
-start();
+import axios from 'axios';
+import { throttle } from 'lodash';
+import { defineMessages } from 'react-intl';
 
 const messages = defineMessages({
   usernameTaken: { id: 'username.taken', defaultMessage: 'That username is taken. Try another' },
   passwordExceedsLength: { id: 'password_confirmation.exceeds_maxlength', defaultMessage: 'Password confirmation exceeds the maximum password length' },
   passwordDoesNotMatch: { id: 'password_confirmation.mismatching', defaultMessage: 'Password confirmation does not match' },
 });
+
+start();
 
 window.addEventListener('message', e => {
   const data = e.data || {};
@@ -45,8 +33,16 @@ window.addEventListener('message', e => {
   });
 });
 
-function loaded() {
-  const { messages: localeData } = getLocale();
+function main() {
+  const IntlMessageFormat = require('intl-messageformat').default;
+  const { timeAgoString } = require('../mastodon/components/relative_timestamp');
+  const { delegate } = require('@rails/ujs');
+  const emojify = require('../mastodon/features/emoji/emoji').default;
+  const { getLocale } = require('../mastodon/locales');
+  const { localeData } = getLocale();
+  const React = require('react');
+  const ReactDOM = require('react-dom');
+  const { createBrowserHistory } = require('history');
 
   const scrollToDetailedStatus = () => {
     const history = createBrowserHistory();
@@ -156,8 +152,7 @@ function loaded() {
 
           const content = document.createElement('div');
 
-          const root = createRoot(content);
-          root.render(<MediaContainer locale={locale} components={reactComponents} />);
+          ReactDOM.render(<MediaContainer locale={locale} components={reactComponents} />, content);
           document.body.appendChild(content);
           scrollToDetailedStatus();
         })
@@ -346,13 +341,7 @@ function loaded() {
   });
 }
 
-
-function main() {
-  ready(loaded);
-}
-
 loadPolyfills()
-  .then(loadLocale)
   .then(main)
   .then(loadKeyboardExtensions)
   .catch(error => {

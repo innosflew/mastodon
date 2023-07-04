@@ -1,20 +1,17 @@
 import PropTypes from 'prop-types';
-
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
-import { Helmet } from 'react-helmet';
-
-import ImmutablePropTypes from 'react-immutable-proptypes';
+import React from 'react';
 import ImmutablePureComponent from 'react-immutable-pure-component';
+import ImmutablePropTypes from 'react-immutable-proptypes';
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-
-import { fetchFavourites } from 'mastodon/actions/interactions';
 import ColumnHeader from 'mastodon/components/column_header';
-import { Icon }  from 'mastodon/components/icon';
-import { LoadingIndicator } from 'mastodon/components/loading_indicator';
+import Icon from 'mastodon/components/icon';
+import { fetchFavourites } from 'mastodon/actions/interactions';
+import LoadingIndicator from 'mastodon/components/loading_indicator';
 import ScrollableList from 'mastodon/components/scrollable_list';
 import AccountContainer from 'mastodon/containers/account_container';
 import Column from 'mastodon/features/ui/components/column';
+import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({
   refresh: { id: 'refresh', defaultMessage: 'Refresh' },
@@ -34,13 +31,13 @@ class Favourites extends ImmutablePureComponent {
     intl: PropTypes.object.isRequired,
   };
 
-  UNSAFE_componentWillMount () {
+  componentWillMount () {
     if (!this.props.accountIds) {
       this.props.dispatch(fetchFavourites(this.props.params.statusId));
     }
   }
 
-  UNSAFE_componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps (nextProps) {
     if (nextProps.params.statusId !== this.props.params.statusId && nextProps.params.statusId) {
       this.props.dispatch(fetchFavourites(nextProps.params.statusId));
     }

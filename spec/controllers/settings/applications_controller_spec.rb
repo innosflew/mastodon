@@ -50,7 +50,7 @@ describe Settings::ApplicationsController do
   end
 
   describe 'POST #create' do
-    context 'when success (passed scopes as a String)' do
+    context 'success (passed scopes as a String)' do
       def call_create
         post :create, params: {
           doorkeeper_application: {
@@ -72,7 +72,7 @@ describe Settings::ApplicationsController do
       end
     end
 
-    context 'when success (passed scopes as an Array)' do
+    context 'success (passed scopes as an Array)' do
       def call_create
         post :create, params: {
           doorkeeper_application: {
@@ -94,7 +94,7 @@ describe Settings::ApplicationsController do
       end
     end
 
-    context 'with failure request' do
+    context 'failure' do
       before do
         post :create, params: {
           doorkeeper_application: {
@@ -117,7 +117,7 @@ describe Settings::ApplicationsController do
   end
 
   describe 'PATCH #update' do
-    context 'when success' do
+    context 'success' do
       let(:opts) do
         {
           website: 'https://foo.bar/',
@@ -142,7 +142,7 @@ describe Settings::ApplicationsController do
       end
     end
 
-    context 'with failure request' do
+    context 'failure' do
       before do
         patch :update, params: {
           id: app.id,
@@ -182,10 +182,12 @@ describe Settings::ApplicationsController do
   describe 'regenerate' do
     let(:token) { user.token_for_app(app) }
 
-    it 'creates new token' do
+    before do
       expect(token).to_not be_nil
       post :regenerate, params: { id: app.id }
+    end
 
+    it 'creates new token' do
       expect(user.token_for_app(app)).to_not eql(token)
     end
   end

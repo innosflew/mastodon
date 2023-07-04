@@ -1,15 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { defineMessages, injectIntl } from 'react-intl';
-
-import classNames from 'classnames';
-
 import { connect } from 'react-redux';
-
-import { Icon }  from 'mastodon/components/icon';
-
+import { defineMessages, injectIntl } from 'react-intl';
 import { fetchListSuggestions, clearListSuggestions, changeListSuggestions } from '../../../actions/lists';
+import classNames from 'classnames';
+import Icon from 'mastodon/components/icon';
 
 const messages = defineMessages({
   search: { id: 'lists.search', defaultMessage: 'Search among people you follow' },
@@ -25,7 +20,7 @@ const mapDispatchToProps = dispatch => ({
   onChange: value => dispatch(changeListSuggestions(value)),
 });
 
-class Search extends PureComponent {
+class Search extends React.PureComponent {
 
   static propTypes = {
     intl: PropTypes.object.isRequired,

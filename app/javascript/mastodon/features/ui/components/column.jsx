@@ -1,14 +1,11 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { debounce } from 'lodash';
-
-import { isMobile } from '../../../is_mobile';
-import { scrollTop } from '../../../scroll';
-
+import React from 'react';
 import ColumnHeader from './column_header';
+import PropTypes from 'prop-types';
+import { debounce } from 'lodash';
+import { scrollTop } from '../../../scroll';
+import { isMobile } from '../../../is_mobile';
 
-export default class Column extends PureComponent {
+export default class Column extends React.PureComponent {
 
   static propTypes = {
     heading: PropTypes.string,

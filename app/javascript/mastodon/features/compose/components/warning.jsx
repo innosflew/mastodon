@@ -1,11 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
+import Motion from '../../ui/util/optional_motion';
 import spring from 'react-motion/lib/spring';
 
-import Motion from '../../ui/util/optional_motion';
-
-export default class Warning extends PureComponent {
+export default class Warning extends React.PureComponent {
 
   static propTypes = {
     message: PropTypes.node.isRequired,

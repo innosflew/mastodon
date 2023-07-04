@@ -1,11 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { FormattedMessage } from 'react-intl';
-
 import { connect } from 'react-redux';
-
 import { revealAccount } from 'mastodon/actions/accounts';
+import { FormattedMessage } from 'react-intl';
 import Button from 'mastodon/components/button';
 import { domain } from 'mastodon/initial_state';
 
@@ -17,7 +14,7 @@ const mapDispatchToProps = (dispatch, { accountId }) => ({
 
 });
 
-class LimitedAccountHint extends PureComponent {
+class LimitedAccountHint extends React.PureComponent {
 
   static propTypes = {
     accountId: PropTypes.string.isRequired,

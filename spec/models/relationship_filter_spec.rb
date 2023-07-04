@@ -8,7 +8,7 @@ describe RelationshipFilter do
   describe '#results' do
     context 'when default params are used' do
       let(:subject) do
-        described_class.new(account, 'order' => 'active').results
+        RelationshipFilter.new(account, 'order' => 'active').results
       end
 
       before do

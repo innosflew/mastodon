@@ -11,15 +11,15 @@ class BackupsController < ApplicationController
   def download
     case Paperclip::Attachment.default_options[:storage]
     when :s3
-      redirect_to @backup.dump.expiring_url(10), allow_other_host: true
+      redirect_to @backup.dump.expiring_url(10)
     when :fog
       if Paperclip::Attachment.default_options.dig(:fog_credentials, :openstack_temp_url_key).present?
-        redirect_to @backup.dump.expiring_url(Time.now.utc + 10), allow_other_host: true
+        redirect_to @backup.dump.expiring_url(Time.now.utc + 10)
       else
-        redirect_to full_asset_url(@backup.dump.url), allow_other_host: true
+        redirect_to full_asset_url(@backup.dump.url)
       end
     when :filesystem
-      redirect_to full_asset_url(@backup.dump.url), allow_other_host: true
+      redirect_to full_asset_url(@backup.dump.url)
     end
   end
 

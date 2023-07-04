@@ -1,15 +1,13 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { injectIntl, FormattedMessage } from 'react-intl';
-
+import React from 'react';
 import { connect } from 'react-redux';
-
-import { blockAccount } from '../../../actions/accounts';
-import { closeModal } from '../../../actions/modal';
-import { initReport } from '../../../actions/reports';
-import Button from '../../../components/button';
+import PropTypes from 'prop-types';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import { makeGetAccount } from '../../../selectors';
+import Button from '../../../components/button';
+import { closeModal } from '../../../actions/modal';
+import { blockAccount } from '../../../actions/accounts';
+import { initReport } from '../../../actions/reports';
+
 
 const makeMapStateToProps = () => {
   const getAccount = makeGetAccount();
@@ -33,15 +31,12 @@ const mapDispatchToProps = dispatch => {
     },
 
     onClose() {
-      dispatch(closeModal({
-        modalType: undefined,
-        ignoreFocus: false,
-      }));
+      dispatch(closeModal());
     },
   };
 };
 
-class BlockModal extends PureComponent {
+class BlockModal extends React.PureComponent {
 
   static propTypes = {
     account: PropTypes.object.isRequired,

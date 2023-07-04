@@ -1,26 +1,21 @@
-import PropTypes from 'prop-types';
-
-import { defineMessages, injectIntl } from 'react-intl';
-
-import { Helmet } from 'react-helmet';
-
-import ImmutablePropTypes from 'react-immutable-proptypes';
-import ImmutablePureComponent from 'react-immutable-pure-component';
+import React from 'react';
 import { connect } from 'react-redux';
-
-import { getStatusList } from 'mastodon/selectors';
-
+import PropTypes from 'prop-types';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 import { fetchPinnedStatuses } from '../../actions/pin_statuses';
+import Column from '../ui/components/column';
 import ColumnBackButtonSlim from '../../components/column_back_button_slim';
 import StatusList from '../../components/status_list';
-import Column from '../ui/components/column';
+import { defineMessages, injectIntl } from 'react-intl';
+import ImmutablePureComponent from 'react-immutable-pure-component';
+import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({
   heading: { id: 'column.pins', defaultMessage: 'Pinned post' },
 });
 
 const mapStateToProps = state => ({
-  statusIds: getStatusList(state, 'pins'),
+  statusIds: state.getIn(['status_lists', 'pins', 'items']),
   hasMore: !!state.getIn(['status_lists', 'pins', 'next']),
 });
 
@@ -34,7 +29,7 @@ class PinnedStatuses extends ImmutablePureComponent {
     multiColumn: PropTypes.bool,
   };
 
-  UNSAFE_componentWillMount () {
+  componentWillMount () {
     this.props.dispatch(fetchPinnedStatuses());
   }
 

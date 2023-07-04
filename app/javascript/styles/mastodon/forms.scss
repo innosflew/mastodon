@@ -136,14 +136,6 @@ code {
     line-height: 22px;
     color: $secondary-text-color;
     margin-bottom: 30px;
-
-    &.invited-by {
-      margin-bottom: 15px;
-    }
-
-    a {
-      color: $highlight-text-color;
-    }
   }
 
   .rules-list {
@@ -511,8 +503,8 @@ code {
     width: 100%;
     border: 0;
     border-radius: 4px;
-    background: $ui-button-background-color;
-    color: $ui-button-color;
+    background: darken($ui-highlight-color, 2%);
+    color: $primary-text-color;
     font-size: 18px;
     line-height: inherit;
     height: auto;
@@ -534,7 +526,7 @@ code {
     &:active,
     &:focus,
     &:hover {
-      background-color: $ui-button-focus-background-color;
+      background-color: $ui-highlight-color;
     }
 
     &:disabled:hover {
@@ -542,12 +534,15 @@ code {
     }
 
     &.negative {
-      background: $ui-button-destructive-background-color;
+      background: $error-value-color;
 
-      &:hover,
+      &:hover {
+        background-color: lighten($error-value-color, 5%);
+      }
+
       &:active,
       &:focus {
-        background-color: $ui-button-destructive-focus-background-color;
+        background-color: darken($error-value-color, 5%);
       }
     }
   }
@@ -727,7 +722,7 @@ code {
     }
   }
 
-  @media screen and (440px < width <= 740px) {
+  @media screen and (max-width: 740px) and (min-width: 441px) {
     margin-top: 40px;
   }
 
@@ -1042,12 +1037,6 @@ code {
   &:not(.field_with_errors) {
     display: none;
   }
-}
-
-.simple_form .h-captcha {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
 }
 
 .permissions-list {

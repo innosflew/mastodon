@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe RejectFollowService, type: :service do
-  subject { described_class.new }
+  subject { RejectFollowService.new }
 
   let(:sender) { Fabricate(:account, username: 'alice') }
 

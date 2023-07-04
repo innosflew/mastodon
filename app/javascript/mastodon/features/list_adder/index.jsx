@@ -1,17 +1,14 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-
-import { injectIntl } from 'react-intl';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import ImmutablePureComponent from 'react-immutable-pure-component';
 import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
-
+import ImmutablePureComponent from 'react-immutable-pure-component';
+import { injectIntl } from 'react-intl';
 import { setupListAdder, resetListAdder } from '../../actions/lists';
-import NewListForm from '../lists/components/new_list_form';
-
-import Account from './components/account';
+import { createSelector } from 'reselect';
 import List from './components/list';
+import Account from './components/account';
+import NewListForm from '../lists/components/new_list_form';
 // hack
 
 const getOrderedLists = createSelector([state => state.get('lists')], lists => {

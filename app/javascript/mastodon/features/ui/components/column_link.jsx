@@ -1,9 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-
-import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
-
-import { Icon }  from 'mastodon/components/icon';
+import Icon from 'mastodon/components/icon';
+import classNames from 'classnames';
 
 const ColumnLink = ({ icon, text, to, href, method, badge, transparent, ...other }) => {
   const className = classNames('column-link', { 'column-link--transparent': transparent });

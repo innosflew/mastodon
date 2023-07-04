@@ -8,32 +8,16 @@ describe WebhookPolicy do
   let(:admin)   { Fabricate(:user, role: UserRole.find_by(name: 'Admin')).account }
   let(:john)    { Fabricate(:account) }
 
-  permissions :index?, :create? do
+  permissions :index?, :create?, :show?, :update?, :enable?, :disable?, :rotate_secret?, :destroy? do
     context 'with an admin' do
       it 'permits' do
-        expect(policy).to permit(admin, Webhook)
+        expect(policy).to permit(admin, Tag)
       end
     end
 
     context 'with a non-admin' do
       it 'denies' do
-        expect(policy).to_not permit(john, Webhook)
-      end
-    end
-  end
-
-  permissions :show?, :update?, :enable?, :disable?, :rotate_secret?, :destroy? do
-    let(:webhook) { Fabricate(:webhook, events: ['account.created', 'report.created']) }
-
-    context 'with an admin' do
-      it 'permits' do
-        expect(policy).to permit(admin, webhook)
-      end
-    end
-
-    context 'with a non-admin' do
-      it 'denies' do
-        expect(policy).to_not permit(john, webhook)
+        expect(policy).to_not permit(john, Tag)
       end
     end
   end

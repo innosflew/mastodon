@@ -1,23 +1,19 @@
-import PropTypes from 'prop-types';
-
-import { defineMessages, injectIntl } from 'react-intl';
-
-import classNames from 'classnames';
-
-import ImmutablePropTypes from 'react-immutable-proptypes';
-import ImmutablePureComponent from 'react-immutable-pure-component';
-
+import React from 'react';
 import ReactSwipeableViews from 'react-swipeable-views';
-
-import { getAverageFromBlurhash } from 'mastodon/blurhash';
-import { GIFV } from 'mastodon/components/gifv';
-import { Icon }  from 'mastodon/components/icon';
-import { IconButton } from 'mastodon/components/icon_button';
-import Footer from 'mastodon/features/picture_in_picture/components/footer';
+import ImmutablePropTypes from 'react-immutable-proptypes';
+import PropTypes from 'prop-types';
 import Video from 'mastodon/features/video';
-import { disableSwiping } from 'mastodon/initial_state';
-
+import { connect } from 'react-redux';
+import classNames from 'classnames';
+import { defineMessages, injectIntl } from 'react-intl';
+import IconButton from 'mastodon/components/icon_button';
+import ImmutablePureComponent from 'react-immutable-pure-component';
 import ImageLoader from './image_loader';
+import Icon from 'mastodon/components/icon';
+import GIFV from 'mastodon/components/gifv';
+import { disableSwiping } from 'mastodon/initial_state';
+import Footer from 'mastodon/features/picture_in_picture/components/footer';
+import { getAverageFromBlurhash } from 'mastodon/blurhash';
 
 const messages = defineMessages({
   close: { id: 'lightbox.close', defaultMessage: 'Close' },
@@ -25,12 +21,15 @@ const messages = defineMessages({
   next: { id: 'lightbox.next', defaultMessage: 'Next' },
 });
 
+const mapStateToProps = (state, { statusId }) => ({
+  language: state.getIn(['statuses', statusId, 'language']),
+});
+
 class MediaModal extends ImmutablePureComponent {
 
   static propTypes = {
     media: ImmutablePropTypes.list.isRequired,
     statusId: PropTypes.string,
-    lang: PropTypes.string,
     index: PropTypes.number.isRequired,
     onClose: PropTypes.func.isRequired,
     intl: PropTypes.object.isRequired,
@@ -134,7 +133,7 @@ class MediaModal extends ImmutablePureComponent {
   };
 
   render () {
-    const { media, statusId, lang, intl, onClose } = this.props;
+    const { media, language, statusId, intl, onClose } = this.props;
     const { navigationHidden } = this.state;
 
     const index = this.getIndex();
@@ -145,7 +144,6 @@ class MediaModal extends ImmutablePureComponent {
     const content = media.map((image) => {
       const width  = image.getIn(['meta', 'original', 'width']) || null;
       const height = image.getIn(['meta', 'original', 'height']) || null;
-      const description = image.getIn(['translation', 'description']) || image.get('description');
 
       if (image.get('type') === 'image') {
         return (
@@ -154,8 +152,8 @@ class MediaModal extends ImmutablePureComponent {
             src={image.get('url')}
             width={width}
             height={height}
-            alt={description}
-            lang={lang}
+            alt={image.get('description')}
+            lang={language}
             key={image.get('url')}
             onClick={this.toggleNavigation}
             zoomButtonHidden={this.state.zoomButtonHidden}
@@ -177,8 +175,8 @@ class MediaModal extends ImmutablePureComponent {
             volume={volume || 1}
             onCloseVideo={onClose}
             detailed
-            alt={description}
-            lang={lang}
+            alt={image.get('description')}
+            lang={language}
             key={image.get('url')}
           />
         );
@@ -189,8 +187,8 @@ class MediaModal extends ImmutablePureComponent {
             width={width}
             height={height}
             key={image.get('url')}
-            alt={description}
-            lang={lang}
+            alt={image.get('description')}
+            lang={language}
             onClick={this.toggleNavigation}
           />
         );
@@ -258,4 +256,4 @@ class MediaModal extends ImmutablePureComponent {
 
 }
 
-export default injectIntl(MediaModal);
+export default connect(mapStateToProps, null, null, { forwardRef: true })(injectIntl(MediaModal));

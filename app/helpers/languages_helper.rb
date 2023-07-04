@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ModuleLength
+
 module LanguagesHelper
   ISO_639_1 = {
     aa: ['Afar', 'Afaraf'].freeze,

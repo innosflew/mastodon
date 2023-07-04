@@ -3,7 +3,6 @@ on:
   push:
     branches-ignore:
       - 'dependabot/**'
-      - 'renovate/**'
   pull_request:
 
 jobs:
@@ -24,17 +23,9 @@ jobs:
     needs: pre_job
     if: needs.pre_job.outputs.should_skip != 'true'
 
-    strategy:
-      fail-fast: false
-
-      matrix:
-        postgres:
-          - 14-alpine
-          - 15-alpine
-
     services:
       postgres:
-        image: postgres:${{ matrix.postgres}}
+        image: postgres:14-alpine
         env:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USER: postgres

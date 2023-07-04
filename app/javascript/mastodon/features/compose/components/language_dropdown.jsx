@@ -1,18 +1,13 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
 import { injectIntl, defineMessages } from 'react-intl';
-
-import classNames from 'classnames';
-
-import { supportsPassiveEvents } from 'detect-passive-events';
-import fuzzysort from 'fuzzysort';
+import TextIconButton from './text_icon_button';
 import Overlay from 'react-overlays/Overlay';
-
+import { supportsPassiveEvents } from 'detect-passive-events';
+import classNames from 'classnames';
 import { languages as preloadedLanguages } from 'mastodon/initial_state';
 import { loupeIcon, deleteIcon } from 'mastodon/utils/icons';
-
-import TextIconButton from './text_icon_button';
+import fuzzysort from 'fuzzysort';
 
 const messages = defineMessages({
   changeLanguage: { id: 'compose.language.change', defaultMessage: 'Change language' },
@@ -20,9 +15,9 @@ const messages = defineMessages({
   clear: { id: 'emoji_button.clear', defaultMessage: 'Clear' },
 });
 
-const listenerOptions = supportsPassiveEvents ? { passive: true, capture: true } : true;
+const listenerOptions = supportsPassiveEvents ? { passive: true } : false;
 
-class LanguageDropdownMenu extends PureComponent {
+class LanguageDropdownMenu extends React.PureComponent {
 
   static propTypes = {
     value: PropTypes.string.isRequired,
@@ -44,12 +39,11 @@ class LanguageDropdownMenu extends PureComponent {
   handleDocumentClick = e => {
     if (this.node && !this.node.contains(e.target)) {
       this.props.onClose();
-      e.stopPropagation();
     }
   };
 
   componentDidMount () {
-    document.addEventListener('click', this.handleDocumentClick, { capture: true });
+    document.addEventListener('click', this.handleDocumentClick, false);
     document.addEventListener('touchend', this.handleDocumentClick, listenerOptions);
 
     // Because of https://github.com/react-bootstrap/react-bootstrap/issues/2614 we need
@@ -63,7 +57,7 @@ class LanguageDropdownMenu extends PureComponent {
   }
 
   componentWillUnmount () {
-    document.removeEventListener('click', this.handleDocumentClick, { capture: true });
+    document.removeEventListener('click', this.handleDocumentClick, false);
     document.removeEventListener('touchend', this.handleDocumentClick, listenerOptions);
   }
 
@@ -243,7 +237,7 @@ class LanguageDropdownMenu extends PureComponent {
 
 }
 
-class LanguageDropdown extends PureComponent {
+class LanguageDropdown extends React.PureComponent {
 
   static propTypes = {
     value: PropTypes.string,

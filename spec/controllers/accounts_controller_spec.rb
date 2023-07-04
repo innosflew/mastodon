@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe AccountsController do
+RSpec.describe AccountsController, type: :controller do
   render_views
 
   let(:account) { Fabricate(:account) }
@@ -57,7 +57,7 @@ RSpec.describe AccountsController do
       end
     end
 
-    context 'with HTML' do
+    context 'as HTML' do
       let(:format) { 'html' }
 
       it_behaves_like 'preliminary checks'
@@ -99,7 +99,7 @@ RSpec.describe AccountsController do
         end
       end
 
-      context 'with a normal account in an HTML request' do
+      context do
         before do
           get :show, params: { username: account.username, format: format }
         end
@@ -140,7 +140,7 @@ RSpec.describe AccountsController do
       end
     end
 
-    context 'with JSON' do
+    context 'as JSON' do
       let(:authorized_fetch_mode) { false }
       let(:format) { 'json' }
 
@@ -173,7 +173,7 @@ RSpec.describe AccountsController do
         end
       end
 
-      context 'with a normal account in a JSON request' do
+      context do
         before do
           get :show, params: { username: account.username, format: format }
         end
@@ -193,7 +193,7 @@ RSpec.describe AccountsController do
           expect(json).to include(:id, :type, :preferredUsername, :inbox, :publicKey, :name, :summary)
         end
 
-        context 'with authorized fetch mode' do
+        context 'in authorized fetch mode' do
           let(:authorized_fetch_mode) { true }
 
           it 'returns http unauthorized' do
@@ -251,7 +251,7 @@ RSpec.describe AccountsController do
           expect(json).to include(:id, :type, :preferredUsername, :inbox, :publicKey, :name, :summary)
         end
 
-        context 'with authorized fetch mode' do
+        context 'in authorized fetch mode' do
           let(:authorized_fetch_mode) { true }
 
           it 'returns http success' do
@@ -278,7 +278,7 @@ RSpec.describe AccountsController do
       end
     end
 
-    context 'with RSS' do
+    context 'as RSS' do
       let(:format) { 'rss' }
 
       it_behaves_like 'preliminary checks'
@@ -314,7 +314,7 @@ RSpec.describe AccountsController do
         it_behaves_like 'cacheable response'
       end
 
-      context 'with a normal account in an RSS request' do
+      context do
         before do
           get :show, params: { username: account.username, format: format }
         end

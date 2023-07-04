@@ -1,10 +1,7 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
 import classNames from 'classnames';
-
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import { LoadingBar } from 'react-redux-loading-bar';
-
 import ZoomableImage from './zoomable_image';
 
 export default class ImageLoader extends PureComponent {

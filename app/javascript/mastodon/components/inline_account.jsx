@@ -1,10 +1,8 @@
-import { PureComponent } from 'react';
-
+import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';
-
-import { Avatar } from 'mastodon/components/avatar';
 import { makeGetAccount } from 'mastodon/selectors';
+import Avatar from 'mastodon/components/avatar';
 
 const makeMapStateToProps = () => {
   const getAccount = makeGetAccount();
@@ -16,7 +14,7 @@ const makeMapStateToProps = () => {
   return mapStateToProps;
 };
 
-class InlineAccount extends PureComponent {
+class InlineAccount extends React.PureComponent {
 
   static propTypes = {
     account: ImmutablePropTypes.map.isRequired,

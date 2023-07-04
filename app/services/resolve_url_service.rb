@@ -89,28 +89,13 @@ class ResolveURLService < BaseService
   def process_local_url
     recognized_params = Rails.application.routes.recognize_path(@url)
 
-    case recognized_params[:controller]
-    when 'statuses'
-      return unless recognized_params[:action] == 'show'
+    return unless recognized_params[:action] == 'show'
 
+    if recognized_params[:controller] == 'statuses'
       status = Status.find_by(id: recognized_params[:id])
       check_local_status(status)
-    when 'accounts'
-      return unless recognized_params[:action] == 'show'
-
+    elsif recognized_params[:controller] == 'accounts'
       Account.find_local(recognized_params[:username])
-    when 'home'
-      return unless recognized_params[:action] == 'index' && recognized_params[:username_with_domain].present?
-
-      if recognized_params[:any]&.match?(/\A[0-9]+\Z/)
-        status = Status.find_by(id: recognized_params[:any])
-        check_local_status(status)
-      elsif recognized_params[:any].blank?
-        username, domain = recognized_params[:username_with_domain].gsub(/\A@/, '').split('@')
-        return unless username.present? && domain.present?
-
-        Account.find_remote(username, domain)
-      end
     end
   end
 

@@ -45,7 +45,7 @@ class StatusesController < ApplicationController
     return not_found if @status.hidden? || @status.reblog?
 
     expires_in 180, public: true
-    response.headers.delete('X-Frame-Options')
+    response.headers['X-Frame-Options'] = 'ALLOWALL'
 
     render layout: 'embedded'
   end

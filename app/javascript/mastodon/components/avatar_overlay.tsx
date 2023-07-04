@@ -1,14 +1,15 @@
-import { useHovering } from '../../hooks/useHovering';
+import React from 'react';
 import type { Account } from '../../types/resources';
+import { useHovering } from '../../hooks/useHovering';
 import { autoPlayGif } from '../initial_state';
 
-interface Props {
+type Props = {
   account: Account;
   friend: Account;
   size?: number;
   baseSize?: number;
   overlaySize?: number;
-}
+};
 
 export const AvatarOverlay: React.FC<Props> = ({
   account,
@@ -17,19 +18,13 @@ export const AvatarOverlay: React.FC<Props> = ({
   baseSize = 36,
   overlaySize = 24,
 }) => {
-  const { hovering, handleMouseEnter, handleMouseLeave } =
-    useHovering(autoPlayGif);
-  const accountSrc = hovering
-    ? account?.get('avatar')
-    : account?.get('avatar_static');
-  const friendSrc = hovering
-    ? friend?.get('avatar')
-    : friend?.get('avatar_static');
+  const { hovering, handleMouseEnter, handleMouseLeave } = useHovering(autoPlayGif);
+  const accountSrc = hovering ? account?.get('avatar') : account?.get('avatar_static');
+  const friendSrc = hovering ? friend?.get('avatar') : friend?.get('avatar_static');
 
   return (
     <div
-      className='account__avatar-overlay'
-      style={{ width: size, height: size }}
+      className='account__avatar-overlay' style={{ width: size, height: size }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -52,3 +47,5 @@ export const AvatarOverlay: React.FC<Props> = ({
     </div>
   );
 };
+
+export default AvatarOverlay;

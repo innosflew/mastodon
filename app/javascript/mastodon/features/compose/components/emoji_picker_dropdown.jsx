@@ -1,19 +1,13 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
-import classNames from 'classnames';
-
-import ImmutablePropTypes from 'react-immutable-proptypes';
-
-import { supportsPassiveEvents } from 'detect-passive-events';
-import Overlay from 'react-overlays/Overlay';
-
-import { assetHost } from 'mastodon/utils/config';
-
-import { buildCustomEmojis, categoriesFromEmojis } from '../../emoji/emoji';
 import { EmojiPicker as EmojiPickerAsync } from '../../ui/util/async-components';
+import Overlay from 'react-overlays/Overlay';
+import classNames from 'classnames';
+import ImmutablePropTypes from 'react-immutable-proptypes';
+import { supportsPassiveEvents } from 'detect-passive-events';
+import { buildCustomEmojis, categoriesFromEmojis } from '../../emoji/emoji';
+import { assetHost } from 'mastodon/utils/config';
 
 const messages = defineMessages({
   emoji: { id: 'emoji_button.label', defaultMessage: 'Insert emoji' },
@@ -33,7 +27,7 @@ const messages = defineMessages({
 
 let EmojiPicker, Emoji; // load asynchronously
 
-const listenerOptions = supportsPassiveEvents ? { passive: true, capture: true } : true;
+const listenerOptions = supportsPassiveEvents ? { passive: true } : false;
 
 const backgroundImageFn = () => `${assetHost}/emoji/sheet_13.png`;
 
@@ -53,7 +47,7 @@ const notFoundFn = () => (
   </div>
 );
 
-class ModifierPickerMenu extends PureComponent {
+class ModifierPickerMenu extends React.PureComponent {
 
   static propTypes = {
     active: PropTypes.bool,
@@ -65,7 +59,7 @@ class ModifierPickerMenu extends PureComponent {
     this.props.onSelect(e.currentTarget.getAttribute('data-index') * 1);
   };
 
-  UNSAFE_componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps (nextProps) {
     if (nextProps.active) {
       this.attachListeners();
     } else {
@@ -84,12 +78,12 @@ class ModifierPickerMenu extends PureComponent {
   };
 
   attachListeners () {
-    document.addEventListener('click', this.handleDocumentClick, { capture: true });
+    document.addEventListener('click', this.handleDocumentClick, false);
     document.addEventListener('touchend', this.handleDocumentClick, listenerOptions);
   }
 
   removeListeners () {
-    document.removeEventListener('click', this.handleDocumentClick, { capture: true });
+    document.removeEventListener('click', this.handleDocumentClick, false);
     document.removeEventListener('touchend', this.handleDocumentClick, listenerOptions);
   }
 
@@ -114,7 +108,7 @@ class ModifierPickerMenu extends PureComponent {
 
 }
 
-class ModifierPicker extends PureComponent {
+class ModifierPicker extends React.PureComponent {
 
   static propTypes = {
     active: PropTypes.bool,
@@ -150,7 +144,7 @@ class ModifierPicker extends PureComponent {
 
 }
 
-class EmojiPickerMenuImpl extends PureComponent {
+class EmojiPickerMenuImpl extends React.PureComponent {
 
   static propTypes = {
     custom_emojis: ImmutablePropTypes.list,
@@ -182,7 +176,7 @@ class EmojiPickerMenuImpl extends PureComponent {
   };
 
   componentDidMount () {
-    document.addEventListener('click', this.handleDocumentClick, { capture: true });
+    document.addEventListener('click', this.handleDocumentClick, false);
     document.addEventListener('touchend', this.handleDocumentClick, listenerOptions);
 
     // Because of https://github.com/react-bootstrap/react-bootstrap/issues/2614 we need
@@ -197,7 +191,7 @@ class EmojiPickerMenuImpl extends PureComponent {
   }
 
   componentWillUnmount () {
-    document.removeEventListener('click', this.handleDocumentClick, { capture: true });
+    document.removeEventListener('click', this.handleDocumentClick, false);
     document.removeEventListener('touchend', this.handleDocumentClick, listenerOptions);
   }
 
@@ -312,7 +306,7 @@ class EmojiPickerMenuImpl extends PureComponent {
 
 const EmojiPickerMenu = injectIntl(EmojiPickerMenuImpl);
 
-class EmojiPickerDropdown extends PureComponent {
+class EmojiPickerDropdown extends React.PureComponent {
 
   static propTypes = {
     custom_emojis: ImmutablePropTypes.list,
@@ -389,7 +383,7 @@ class EmojiPickerDropdown extends PureComponent {
           {button || <img
             className={classNames('emojione', { 'pulse-loading': active && loading })}
             alt='🙂'
-            src={`${assetHost}/emoji/1f642.svg`}
+            src={`${assetHost}/emoji/1f602.svg`}
           />}
         </div>
 

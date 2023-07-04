@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe UnblockService, type: :service do
-  subject { described_class.new }
+  subject { UnblockService.new }
 
   let(:sender) { Fabricate(:account, username: 'alice') }
 

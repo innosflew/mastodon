@@ -1,20 +1,16 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent, cloneElement, Children } from 'react';
-
-import classNames from 'classnames';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
-
-import { supportsPassiveEvents } from 'detect-passive-events';
+import IconButton from './icon_button';
 import Overlay from 'react-overlays/Overlay';
+import { supportsPassiveEvents } from 'detect-passive-events';
+import classNames from 'classnames';
+import { CircularProgress } from 'mastodon/components/loading_indicator';
 
-import { CircularProgress } from "./circular_progress";
-import { IconButton } from './icon_button';
-
-const listenerOptions = supportsPassiveEvents ? { passive: true, capture: true } : true;
+const listenerOptions = supportsPassiveEvents ? { passive: true } : false;
 let id = 0;
 
-class DropdownMenu extends PureComponent {
+class DropdownMenu extends React.PureComponent {
 
   static contextTypes = {
     router: PropTypes.object,
@@ -39,13 +35,12 @@ class DropdownMenu extends PureComponent {
   handleDocumentClick = e => {
     if (this.node && !this.node.contains(e.target)) {
       this.props.onClose();
-      e.stopPropagation();
     }
   };
 
   componentDidMount () {
-    document.addEventListener('click', this.handleDocumentClick, { capture: true });
-    document.addEventListener('keydown', this.handleKeyDown, { capture: true });
+    document.addEventListener('click', this.handleDocumentClick, false);
+    document.addEventListener('keydown', this.handleKeyDown, false);
     document.addEventListener('touchend', this.handleDocumentClick, listenerOptions);
 
     if (this.focusedItem && this.props.openedViaKeyboard) {
@@ -54,8 +49,8 @@ class DropdownMenu extends PureComponent {
   }
 
   componentWillUnmount () {
-    document.removeEventListener('click', this.handleDocumentClick, { capture: true });
-    document.removeEventListener('keydown', this.handleKeyDown, { capture: true });
+    document.removeEventListener('click', this.handleDocumentClick, false);
+    document.removeEventListener('keydown', this.handleKeyDown, false);
     document.removeEventListener('touchend', this.handleDocumentClick, listenerOptions);
   }
 
@@ -120,10 +115,10 @@ class DropdownMenu extends PureComponent {
       return <li key={`sep-${i}`} className='dropdown-menu__separator' />;
     }
 
-    const { text, href = '#', target = '_blank', method, dangerous } = option;
+    const { text, href = '#', target = '_blank', method } = option;
 
     return (
-      <li className={classNames('dropdown-menu__item', { 'dropdown-menu__item--dangerous': dangerous })} key={`${text}-${i}`}>
+      <li className='dropdown-menu__item' key={`${text}-${i}`}>
         <a href={href} target={target} data-method={method} rel='noopener noreferrer' role='button' tabIndex={0} ref={i === 0 ? this.setFocusRef : null} onClick={this.handleClick} onKeyPress={this.handleItemKeyPress} data-index={i}>
           {text}
         </a>
@@ -159,7 +154,7 @@ class DropdownMenu extends PureComponent {
 
 }
 
-export default class Dropdown extends PureComponent {
+export default class Dropdown extends React.PureComponent {
 
   static contextTypes = {
     router: PropTypes.object,
@@ -290,7 +285,7 @@ export default class Dropdown extends PureComponent {
 
     const open = this.state.id === openDropdownId;
 
-    const button = children ? cloneElement(Children.only(children), {
+    const button = children ? React.cloneElement(React.Children.only(children), {
       onClick: this.handleClick,
       onMouseDown: this.handleMouseDown,
       onKeyDown: this.handleButtonKeyDown,
@@ -310,7 +305,7 @@ export default class Dropdown extends PureComponent {
     );
 
     return (
-      <>
+      <React.Fragment>
         <span ref={this.setTargetRef}>
           {button}
         </span>
@@ -333,7 +328,7 @@ export default class Dropdown extends PureComponent {
             </div>
           )}
         </Overlay>
-      </>
+      </React.Fragment>
     );
   }
 

@@ -1,12 +1,10 @@
-import { FormattedMessage } from 'react-intl';
-
-import { Link } from 'react-router-dom';
-
+import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
+import { FormattedMessage } from 'react-intl';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-
-import { AvatarOverlay } from '../../../components/avatar_overlay';
-import { DisplayName } from '../../../components/display_name';
+import AvatarOverlay from '../../../components/avatar_overlay';
+import DisplayName from '../../../components/display_name';
+import { Link } from 'react-router-dom';
 
 export default class MovedNote extends ImmutablePureComponent {
 

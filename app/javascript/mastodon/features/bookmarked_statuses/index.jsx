@@ -1,28 +1,23 @@
+import { debounce } from 'lodash';
 import PropTypes from 'prop-types';
-
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
+import React from 'react';
 import { Helmet } from 'react-helmet';
-
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 import { connect } from 'react-redux';
-
-import { debounce } from 'lodash';
-
 import { fetchBookmarkedStatuses, expandBookmarkedStatuses } from 'mastodon/actions/bookmarks';
 import { addColumn, removeColumn, moveColumn } from 'mastodon/actions/columns';
 import ColumnHeader from 'mastodon/components/column_header';
 import StatusList from 'mastodon/components/status_list';
 import Column from 'mastodon/features/ui/components/column';
-import { getStatusList } from 'mastodon/selectors';
 
 const messages = defineMessages({
   heading: { id: 'column.bookmarks', defaultMessage: 'Bookmarks' },
 });
 
 const mapStateToProps = state => ({
-  statusIds: getStatusList(state, 'bookmarks'),
+  statusIds: state.getIn(['status_lists', 'bookmarks', 'items']),
   isLoading: state.getIn(['status_lists', 'bookmarks', 'isLoading'], true),
   hasMore: !!state.getIn(['status_lists', 'bookmarks', 'next']),
 });
@@ -39,7 +34,7 @@ class Bookmarks extends ImmutablePureComponent {
     isLoading: PropTypes.bool,
   };
 
-  UNSAFE_componentWillMount () {
+  componentWillMount () {
     this.props.dispatch(fetchBookmarkedStatuses());
   }
 

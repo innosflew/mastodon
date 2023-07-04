@@ -1,21 +1,17 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { FormattedMessage, injectIntl } from 'react-intl';
-
-import classnames from 'classnames';
-import { Link } from 'react-router-dom';
-
+import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
+import PropTypes from 'prop-types';
+import { FormattedMessage, injectIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
-import { Icon }  from 'mastodon/components/icon';
+import classnames from 'classnames';
 import PollContainer from 'mastodon/containers/poll_container';
+import Icon from 'mastodon/components/icon';
 import { autoPlayGif, languages as preloadedLanguages } from 'mastodon/initial_state';
 
 const MAX_HEIGHT = 706; // 22px * 32 (+ 2px padding at the top)
 
-class TranslateButton extends PureComponent {
+class TranslateButton extends React.PureComponent {
 
   static propTypes = {
     translation: ImmutablePropTypes.map,
@@ -56,7 +52,7 @@ const mapStateToProps = state => ({
   languages: state.getIn(['server', 'translationLanguages', 'items']),
 });
 
-class StatusContent extends PureComponent {
+class StatusContent extends React.PureComponent {
 
   static contextTypes = {
     router: PropTypes.object,
@@ -104,7 +100,7 @@ class StatusContent extends PureComponent {
 
       if (mention) {
         link.addEventListener('click', this.onMentionClick.bind(this, mention), false);
-        link.setAttribute('title', `@${mention.get('acct')}`);
+        link.setAttribute('title', mention.get('acct'));
         link.setAttribute('href', `/@${mention.get('acct')}`);
       } else if (link.textContent[0] === '#' || (link.previousSibling && link.previousSibling.textContent && link.previousSibling.textContent[link.previousSibling.textContent.length - 1] === '#')) {
         link.addEventListener('click', this.onHashtagClick.bind(this, link.text), false);
@@ -231,11 +227,11 @@ class StatusContent extends PureComponent {
     const renderReadMore = this.props.onClick && status.get('collapsed');
     const contentLocale = intl.locale.replace(/[_-].*/, '');
     const targetLanguages = this.props.languages?.get(status.get('language') || 'und');
-    const renderTranslate = this.props.onTranslate && this.context.identity.signedIn && ['public', 'unlisted'].includes(status.get('visibility')) && status.get('search_index').trim().length > 0 && targetLanguages?.includes(contentLocale);
+    const renderTranslate = this.props.onTranslate && this.context.identity.signedIn && ['public', 'unlisted'].includes(status.get('visibility')) && status.get('contentHtml').length > 0 && targetLanguages?.includes(contentLocale);
 
-    const content = { __html: status.getIn(['translation', 'contentHtml']) || status.get('contentHtml') };
-    const spoilerContent = { __html: status.getIn(['translation', 'spoilerHtml']) || status.get('spoilerHtml') };
-    const language = status.getIn(['translation', 'language']) || status.get('language');
+    const content = { __html: status.get('translation') ? status.getIn(['translation', 'content']) : status.get('contentHtml') };
+    const spoilerContent = { __html: status.get('spoilerHtml') };
+    const lang = status.get('translation') ? intl.locale : status.get('language');
     const classNames = classnames('status__content', {
       'status__content--with-action': this.props.onClick && this.context.router,
       'status__content--with-spoiler': status.get('spoiler_text').length > 0,
@@ -253,7 +249,7 @@ class StatusContent extends PureComponent {
     );
 
     const poll = !!status.get('poll') && (
-      <PollContainer pollId={status.get('poll')} lang={language} />
+      <PollContainer pollId={status.get('poll')} lang={status.get('language')} />
     );
 
     if (status.get('spoiler_text').length > 0) {
@@ -274,24 +270,24 @@ class StatusContent extends PureComponent {
       return (
         <div className={classNames} ref={this.setRef} tabIndex={0} onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
           <p style={{ marginBottom: hidden && status.get('mentions').isEmpty() ? '0px' : null }}>
-            <span dangerouslySetInnerHTML={spoilerContent} className='translate' lang={language} />
+            <span dangerouslySetInnerHTML={spoilerContent} className='translate' lang={lang} />
             {' '}
             <button type='button' className={`status__content__spoiler-link ${hidden ? 'status__content__spoiler-link--show-more' : 'status__content__spoiler-link--show-less'}`} onClick={this.handleSpoilerClick} aria-expanded={!hidden}>{toggleText}</button>
           </p>
 
           {mentionsPlaceholder}
 
-          <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''} translate`} lang={language} dangerouslySetInnerHTML={content} />
+          <div tabIndex={!hidden ? 0 : null} className={`status__content__text ${!hidden ? 'status__content__text--visible' : ''} translate`} lang={lang} dangerouslySetInnerHTML={content} />
 
           {!hidden && poll}
-          {translateButton}
+          {!hidden && translateButton}
         </div>
       );
     } else if (this.props.onClick) {
       return (
         <>
           <div className={classNames} ref={this.setRef} tabIndex={0} onMouseDown={this.handleMouseDown} onMouseUp={this.handleMouseUp} key='status-content' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-            <div className='status__content__text status__content__text--visible translate' lang={language} dangerouslySetInnerHTML={content} />
+            <div className='status__content__text status__content__text--visible translate' lang={lang} dangerouslySetInnerHTML={content} />
 
             {poll}
             {translateButton}
@@ -303,7 +299,7 @@ class StatusContent extends PureComponent {
     } else {
       return (
         <div className={classNames} ref={this.setRef} tabIndex={0} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-          <div className='status__content__text status__content__text--visible translate' lang={language} dangerouslySetInnerHTML={content} />
+          <div className='status__content__text status__content__text--visible translate' lang={lang} dangerouslySetInnerHTML={content} />
 
           {poll}
           {translateButton}

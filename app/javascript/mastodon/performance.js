@@ -2,8 +2,9 @@
 // Tools for performance debugging, only enabled in development mode.
 // Open up Chrome Dev Tools, then Timeline, then User Timing to see output.
 // Also see config/webpack/loaders/mark.js for the webpack loader marks.
+//
 
-import * as marky from 'marky';
+let marky;
 
 if (process.env.NODE_ENV === 'development') {
   if (typeof performance !== 'undefined' && performance.setResourceTimingBufferSize) {
@@ -12,6 +13,7 @@ if (process.env.NODE_ENV === 'development') {
     performance.setResourceTimingBufferSize(Infinity);
   }
 
+  marky = require('marky');
   // allows us to easily do e.g. ReactPerf.printWasted() while debugging
   //window.ReactPerf = require('react-addons-perf');
   //window.ReactPerf.start();

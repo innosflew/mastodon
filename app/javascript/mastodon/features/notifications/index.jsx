@@ -1,23 +1,9 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
-import { Helmet } from 'react-helmet';
-
-import { List as ImmutableList } from 'immutable';
-import ImmutablePropTypes from 'react-immutable-proptypes';
+import React from 'react';
 import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
-
-import { debounce } from 'lodash';
-
-import { compareId } from 'mastodon/compare_id';
-import { Icon }  from 'mastodon/components/icon';
-import { NotSignedInIndicator } from 'mastodon/components/not_signed_in_indicator';
-
-import { addColumn, removeColumn, moveColumn } from '../../actions/columns';
-import { submitMarkers } from '../../actions/markers';
+import PropTypes from 'prop-types';
+import ImmutablePropTypes from 'react-immutable-proptypes';
+import Column from '../../components/column';
+import ColumnHeader from '../../components/column_header';
 import {
   expandNotifications,
   scrollTopNotifications,
@@ -26,15 +12,22 @@ import {
   unmountNotifications,
   markNotificationsAsRead,
 } from '../../actions/notifications';
-import Column from '../../components/column';
-import ColumnHeader from '../../components/column_header';
-import { LoadGap } from '../../components/load_gap';
-import ScrollableList from '../../components/scrollable_list';
-
-import NotificationsPermissionBanner from './components/notifications_permission_banner';
+import { submitMarkers } from '../../actions/markers';
+import { addColumn, removeColumn, moveColumn } from '../../actions/columns';
+import NotificationContainer from './containers/notification_container';
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import ColumnSettingsContainer from './containers/column_settings_container';
 import FilterBarContainer from './containers/filter_bar_container';
-import NotificationContainer from './containers/notification_container';
+import { createSelector } from 'reselect';
+import { List as ImmutableList } from 'immutable';
+import { debounce } from 'lodash';
+import ScrollableList from '../../components/scrollable_list';
+import LoadGap from '../../components/load_gap';
+import Icon from 'mastodon/components/icon';
+import compareId from 'mastodon/compare_id';
+import NotificationsPermissionBanner from './components/notifications_permission_banner';
+import NotSignedInIndicator from 'mastodon/components/not_signed_in_indicator';
+import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({
   title: { id: 'column.notifications', defaultMessage: 'Notifications' },
@@ -74,7 +67,7 @@ const mapStateToProps = state => ({
   needsNotificationPermission: state.getIn(['settings', 'notifications', 'alerts']).includes(true) && state.getIn(['notifications', 'browserSupport']) && state.getIn(['notifications', 'browserPermission']) === 'default' && !state.getIn(['settings', 'notifications', 'dismissPermissionBanner']),
 });
 
-class Notifications extends PureComponent {
+class Notifications extends React.PureComponent {
 
   static contextTypes = {
     identity: PropTypes.object,
@@ -100,7 +93,7 @@ class Notifications extends PureComponent {
     trackScroll: true,
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     this.props.dispatch(mountNotifications());
   }
 

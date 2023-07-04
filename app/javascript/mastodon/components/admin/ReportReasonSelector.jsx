@@ -1,11 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { injectIntl, defineMessages } from 'react-intl';
-
-import classNames from 'classnames';
-
 import api from 'mastodon/api';
+import { injectIntl, defineMessages } from 'react-intl';
+import classNames from 'classnames';
 
 const messages = defineMessages({
   other: { id: 'report.categories.other', defaultMessage: 'Other' },
@@ -13,7 +10,7 @@ const messages = defineMessages({
   violation: { id: 'report.categories.violation', defaultMessage: 'Content violates one or more server rules' },
 });
 
-class Category extends PureComponent {
+class Category extends React.PureComponent {
 
   static propTypes = {
     id: PropTypes.string.isRequired,
@@ -55,7 +52,7 @@ class Category extends PureComponent {
 
 }
 
-class Rule extends PureComponent {
+class Rule extends React.PureComponent {
 
   static propTypes = {
     id: PropTypes.string.isRequired,
@@ -87,7 +84,7 @@ class Rule extends PureComponent {
 
 }
 
-class ReportReasonSelector extends PureComponent {
+class ReportReasonSelector extends React.PureComponent {
 
   static propTypes = {
     id: PropTypes.string.isRequired,

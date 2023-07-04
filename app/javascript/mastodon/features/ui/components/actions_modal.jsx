@@ -1,11 +1,9 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-
-import classNames from 'classnames';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-
-import { IconButton } from '../../../components/icon_button';
+import IconButton from '../../../components/icon_button';
+import classNames from 'classnames';
 
 export default class ActionsModal extends ImmutablePureComponent {
 

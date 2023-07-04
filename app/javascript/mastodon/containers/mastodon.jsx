@@ -1,24 +1,25 @@
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { BrowserRouter, Route } from 'react-router-dom';
-
+import { IntlProvider, addLocaleData } from 'react-intl';
 import { Provider as ReduxProvider } from 'react-redux';
-
+import { BrowserRouter, Route } from 'react-router-dom';
 import { ScrollContext } from 'react-router-scroll-4';
-
+import configureStore from 'mastodon/store/configureStore';
+import UI from 'mastodon/features/ui';
 import { fetchCustomEmojis } from 'mastodon/actions/custom_emojis';
 import { hydrateStore } from 'mastodon/actions/store';
 import { connectUserStream } from 'mastodon/actions/streaming';
 import ErrorBoundary from 'mastodon/components/error_boundary';
-import UI from 'mastodon/features/ui';
 import initialState, { title as siteTitle } from 'mastodon/initial_state';
-import { IntlProvider } from 'mastodon/locales';
-import { store } from 'mastodon/store';
+import { getLocale } from 'mastodon/locales';
+
+const { localeData, messages } = getLocale();
+addLocaleData(localeData);
 
 const title = process.env.NODE_ENV === 'production' ? siteTitle : `${siteTitle} (Dev)`;
 
+export const store = configureStore();
 const hydrateAction = hydrateStore(initialState);
 
 store.dispatch(hydrateAction);
@@ -34,7 +35,11 @@ const createIdentityContext = state => ({
   permissions: state.role ? state.role.permissions : 0,
 });
 
-export default class Mastodon extends PureComponent {
+export default class Mastodon extends React.PureComponent {
+
+  static propTypes = {
+    locale: PropTypes.string.isRequired,
+  };
 
   static childContextTypes = {
     identity: PropTypes.shape({
@@ -71,8 +76,10 @@ export default class Mastodon extends PureComponent {
   }
 
   render () {
+    const { locale } = this.props;
+
     return (
-      <IntlProvider>
+      <IntlProvider locale={locale} messages={messages}>
         <ReduxProvider store={store}>
           <ErrorBoundary>
             <BrowserRouter>

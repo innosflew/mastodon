@@ -13,7 +13,7 @@
 #
 
 class Identity < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
   validates :uid, presence: true, uniqueness: { scope: :provider }
   validates :provider, presence: true
 

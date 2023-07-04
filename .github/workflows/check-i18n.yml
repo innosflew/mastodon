@@ -41,7 +41,8 @@ jobs:
 
       - name: Check for missing strings in English JSON
         run: |
-          yarn i18n:extract --throws
+          yarn build:development
+          yarn manage:translations en
           git diff --exit-code
 
       - name: Check locale file normalization

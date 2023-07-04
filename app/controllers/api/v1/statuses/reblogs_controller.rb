@@ -2,8 +2,6 @@
 
 class Api::V1::Statuses::ReblogsController < Api::BaseController
   include Authorization
-  include Redisable
-  include Lockable
 
   before_action -> { doorkeeper_authorize! :write, :'write:statuses' }
   before_action :require_user!
@@ -12,9 +10,7 @@ class Api::V1::Statuses::ReblogsController < Api::BaseController
   override_rate_limit_headers :create, family: :statuses
 
   def create
-    with_redis_lock("reblog:#{current_account.id}:#{@reblog.id}") do
-      @status = ReblogService.new.call(current_account, @reblog, reblog_params)
-    end
+    @status = ReblogService.new.call(current_account, @reblog, reblog_params)
 
     render json: @status, serializer: REST::StatusSerializer
   end

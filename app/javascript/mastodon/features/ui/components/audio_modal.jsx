@@ -1,14 +1,13 @@
-import PropTypes from 'prop-types';
-
+import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import ImmutablePureComponent from 'react-immutable-pure-component';
-import { connect } from 'react-redux';
-
+import PropTypes from 'prop-types';
 import Audio from 'mastodon/features/audio';
+import { connect } from 'react-redux';
+import ImmutablePureComponent from 'react-immutable-pure-component';
 import Footer from 'mastodon/features/picture_in_picture/components/footer';
 
 const mapStateToProps = (state, { statusId }) => ({
-  status: state.getIn(['statuses', statusId]),
+  language: state.getIn(['statuses', statusId, 'language']),
   accountStaticAvatar: state.getIn(['accounts', state.getIn(['statuses', statusId, 'account']), 'avatar_static']),
 });
 
@@ -17,7 +16,7 @@ class AudioModal extends ImmutablePureComponent {
   static propTypes = {
     media: ImmutablePropTypes.map.isRequired,
     statusId: PropTypes.string.isRequired,
-    status: ImmutablePropTypes.map.isRequired,
+    language: PropTypes.string,
     accountStaticAvatar: PropTypes.string.isRequired,
     options: PropTypes.shape({
       autoPlay: PropTypes.bool,
@@ -27,17 +26,15 @@ class AudioModal extends ImmutablePureComponent {
   };
 
   render () {
-    const { media, status, accountStaticAvatar, onClose } = this.props;
+    const { media, language, accountStaticAvatar, statusId, onClose } = this.props;
     const options = this.props.options || {};
-    const language = status.getIn(['translation', 'language']) || status.get('language');
-    const description = media.getIn(['translation', 'description']) || media.get('description');
 
     return (
       <div className='modal-root__modal audio-modal'>
         <div className='audio-modal__container'>
           <Audio
             src={media.get('url')}
-            alt={description}
+            alt={media.get('description')}
             lang={language}
             duration={media.getIn(['meta', 'original', 'duration'], 0)}
             height={150}
@@ -50,7 +47,7 @@ class AudioModal extends ImmutablePureComponent {
         </div>
 
         <div className='media-modal__overlay'>
-          {status && <Footer statusId={status.get('id')} withOpenButton onClose={onClose} />}
+          {statusId && <Footer statusId={statusId} withOpenButton onClose={onClose} />}
         </div>
       </div>
     );

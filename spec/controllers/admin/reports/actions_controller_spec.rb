@@ -15,7 +15,7 @@ describe Admin::Reports::ActionsController do
     let(:report) { Fabricate(:report) }
 
     before do
-      post :preview, params: { :report_id => report.id, action => '' }
+      post :preview, params: { report_id: report.id, action => '' }
     end
 
     context 'when the action is "suspend"' do
@@ -62,10 +62,17 @@ describe Admin::Reports::ActionsController do
     end
 
     shared_examples 'common behavior' do
-      it 'closes the report and redirects' do
-        expect { subject }.to mark_report_action_taken.and create_target_account_strike
+      it 'closes the report' do
+        expect { subject }.to change { report.reload.action_taken? }.from(false).to(true)
+      end
 
+      it 'creates a strike with the expected text' do
+        expect { subject }.to change { report.target_account.strikes.count }.by(1)
         expect(report.target_account.strikes.last.text).to eq text
+      end
+
+      it 'redirects' do
+        subject
         expect(response).to redirect_to(admin_reports_path)
       end
 
@@ -74,20 +81,19 @@ describe Admin::Reports::ActionsController do
           { report_id: report.id }
         end
 
-        it 'closes the report and redirects' do
-          expect { subject }.to mark_report_action_taken.and create_target_account_strike
+        it 'closes the report' do
+          expect { subject }.to change { report.reload.action_taken? }.from(false).to(true)
+        end
 
+        it 'creates a strike with the expected text' do
+          expect { subject }.to change { report.target_account.strikes.count }.by(1)
           expect(report.target_account.strikes.last.text).to eq ''
+        end
+
+        it 'redirects' do
+          subject
           expect(response).to redirect_to(admin_reports_path)
         end
-      end
-
-      def mark_report_action_taken
-        change { report.reload.action_taken? }.from(false).to(true)
-      end
-
-      def create_target_account_strike
-        change { report.target_account.strikes.count }.by(1)
       end
     end
 
@@ -140,13 +146,13 @@ describe Admin::Reports::ActionsController do
       end
     end
 
-    context 'with action as submit button' do
+    context 'action as submit button' do
       subject { post :create, params: common_params.merge({ action => '' }) }
 
       it_behaves_like 'all action types'
     end
 
-    context 'with moderation action as an extra field' do
+    context 'action as submit button' do
       subject { post :create, params: common_params.merge({ moderation_action: action }) }
 
       it_behaves_like 'all action types'

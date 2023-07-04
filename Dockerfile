@@ -41,10 +41,6 @@ RUN apt-get update && \
 
 FROM node:${NODE_VERSION}
 
-# Use those args to specify your own version flags & suffixes
-ARG MASTODON_VERSION_FLAGS=""
-ARG MASTODON_VERSION_SUFFIX=""
-
 ARG UID="991"
 ARG GID="991"
 
@@ -55,7 +51,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV DEBIAN_FRONTEND="noninteractive" \
     PATH="${PATH}:/opt/ruby/bin:/opt/mastodon/bin"
 
-# Ignoring these here since we don't want to pin any versions and the Debian image removes apt-get content after use
+# Ignoreing these here since we don't want to pin any versions and the Debian image removes apt-get content after use
 # hadolint ignore=DL3008,DL3009
 RUN apt-get update && \
     echo "Etc/UTC" > /etc/localtime && \
@@ -88,9 +84,7 @@ COPY --chown=mastodon:mastodon --from=build /opt/mastodon /opt/mastodon
 ENV RAILS_ENV="production" \
     NODE_ENV="production" \
     RAILS_SERVE_STATIC_FILES="true" \
-    BIND="0.0.0.0" \
-    MASTODON_VERSION_FLAGS="${MASTODON_VERSION_FLAGS}" \
-    MASTODON_VERSION_SUFFIX="${MASTODON_VERSION_SUFFIX}"
+    BIND="0.0.0.0"
 
 # Set the run user
 USER mastodon

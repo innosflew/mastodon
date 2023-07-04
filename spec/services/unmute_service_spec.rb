@@ -3,5 +3,5 @@
 require 'rails_helper'
 
 RSpec.describe UnmuteService, type: :service do
-  subject { described_class.new }
+  subject { UnmuteService.new }
 end

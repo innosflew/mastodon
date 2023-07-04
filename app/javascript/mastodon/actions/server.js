@@ -1,5 +1,4 @@
 import api from '../api';
-
 import { importFetchedAccount } from './importer';
 
 export const SERVER_FETCH_REQUEST = 'Server_FETCH_REQUEST';
@@ -19,10 +18,6 @@ export const SERVER_DOMAIN_BLOCKS_FETCH_SUCCESS = 'SERVER_DOMAIN_BLOCKS_FETCH_SU
 export const SERVER_DOMAIN_BLOCKS_FETCH_FAIL    = 'SERVER_DOMAIN_BLOCKS_FETCH_FAIL';
 
 export const fetchServer = () => (dispatch, getState) => {
-  if (getState().getIn(['server', 'server', 'isLoading'])) {
-    return;
-  }
-
   dispatch(fetchServerRequest());
 
   api(getState)
@@ -70,10 +65,6 @@ const fetchServerTranslationLanguagesFail = error => ({
 });
 
 export const fetchExtendedDescription = () => (dispatch, getState) => {
-  if (getState().getIn(['server', 'extendedDescription', 'isLoading'])) {
-    return;
-  }
-
   dispatch(fetchExtendedDescriptionRequest());
 
   api(getState)
@@ -97,10 +88,6 @@ const fetchExtendedDescriptionFail = error => ({
 });
 
 export const fetchDomainBlocks = () => (dispatch, getState) => {
-  if (getState().getIn(['server', 'domainBlocks', 'isLoading'])) {
-    return;
-  }
-
   dispatch(fetchDomainBlocksRequest());
 
   api(getState)

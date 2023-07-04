@@ -1,24 +1,19 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { defineMessages, injectIntl } from 'react-intl';
-
-import { Helmet } from 'react-helmet';
-
-import { List as ImmutableList } from 'immutable';
-import ImmutablePropTypes from 'react-immutable-proptypes';
+import React from 'react';
 import { connect } from 'react-redux';
-
-import { addColumn, removeColumn, moveColumn, changeColumnParams } from 'mastodon/actions/columns';
-import { fetchDirectory, expandDirectory } from 'mastodon/actions/directory';
+import { defineMessages, injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 import Column from 'mastodon/components/column';
 import ColumnHeader from 'mastodon/components/column_header';
-import { LoadMore } from 'mastodon/components/load_more';
-import { LoadingIndicator } from 'mastodon/components/loading_indicator';
-import { RadioButton } from 'mastodon/components/radio_button';
-import ScrollContainer from 'mastodon/containers/scroll_container';
-
+import { addColumn, removeColumn, moveColumn, changeColumnParams } from 'mastodon/actions/columns';
+import { fetchDirectory, expandDirectory } from 'mastodon/actions/directory';
+import { List as ImmutableList } from 'immutable';
 import AccountCard from './components/account_card';
+import RadioButton from 'mastodon/components/radio_button';
+import LoadMore from 'mastodon/components/load_more';
+import ScrollContainer from 'mastodon/containers/scroll_container';
+import LoadingIndicator from 'mastodon/components/loading_indicator';
+import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({
   title: { id: 'column.directory', defaultMessage: 'Browse profiles' },
@@ -34,7 +29,7 @@ const mapStateToProps = state => ({
   domain: state.getIn(['meta', 'domain']),
 });
 
-class Directory extends PureComponent {
+class Directory extends React.PureComponent {
 
   static contextTypes = {
     router: PropTypes.object,

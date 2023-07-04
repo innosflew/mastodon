@@ -8,8 +8,8 @@ class TranslationService::LibreTranslate < TranslationService
     @api_key  = api_key
   end
 
-  def translate(texts, source_language, target_language)
-    body = Oj.dump(q: texts, source: source_language.presence || 'auto', target: target_language, format: 'html', api_key: @api_key)
+  def translate(text, source_language, target_language)
+    body = Oj.dump(q: text, source: source_language.presence || 'auto', target: target_language, format: 'html', api_key: @api_key)
     request(:post, '/translate', body: body) do |res|
       transform_response(res.body_with_limit, source_language)
     end
@@ -44,17 +44,12 @@ class TranslationService::LibreTranslate < TranslationService
     end
   end
 
-  def transform_response(json, source_language)
-    data = Oj.load(json, mode: :strict)
-    raise UnexpectedResponseError unless data.is_a?(Hash)
+  def transform_response(str, source_language)
+    json = Oj.load(str, mode: :strict)
 
-    data['translatedText'].map.with_index do |text, index|
-      Translation.new(
-        text: text,
-        detected_source_language: data.dig('detectedLanguage', index, 'language') || source_language,
-        provider: 'LibreTranslate'
-      )
-    end
+    raise UnexpectedResponseError unless json.is_a?(Hash)
+
+    Translation.new(text: json['translatedText'], detected_source_language: source_language, provider: 'LibreTranslate')
   rescue Oj::ParseError
     raise UnexpectedResponseError
   end

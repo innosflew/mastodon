@@ -1,10 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
 
 const emptyComponent = () => null;
 const noop = () => { };
 
-class Bundle extends PureComponent {
+class Bundle extends React.PureComponent {
 
   static propTypes = {
     fetchComponent: PropTypes.func.isRequired,
@@ -33,11 +33,11 @@ class Bundle extends PureComponent {
     forceRender: false,
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     this.load(this.props);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.fetchComponent !== this.props.fetchComponent) {
       this.load(nextProps);
     }

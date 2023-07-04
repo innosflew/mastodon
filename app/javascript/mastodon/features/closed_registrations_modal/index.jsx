@@ -1,10 +1,9 @@
-import { FormattedMessage } from 'react-intl';
-
-import ImmutablePureComponent from 'react-immutable-pure-component';
+import React from 'react';
 import { connect } from 'react-redux';
-
-import { fetchServer } from 'mastodon/actions/server';
+import { FormattedMessage } from 'react-intl';
+import ImmutablePureComponent from 'react-immutable-pure-component';
 import { domain } from 'mastodon/initial_state';
+import { fetchServer } from 'mastodon/actions/server';
 
 const mapStateToProps = state => ({
   message: state.getIn(['server', 'server', 'registrations', 'message']),

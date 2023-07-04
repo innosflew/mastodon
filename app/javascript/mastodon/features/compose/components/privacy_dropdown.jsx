@@ -1,16 +1,11 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
 import { injectIntl, defineMessages } from 'react-intl';
-
-import classNames from 'classnames';
-
-import { supportsPassiveEvents } from 'detect-passive-events';
+import IconButton from '../../../components/icon_button';
 import Overlay from 'react-overlays/Overlay';
-
-import { Icon }  from 'mastodon/components/icon';
-
-import { IconButton } from '../../../components/icon_button';
+import { supportsPassiveEvents } from 'detect-passive-events';
+import classNames from 'classnames';
+import Icon from 'mastodon/components/icon';
 
 const messages = defineMessages({
   public_short: { id: 'privacy.public.short', defaultMessage: 'Public' },
@@ -24,9 +19,9 @@ const messages = defineMessages({
   change_privacy: { id: 'privacy.change', defaultMessage: 'Adjust status privacy' },
 });
 
-const listenerOptions = supportsPassiveEvents ? { passive: true, capture: true } : true;
+const listenerOptions = supportsPassiveEvents ? { passive: true } : false;
 
-class PrivacyDropdownMenu extends PureComponent {
+class PrivacyDropdownMenu extends React.PureComponent {
 
   static propTypes = {
     style: PropTypes.object,
@@ -39,7 +34,6 @@ class PrivacyDropdownMenu extends PureComponent {
   handleDocumentClick = e => {
     if (this.node && !this.node.contains(e.target)) {
       this.props.onClose();
-      e.stopPropagation();
     }
   };
 
@@ -97,13 +91,13 @@ class PrivacyDropdownMenu extends PureComponent {
   };
 
   componentDidMount () {
-    document.addEventListener('click', this.handleDocumentClick, { capture: true });
+    document.addEventListener('click', this.handleDocumentClick, false);
     document.addEventListener('touchend', this.handleDocumentClick, listenerOptions);
     if (this.focusedItem) this.focusedItem.focus({ preventScroll: true });
   }
 
   componentWillUnmount () {
-    document.removeEventListener('click', this.handleDocumentClick, { capture: true });
+    document.removeEventListener('click', this.handleDocumentClick, false);
     document.removeEventListener('touchend', this.handleDocumentClick, listenerOptions);
   }
 
@@ -138,7 +132,7 @@ class PrivacyDropdownMenu extends PureComponent {
 
 }
 
-class PrivacyDropdown extends PureComponent {
+class PrivacyDropdown extends React.PureComponent {
 
   static propTypes = {
     isUserTouching: PropTypes.func,
@@ -218,7 +212,7 @@ class PrivacyDropdown extends PureComponent {
     this.props.onChange(value);
   };
 
-  UNSAFE_componentWillMount () {
+  componentWillMount () {
     const { intl: { formatMessage } } = this.props;
 
     this.options = [

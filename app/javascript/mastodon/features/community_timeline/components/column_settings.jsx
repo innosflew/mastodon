@@ -1,13 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { injectIntl, FormattedMessage } from 'react-intl';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
-
+import { injectIntl, FormattedMessage } from 'react-intl';
 import SettingToggle from '../../notifications/components/setting_toggle';
 
-class ColumnSettings extends PureComponent {
+class ColumnSettings extends React.PureComponent {
 
   static propTypes = {
     settings: ImmutablePropTypes.map.isRequired,

@@ -1,19 +1,16 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { FormattedMessage, FormattedDate, injectIntl, defineMessages } from 'react-intl';
-
 import { Helmet } from 'react-helmet';
-
-import api from 'mastodon/api';
+import { FormattedMessage, FormattedDate, injectIntl, defineMessages } from 'react-intl';
 import Column from 'mastodon/components/column';
-import { Skeleton } from 'mastodon/components/skeleton';
+import api from 'mastodon/api';
+import Skeleton from 'mastodon/components/skeleton';
 
 const messages = defineMessages({
   title: { id: 'privacy_policy.title', defaultMessage: 'Privacy Policy' },
 });
 
-class PrivacyPolicy extends PureComponent {
+class PrivacyPolicy extends React.PureComponent {
 
   static propTypes = {
     intl: PropTypes.object,

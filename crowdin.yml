@@ -1,4 +1,3 @@
-skip_untranslated_strings: 1
 commit_message: '[ci skip]'
 files:
   - source: /app/javascript/mastodon/locales/en.json

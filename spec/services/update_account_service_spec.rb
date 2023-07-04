@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe UpdateAccountService, type: :service do
-  subject { described_class.new }
+  subject { UpdateAccountService.new }
 
   describe 'switching form locked to unlocked accounts' do
     let(:account) { Fabricate(:account, locked: true) }

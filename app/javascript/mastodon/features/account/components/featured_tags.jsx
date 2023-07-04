@@ -1,10 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import Hashtag from 'mastodon/components/hashtag';
 
 const messages = defineMessages({

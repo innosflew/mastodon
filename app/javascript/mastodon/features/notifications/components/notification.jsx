@@ -1,23 +1,17 @@
-import PropTypes from 'prop-types';
-
-import { injectIntl, FormattedMessage, defineMessages } from 'react-intl';
-
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
-
+import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import ImmutablePureComponent from 'react-immutable-pure-component';
-
+import { injectIntl, FormattedMessage, defineMessages } from 'react-intl';
 import { HotKeys } from 'react-hotkeys';
-
-import { Icon }  from 'mastodon/components/icon';
-import AccountContainer from 'mastodon/containers/account_container';
-import StatusContainer from 'mastodon/containers/status_container';
+import PropTypes from 'prop-types';
+import ImmutablePureComponent from 'react-immutable-pure-component';
 import { me } from 'mastodon/initial_state';
-
-import FollowRequestContainer from '../containers/follow_request_container';
-
+import StatusContainer from 'mastodon/containers/status_container';
+import AccountContainer from 'mastodon/containers/account_container';
 import Report from './report';
+import FollowRequestContainer from '../containers/follow_request_container';
+import Icon from 'mastodon/components/icon';
+import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 
 const messages = defineMessages({
   favourite: { id: 'notification.favourite', defaultMessage: '{name} favourited your status' },

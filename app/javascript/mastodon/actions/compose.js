@@ -1,12 +1,9 @@
-import { defineMessages } from 'react-intl';
-
 import axios from 'axios';
 import { throttle } from 'lodash';
-
+import { defineMessages } from 'react-intl';
 import api from 'mastodon/api';
 import { search as emojiSearch } from 'mastodon/features/emoji/emoji_mart_search_light';
 import { tagHistory } from 'mastodon/settings';
-
 import { showAlert, showAlertForError } from './alerts';
 import { useEmoji } from './emojis';
 import { importFetchedAccounts, importFetchedStatus } from './importer';
@@ -129,13 +126,12 @@ export function resetCompose() {
   };
 }
 
-export const focusCompose = (routerHistory, defaultText) => (dispatch, getState) => {
+export const focusCompose = routerHistory => dispatch => {
   dispatch({
     type: COMPOSE_FOCUS,
-    defaultText,
   });
 
-  ensureComposeIsVisible(getState, routerHistory);
+  ensureComposeIsVisible(routerHistory);
 };
 
 export function mentionCompose(account, routerHistory) {
@@ -381,10 +377,7 @@ export function initMediaEditModal(id) {
       id,
     });
 
-    dispatch(openModal({
-      modalType: 'FOCAL_POINT',
-      modalProps: { id },
-    }));
+    dispatch(openModal('FOCAL_POINT', { id }));
   };
 }
 
@@ -412,12 +405,16 @@ export function changeUploadCompose(id, params) {
     // Editing already-attached media is deferred to editing the post itself.
     // For simplicity's sake, fake an API reply.
     if (media && !media.get('unattached')) {
-      const { focus, ...other } = params;
-      const data = { ...media.toJS(), ...other };
+      let { description, focus } = params;
+      const data = media.toJS();
+
+      if (description) {
+        data.description = description;
+      }
 
       if (focus) {
-        const [x, y] = focus.split(',');
-        data.meta = { focus: { x: parseFloat(x), y: parseFloat(y) } };
+        focus = focus.split(',');
+        data.meta = { focus: { x: parseFloat(focus[0]), y: parseFloat(focus[1]) } };
       }
 
       dispatch(changeUploadComposeSuccess(data, true));

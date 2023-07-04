@@ -1,12 +1,9 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { defineMessages, injectIntl } from 'react-intl';
-
+import React from 'react';
 import { connect } from 'react-redux';
-
+import PropTypes from 'prop-types';
 import { changeListEditorTitle, submitListEditor } from 'mastodon/actions/lists';
 import Button from 'mastodon/components/button';
+import { defineMessages, injectIntl } from 'react-intl';
 
 const messages = defineMessages({
   label: { id: 'lists.new.title_placeholder', defaultMessage: 'New list title' },
@@ -23,7 +20,7 @@ const mapDispatchToProps = dispatch => ({
   onSubmit: () => dispatch(submitListEditor(true)),
 });
 
-class NewListForm extends PureComponent {
+class NewListForm extends React.PureComponent {
 
   static propTypes = {
     value: PropTypes.string.isRequired,

@@ -1,32 +1,24 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
 import { FormattedMessage } from 'react-intl';
-
-import classNames from 'classnames';
-
-import { connect } from 'react-redux';
-
-import { openModal, closeModal } from 'mastodon/actions/modal';
-import { Icon }  from 'mastodon/components/icon';
 import { registrationsOpen } from 'mastodon/initial_state';
+import { connect } from 'react-redux';
+import Icon from 'mastodon/components/icon';
+import classNames from 'classnames';
+import { openModal, closeModal } from 'mastodon/actions/modal';
 
 const mapStateToProps = (state, { accountId }) => ({
   displayNameHtml: state.getIn(['accounts', accountId, 'display_name_html']),
-  signupUrl: state.getIn(['server', 'server', 'registrations', 'url'], null) || '/auth/sign_up',
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onSignupClick() {
-    dispatch(closeModal({
-      modalType: undefined,
-      ignoreFocus: false,
-    }));
-    dispatch(openModal({ modalType: 'CLOSED_REGISTRATIONS' }));
+    dispatch(closeModal());
+    dispatch(openModal('CLOSED_REGISTRATIONS'));
   },
 });
 
-class Copypaste extends PureComponent {
+class Copypaste extends React.PureComponent {
 
   static propTypes = {
     value: PropTypes.string,
@@ -82,14 +74,13 @@ class Copypaste extends PureComponent {
 
 }
 
-class InteractionModal extends PureComponent {
+class InteractionModal extends React.PureComponent {
 
   static propTypes = {
     displayNameHtml: PropTypes.string,
     url: PropTypes.string,
     type: PropTypes.oneOf(['reply', 'reblog', 'favourite', 'follow']),
     onSignupClick: PropTypes.func.isRequired,
-    signupUrl: PropTypes.string.isRequired,
   };
 
   handleSignupClick = () => {
@@ -97,7 +88,7 @@ class InteractionModal extends PureComponent {
   };
 
   render () {
-    const { url, type, displayNameHtml, signupUrl } = this.props;
+    const { url, type, displayNameHtml } = this.props;
 
     const name = <bdi dangerouslySetInnerHTML={{ __html: displayNameHtml }} />;
 
@@ -130,7 +121,7 @@ class InteractionModal extends PureComponent {
 
     if (registrationsOpen) {
       signupButton = (
-        <a href={signupUrl} className='button button--block button-tertiary'>
+        <a href='/auth/sign_up' className='button button--block button-tertiary'>
           <FormattedMessage id='sign_in_banner.create_account' defaultMessage='Create account' />
         </a>
       );
@@ -152,7 +143,7 @@ class InteractionModal extends PureComponent {
         <div className='interaction-modal__choices'>
           <div className='interaction-modal__choices__choice'>
             <h3><FormattedMessage id='interaction_modal.on_this_server' defaultMessage='On this server' /></h3>
-            <a href='/auth/sign_in' className='button button--block'><FormattedMessage id='sign_in_banner.sign_in' defaultMessage='Login' /></a>
+            <a href='/auth/sign_in' className='button button--block'><FormattedMessage id='sign_in_banner.sign_in' defaultMessage='Sign in' /></a>
             {signupButton}
           </div>
 

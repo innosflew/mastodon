@@ -1,21 +1,17 @@
-import PropTypes from 'prop-types';
-
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
-import { Helmet } from 'react-helmet';
-
-import ImmutablePropTypes from 'react-immutable-proptypes';
-import ImmutablePureComponent from 'react-immutable-pure-component';
+import React from 'react';
 import { connect } from 'react-redux';
-
-import { Icon }  from 'mastodon/components/icon';
-
+import ImmutablePureComponent from 'react-immutable-pure-component';
+import PropTypes from 'prop-types';
+import ImmutablePropTypes from 'react-immutable-proptypes';
+import LoadingIndicator from '../../components/loading_indicator';
 import { fetchReblogs } from '../../actions/interactions';
-import ColumnHeader from '../../components/column_header';
-import { LoadingIndicator } from '../../components/loading_indicator';
-import ScrollableList from '../../components/scrollable_list';
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import AccountContainer from '../../containers/account_container';
 import Column from '../ui/components/column';
+import ScrollableList from '../../components/scrollable_list';
+import Icon from 'mastodon/components/icon';
+import ColumnHeader from '../../components/column_header';
+import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({
   refresh: { id: 'refresh', defaultMessage: 'Refresh' },
@@ -35,13 +31,13 @@ class Reblogs extends ImmutablePureComponent {
     intl: PropTypes.object.isRequired,
   };
 
-  UNSAFE_componentWillMount () {
+  componentWillMount () {
     if (!this.props.accountIds) {
       this.props.dispatch(fetchReblogs(this.props.params.statusId));
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.params.statusId !== this.props.params.statusId && nextProps.params.statusId) {
       this.props.dispatch(fetchReblogs(nextProps.params.statusId));
     }

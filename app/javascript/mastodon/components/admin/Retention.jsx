@@ -1,11 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { FormattedMessage, FormattedNumber, FormattedDate } from 'react-intl';
-
-import classNames from 'classnames';
-
 import api from 'mastodon/api';
+import { FormattedMessage, FormattedNumber, FormattedDate } from 'react-intl';
+import classNames from 'classnames';
 import { roundTo10 } from 'mastodon/utils/numbers';
 
 const dateForCohort = cohort => {
@@ -17,7 +14,7 @@ const dateForCohort = cohort => {
   }
 };
 
-export default class Retention extends PureComponent {
+export default class Retention extends React.PureComponent {
 
   static propTypes = {
     start_at: PropTypes.string,

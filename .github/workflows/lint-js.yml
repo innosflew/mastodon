@@ -3,7 +3,6 @@ on:
   push:
     branches-ignore:
       - 'dependabot/**'
-      - 'renovate/**'
     paths:
       - 'package.json'
       - 'yarn.lock'
@@ -49,7 +48,7 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: ESLint
-        run: yarn lint:js --max-warnings 0
+        run: yarn test:lint:js
 
       - name: Typecheck
-        run: yarn typecheck
+        run: yarn test:typecheck

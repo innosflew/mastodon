@@ -3,7 +3,6 @@ on:
   push:
     branches-ignore:
       - 'dependabot/**'
-      - 'renovate/**'
     paths:
       - 'package.json'
       - 'yarn.lock'
@@ -45,4 +44,4 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Jest testing
-        run: yarn jest --reporters github-actions summary
+        run: yarn test:jest --reporters github-actions summary

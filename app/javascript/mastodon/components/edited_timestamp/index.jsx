@@ -1,29 +1,22 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
 import { FormattedMessage, injectIntl } from 'react-intl';
-
-import { connect } from 'react-redux';
-
-import { openModal } from 'mastodon/actions/modal';
-import { Icon }  from 'mastodon/components/icon';
-import InlineAccount from 'mastodon/components/inline_account';
-import { RelativeTimestamp } from 'mastodon/components/relative_timestamp';
-
+import Icon from 'mastodon/components/icon';
 import DropdownMenu from './containers/dropdown_menu_container';
+import { connect } from 'react-redux';
+import { openModal } from 'mastodon/actions/modal';
+import RelativeTimestamp from 'mastodon/components/relative_timestamp';
+import InlineAccount from 'mastodon/components/inline_account';
 
 const mapDispatchToProps = (dispatch, { statusId }) => ({
 
   onItemClick (index) {
-    dispatch(openModal({
-      modalType: 'COMPARE_HISTORY',
-      modalProps: { index, statusId },
-    }));
+    dispatch(openModal('COMPARE_HISTORY', { index, statusId }));
   },
 
 });
 
-class EditedTimestamp extends PureComponent {
+class EditedTimestamp extends React.PureComponent {
 
   static propTypes = {
     statusId: PropTypes.string.isRequired,

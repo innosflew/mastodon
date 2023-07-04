@@ -4,7 +4,7 @@ require 'rails_helper'
 
 describe StatusReachFinder do
   describe '#inboxes' do
-    context 'with a local status' do
+    context 'for a local status' do
       subject { described_class.new(status) }
 
       let(:parent_status) { nil }
@@ -71,8 +71,10 @@ describe StatusReachFinder do
           bob.statuses.create!(thread: status, text: 'Hoge')
         end
 
-        it 'includes the inbox of the replier' do
-          expect(subject.inboxes).to include 'https://foo.bar/inbox'
+        context do
+          it 'includes the inbox of the replier' do
+            expect(subject.inboxes).to include 'https://foo.bar/inbox'
+          end
         end
 
         context 'when status is not public' do
@@ -88,8 +90,10 @@ describe StatusReachFinder do
         let(:bob) { Fabricate(:account, username: 'bob', domain: 'foo.bar', protocol: :activitypub, inbox_url: 'https://foo.bar/inbox') }
         let(:parent_status) { Fabricate(:status, account: bob) }
 
-        it 'includes the inbox of the replied-to account' do
-          expect(subject.inboxes).to include 'https://foo.bar/inbox'
+        context do
+          it 'includes the inbox of the replied-to account' do
+            expect(subject.inboxes).to include 'https://foo.bar/inbox'
+          end
         end
 
         context 'when status is not public and replied-to account is not mentioned' do

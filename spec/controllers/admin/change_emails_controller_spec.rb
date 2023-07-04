@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Admin::ChangeEmailsController do
+RSpec.describe Admin::ChangeEmailsController, type: :controller do
   render_views
 
   let(:admin) { Fabricate(:user, role: UserRole.find_by(name: 'Admin')) }
@@ -23,8 +23,7 @@ RSpec.describe Admin::ChangeEmailsController do
 
   describe 'GET #update' do
     before do
-      allow(UserMailer).to receive(:confirmation_instructions)
-        .and_return(instance_double(ActionMailer::MessageDelivery, deliver_later: nil))
+      allow(UserMailer).to receive(:confirmation_instructions).and_return(double('email', deliver_later: nil))
     end
 
     it 'returns http success' do

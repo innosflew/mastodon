@@ -1,5 +1,3 @@
-import { Map as ImmutableMap, List as ImmutableList, OrderedSet as ImmutableOrderedSet, fromJS } from 'immutable';
-
 import {
   COMPOSE_MOUNT,
   COMPOSE_UNMOUNT,
@@ -50,12 +48,13 @@ import {
   COMPOSE_SET_STATUS,
   COMPOSE_FOCUS,
 } from '../actions/compose';
-import { REDRAFT } from '../actions/statuses';
-import { STORE_HYDRATE } from '../actions/store';
 import { TIMELINE_DELETE } from '../actions/timelines';
+import { STORE_HYDRATE } from '../actions/store';
+import { REDRAFT } from '../actions/statuses';
+import { Map as ImmutableMap, List as ImmutableList, OrderedSet as ImmutableOrderedSet, fromJS } from 'immutable';
+import uuid from '../uuid';
 import { me } from '../initial_state';
 import { unescapeHTML } from '../utils/html';
-import { uuid } from '../uuid';
 
 const initialState = ImmutableMap({
   mounted: 0,
@@ -529,7 +528,7 @@ export default function compose(state = initialState, action) {
   case COMPOSE_LANGUAGE_CHANGE:
     return state.set('language', action.language);
   case COMPOSE_FOCUS:
-    return state.set('focusDate', new Date()).update('text', text => text.length > 0 ? text : action.defaultText);
+    return state.set('focusDate', new Date());
   default:
     return state;
   }

@@ -1,15 +1,14 @@
-import PropTypes from 'prop-types';
-
+import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import ImmutablePureComponent from 'react-immutable-pure-component';
-import { connect } from 'react-redux';
-
-import { getAverageFromBlurhash } from 'mastodon/blurhash';
-import Footer from 'mastodon/features/picture_in_picture/components/footer';
+import PropTypes from 'prop-types';
 import Video from 'mastodon/features/video';
+import { connect } from 'react-redux';
+import ImmutablePureComponent from 'react-immutable-pure-component';
+import Footer from 'mastodon/features/picture_in_picture/components/footer';
+import { getAverageFromBlurhash } from 'mastodon/blurhash';
 
 const mapStateToProps = (state, { statusId }) => ({
-  status: state.getIn(['statuses', statusId]),
+  language: state.getIn(['statuses', statusId, 'language']),
 });
 
 class VideoModal extends ImmutablePureComponent {
@@ -17,7 +16,7 @@ class VideoModal extends ImmutablePureComponent {
   static propTypes = {
     media: ImmutablePropTypes.map.isRequired,
     statusId: PropTypes.string,
-    status: ImmutablePropTypes.map,
+    language: PropTypes.string,
     options: PropTypes.shape({
       startTime: PropTypes.number,
       autoPlay: PropTypes.bool,
@@ -38,10 +37,8 @@ class VideoModal extends ImmutablePureComponent {
   }
 
   render () {
-    const { media, status, onClose } = this.props;
+    const { media, statusId, language, onClose } = this.props;
     const options = this.props.options || {};
-    const language = status.getIn(['translation', 'language']) || status.get('language');
-    const description = media.getIn(['translation', 'description']) || media.get('description');
 
     return (
       <div className='modal-root__modal video-modal'>
@@ -57,13 +54,13 @@ class VideoModal extends ImmutablePureComponent {
             onCloseVideo={onClose}
             autoFocus
             detailed
-            alt={description}
+            alt={media.get('description')}
             lang={language}
           />
         </div>
 
         <div className='media-modal__overlay'>
-          {status && <Footer statusId={status.get('id')} withOpenButton onClose={onClose} />}
+          {statusId && <Footer statusId={statusId} withOpenButton onClose={onClose} />}
         </div>
       </div>
     );

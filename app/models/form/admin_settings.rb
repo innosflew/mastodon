@@ -33,7 +33,6 @@ class Form::AdminSettings
     content_cache_retention_period
     backups_retention_period
     status_page_url
-    captcha_enabled
   ).freeze
 
   INTEGER_KEYS = %i(
@@ -53,7 +52,6 @@ class Form::AdminSettings
     trendable_by_default
     noindex
     require_invite_text
-    captcha_enabled
   ).freeze
 
   UPLOAD_KEYS = %i(

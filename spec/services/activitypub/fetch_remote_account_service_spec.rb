@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe ActivityPub::FetchRemoteAccountService, type: :service do
-  subject { described_class.new }
+  subject { ActivityPub::FetchRemoteAccountService.new }
 
   let!(:actor) do
     {

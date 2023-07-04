@@ -1,21 +1,14 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
-
-import classNames from 'classnames';
-
-import { is } from 'immutable';
-
-import { throttle, debounce } from 'lodash';
-
-import { Icon }  from 'mastodon/components/icon';
 import { formatTime, getPointerPosition, fileNameFromURL } from 'mastodon/features/video';
-
-import { Blurhash } from '../../components/blurhash';
-import { displayMedia, useBlurhash } from '../../initial_state';
-
+import Icon from 'mastodon/components/icon';
+import classNames from 'classnames';
+import { throttle, debounce } from 'lodash';
 import Visualizer from './visualizer';
+import { displayMedia, useBlurhash } from '../../initial_state';
+import Blurhash from '../../components/blurhash';
+import { is } from 'immutable';
 
 const messages = defineMessages({
   play: { id: 'video.play', defaultMessage: 'Play' },
@@ -29,7 +22,7 @@ const messages = defineMessages({
 const TICK_SIZE = 10;
 const PADDING   = 180;
 
-class Audio extends PureComponent {
+class Audio extends React.PureComponent {
 
   static propTypes = {
     src: PropTypes.string.isRequired,
@@ -143,7 +136,7 @@ class Audio extends PureComponent {
     }
   }
 
-  UNSAFE_componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps (nextProps) {
     if (!is(nextProps.visible, this.props.visible) && nextProps.visible !== undefined) {
       this.setState({ revealed: nextProps.visible });
     }
@@ -391,7 +384,7 @@ class Audio extends PureComponent {
   }
 
   _getRadius () {
-    return parseInt((this.state.height || this.props.height) / 2 - PADDING * this._getScaleCoefficient());
+    return parseInt(((this.state.height || this.props.height) - (PADDING * this._getScaleCoefficient()) * 2) / 2);
   }
 
   _getScaleCoefficient () {
@@ -403,7 +396,7 @@ class Audio extends PureComponent {
   }
 
   _getCY() {
-    return Math.floor((this.state.height || this.props.height) / 2);
+    return Math.floor(this._getRadius() + (PADDING * this._getScaleCoefficient()));
   }
 
   _getAccentColor () {
@@ -477,7 +470,7 @@ class Audio extends PureComponent {
     }
 
     return (
-      <div className={classNames('audio-player', { editable, inactive: !revealed })} ref={this.setPlayerRef} style={{ backgroundColor: this._getBackgroundColor(), color: this._getForegroundColor(), aspectRatio: '16 / 9' }} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} tabIndex={0} onKeyDown={this.handleKeyDown}>
+      <div className={classNames('audio-player', { editable, inactive: !revealed })} ref={this.setPlayerRef} style={{ backgroundColor: this._getBackgroundColor(), color: this._getForegroundColor(), width: '100%', height: this.props.fullscreen ? '100%' : (this.state.height || this.props.height) }} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} tabIndex={0} onKeyDown={this.handleKeyDown}>
 
         <Blurhash
           hash={blurhash}
@@ -522,16 +515,9 @@ class Audio extends PureComponent {
         {(revealed || editable) && <img
           src={this.props.poster}
           alt=''
-          style={{
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            height: `calc(${(100 - 2 * 100 * PADDING / 982)}% - ${TICK_SIZE * 2}px)`,
-            aspectRatio: '1',
-            transform: 'translate(-50%, -50%)',
-            borderRadius: '50%',
-            pointerEvents: 'none',
-          }}
+          width={(this._getRadius() - TICK_SIZE) * 2}
+          height={(this._getRadius() - TICK_SIZE) * 2}
+          style={{ position: 'absolute', left: this._getCX(), top: this._getCY(), transform: 'translate(-50%, -50%)', borderRadius: '50%', pointerEvents: 'none' }}
         />}
 
         <div className='video-player__seek' onMouseDown={this.handleMouseDown} ref={this.setSeekRef}>

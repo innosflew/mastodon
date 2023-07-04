@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe AuthorizeFollowService, type: :service do
-  subject { described_class.new }
+  subject { AuthorizeFollowService.new }
 
   let(:sender) { Fabricate(:account, username: 'alice') }
 

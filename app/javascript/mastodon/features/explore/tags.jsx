@@ -1,22 +1,19 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { FormattedMessage } from 'react-intl';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import { connect } from 'react-redux';
-
-import { fetchTrendingHashtags } from 'mastodon/actions/trends';
-import DismissableBanner from 'mastodon/components/dismissable_banner';
 import { ImmutableHashtag as Hashtag } from 'mastodon/components/hashtag';
-import { LoadingIndicator } from 'mastodon/components/loading_indicator';
+import LoadingIndicator from 'mastodon/components/loading_indicator';
+import { connect } from 'react-redux';
+import { fetchTrendingHashtags } from 'mastodon/actions/trends';
+import { FormattedMessage } from 'react-intl';
+import DismissableBanner from 'mastodon/components/dismissable_banner';
 
 const mapStateToProps = state => ({
   hashtags: state.getIn(['trends', 'tags', 'items']),
   isLoadingHashtags: state.getIn(['trends', 'tags', 'isLoading']),
 });
 
-class Tags extends PureComponent {
+class Tags extends React.PureComponent {
 
   static propTypes = {
     hashtags: ImmutablePropTypes.list,
@@ -34,7 +31,7 @@ class Tags extends PureComponent {
 
     const banner = (
       <DismissableBanner id='explore/tags'>
-        <FormattedMessage id='dismissable_banner.explore_tags' defaultMessage='These are hashtags that are gaining traction on the social web today. Hashtags that are used by more different people are ranked higher.' />
+        <FormattedMessage id='dismissable_banner.explore_tags' defaultMessage='These hashtags are gaining traction among people on this and other servers of the decentralized network right now.' />
       </DismissableBanner>
     );
 

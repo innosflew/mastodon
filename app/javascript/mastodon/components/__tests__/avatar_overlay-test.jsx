@@ -1,8 +1,7 @@
-import { fromJS } from 'immutable';
-
+import React from 'react';
 import renderer from 'react-test-renderer';
-
-import { AvatarOverlay } from '../avatar_overlay';
+import { fromJS } from 'immutable';
+import AvatarOverlay from '../avatar_overlay';
 
 describe('<AvatarOverlay', () => {
   const account = fromJS({

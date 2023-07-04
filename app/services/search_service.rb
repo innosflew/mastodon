@@ -2,13 +2,12 @@
 
 class SearchService < BaseService
   def call(query, account, limit, options = {})
-    @query     = query&.strip
-    @account   = account
-    @options   = options
-    @limit     = limit.to_i
-    @offset    = options[:type].blank? ? 0 : options[:offset].to_i
-    @resolve   = options[:resolve] || false
-    @following = options[:following] || false
+    @query   = query&.strip
+    @account = account
+    @options = options
+    @limit   = limit.to_i
+    @offset  = options[:type].blank? ? 0 : options[:offset].to_i
+    @resolve = options[:resolve] || false
 
     default_results.tap do |results|
       next if @query.blank? || @limit.zero?
@@ -31,9 +30,7 @@ class SearchService < BaseService
       @account,
       limit: @limit,
       resolve: @resolve,
-      offset: @offset,
-      use_searchable_text: true,
-      following: @following
+      offset: @offset
     )
   end
 
@@ -73,7 +70,7 @@ class SearchService < BaseService
   end
 
   def url_query?
-    @resolve && %r{\Ahttps?://}.match?(@query)
+    @resolve && /\Ahttps?:\/\//.match?(@query)
   end
 
   def url_resource_results

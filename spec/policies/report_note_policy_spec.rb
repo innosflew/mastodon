@@ -9,13 +9,13 @@ RSpec.describe ReportNotePolicy do
   let(:john)    { Fabricate(:account) }
 
   permissions :create? do
-    context 'when staff?' do
+    context 'staff?' do
       it 'permits' do
         expect(subject).to permit(admin, ReportNote)
       end
     end
 
-    context 'with !staff?' do
+    context '!staff?' do
       it 'denies' do
         expect(subject).to_not permit(john, ReportNote)
       end
@@ -23,24 +23,26 @@ RSpec.describe ReportNotePolicy do
   end
 
   permissions :destroy? do
-    context 'when admin?' do
+    context 'admin?' do
       it 'permit' do
         report_note = Fabricate(:report_note, account: john)
         expect(subject).to permit(admin, report_note)
       end
     end
 
-    context 'when owner?' do
-      it 'permit' do
-        report_note = Fabricate(:report_note, account: john)
-        expect(subject).to permit(john, report_note)
+    context 'admin?' do
+      context 'owner?' do
+        it 'permit' do
+          report_note = Fabricate(:report_note, account: john)
+          expect(subject).to permit(john, report_note)
+        end
       end
-    end
 
-    context 'with !owner?' do
-      it 'denies' do
-        report_note = Fabricate(:report_note)
-        expect(subject).to_not permit(john, report_note)
+      context '!owner?' do
+        it 'denies' do
+          report_note = Fabricate(:report_note)
+          expect(subject).to_not permit(john, report_note)
+        end
       end
     end
   end

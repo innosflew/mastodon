@@ -1,23 +1,19 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { FormattedMessage } from 'react-intl';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import { connect } from 'react-redux';
-
-import { fetchTrendingLinks } from 'mastodon/actions/trends';
-import DismissableBanner from 'mastodon/components/dismissable_banner';
-import { LoadingIndicator } from 'mastodon/components/loading_indicator';
-
 import Story from './components/story';
+import LoadingIndicator from 'mastodon/components/loading_indicator';
+import { connect } from 'react-redux';
+import { fetchTrendingLinks } from 'mastodon/actions/trends';
+import { FormattedMessage } from 'react-intl';
+import DismissableBanner from 'mastodon/components/dismissable_banner';
 
 const mapStateToProps = state => ({
   links: state.getIn(['trends', 'links', 'items']),
   isLoading: state.getIn(['trends', 'links', 'isLoading']),
 });
 
-class Links extends PureComponent {
+class Links extends React.PureComponent {
 
   static propTypes = {
     links: ImmutablePropTypes.list,
@@ -35,7 +31,7 @@ class Links extends PureComponent {
 
     const banner = (
       <DismissableBanner id='explore/links'>
-        <FormattedMessage id='dismissable_banner.explore_links' defaultMessage='These are news stories being shared the most on the social web today. Newer news stories posted by more different people are ranked higher.' />
+        <FormattedMessage id='dismissable_banner.explore_links' defaultMessage='These news stories are being talked about by people on this and other servers of the decentralized network right now.' />
       </DismissableBanner>
     );
 

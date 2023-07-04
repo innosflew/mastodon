@@ -1,16 +1,12 @@
-import PropTypes from 'prop-types';
-
-import ImmutablePropTypes from 'react-immutable-proptypes';
-import ImmutablePureComponent from 'react-immutable-pure-component';
-
 import { debounce } from 'lodash';
-
-import RegenerationIndicator from 'mastodon/components/regeneration_indicator';
-
+import React from 'react';
+import ImmutablePropTypes from 'react-immutable-proptypes';
+import PropTypes from 'prop-types';
 import StatusContainer from '../containers/status_container';
-
-import { LoadGap } from './load_gap';
+import ImmutablePureComponent from 'react-immutable-pure-component';
+import LoadGap from './load_gap';
 import ScrollableList from './scrollable_list';
+import RegenerationIndicator from 'mastodon/components/regeneration_indicator';
 
 export default class StatusList extends ImmutablePureComponent {
 
@@ -30,7 +26,6 @@ export default class StatusList extends ImmutablePureComponent {
     alwaysPrepend: PropTypes.bool,
     withCounters: PropTypes.bool,
     timelineId: PropTypes.string,
-    lastId: PropTypes.string,
   };
 
   static defaultProps = {
@@ -60,8 +55,7 @@ export default class StatusList extends ImmutablePureComponent {
   };
 
   handleLoadOlder = debounce(() => {
-    const { statusIds, lastId, onLoadMore } = this.props;
-    onLoadMore(lastId || (statusIds.size > 0 ? statusIds.last() : undefined));
+    this.props.onLoadMore(this.props.statusIds.size > 0 ? this.props.statusIds.last() : undefined);
   }, 300, { leading: true });
 
   _selectChild (index, align_top) {

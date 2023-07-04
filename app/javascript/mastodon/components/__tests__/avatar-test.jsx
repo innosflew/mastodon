@@ -1,8 +1,7 @@
-import { fromJS } from 'immutable';
-
+import React from 'react';
 import renderer from 'react-test-renderer';
-
-import { Avatar } from '../avatar';
+import { fromJS } from 'immutable';
+import Avatar from '../avatar';
 
 describe('<Avatar />', () => {
   const account = fromJS({

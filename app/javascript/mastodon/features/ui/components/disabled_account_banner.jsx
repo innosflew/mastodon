@@ -1,14 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
-
-import { Link } from 'react-router-dom';
-
 import { connect } from 'react-redux';
-
-import { openModal } from 'mastodon/actions/modal';
+import { Link } from 'react-router-dom';
+import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 import { disabledAccountId, movedToAccountId, domain } from 'mastodon/initial_state';
+import { openModal } from 'mastodon/actions/modal';
 import { logOut } from 'mastodon/utils/log_out';
 
 const messages = defineMessages({
@@ -23,19 +19,16 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch, { intl }) => ({
   onLogout () {
-    dispatch(openModal({
-      modalType: 'CONFIRM',
-      modalProps: {
-        message: intl.formatMessage(messages.logoutMessage),
-        confirm: intl.formatMessage(messages.logoutConfirm),
-        closeWhenConfirm: false,
-        onConfirm: () => logOut(),
-      },
+    dispatch(openModal('CONFIRM', {
+      message: intl.formatMessage(messages.logoutMessage),
+      confirm: intl.formatMessage(messages.logoutConfirm),
+      closeWhenConfirm: false,
+      onConfirm: () => logOut(),
     }));
   },
 });
 
-class DisabledAccountBanner extends PureComponent {
+class DisabledAccountBanner extends React.PureComponent {
 
   static propTypes = {
     disabledAcct: PropTypes.string.isRequired,

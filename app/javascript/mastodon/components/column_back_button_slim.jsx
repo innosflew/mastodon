@@ -1,8 +1,7 @@
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
-
-import { Icon }  from 'mastodon/components/icon';
-
 import ColumnBackButton from './column_back_button';
+import Icon from 'mastodon/components/icon';
 
 export default class ColumnBackButtonSlim extends ColumnBackButton {
 

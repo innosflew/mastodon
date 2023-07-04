@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe PublicFeed do
+RSpec.describe PublicFeed, type: :model do
   let(:account) { Fabricate(:account) }
 
   describe '#get' do

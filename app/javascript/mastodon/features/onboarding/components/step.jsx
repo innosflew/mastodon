@@ -1,9 +1,7 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-
-import { Check } from 'mastodon/components/check';
-import { Icon }  from 'mastodon/components/icon';
-
-import ArrowSmallRight from './arrow_small_right';
+import Icon from 'mastodon/components/icon';
+import Check from 'mastodon/components/check';
 
 const Step = ({ label, description, icon, completed, onClick, href }) => {
   const content = (
@@ -17,9 +15,11 @@ const Step = ({ label, description, icon, completed, onClick, href }) => {
         <p>{description}</p>
       </div>
 
-      <div className={completed ? 'onboarding__steps__item__progress' : 'onboarding__steps__item__go'}>
-        {completed ? <Check /> : <ArrowSmallRight />}
-      </div>
+      {completed && (
+        <div className='onboarding__steps__item__progress'>
+          <Check />
+        </div>
+      )}
     </>
   );
 

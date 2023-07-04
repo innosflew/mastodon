@@ -1,25 +1,20 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { FormattedMessage } from 'react-intl';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import { connect } from 'react-redux';
-
-import { debounce } from 'lodash';
-
-import { fetchTrendingStatuses, expandTrendingStatuses } from 'mastodon/actions/trends';
-import DismissableBanner from 'mastodon/components/dismissable_banner';
 import StatusList from 'mastodon/components/status_list';
-import { getStatusList } from 'mastodon/selectors';
+import { FormattedMessage } from 'react-intl';
+import { connect } from 'react-redux';
+import { fetchTrendingStatuses, expandTrendingStatuses } from 'mastodon/actions/trends';
+import { debounce } from 'lodash';
+import DismissableBanner from 'mastodon/components/dismissable_banner';
 
 const mapStateToProps = state => ({
-  statusIds: getStatusList(state, 'trending'),
+  statusIds: state.getIn(['status_lists', 'trending', 'items']),
   isLoading: state.getIn(['status_lists', 'trending', 'isLoading'], true),
   hasMore: !!state.getIn(['status_lists', 'trending', 'next']),
 });
 
-class Statuses extends PureComponent {
+class Statuses extends React.PureComponent {
 
   static propTypes = {
     statusIds: ImmutablePropTypes.list,
@@ -47,7 +42,7 @@ class Statuses extends PureComponent {
     return (
       <>
         <DismissableBanner id='explore/statuses'>
-          <FormattedMessage id='dismissable_banner.explore_statuses' defaultMessage='These are posts from across the social web that are gaining traction today. Newer posts with more boosts and favourites are ranked higher.' />
+          <FormattedMessage id='dismissable_banner.explore_statuses' defaultMessage='These posts from this and other servers in the decentralized network are gaining traction on this server right now.' />
         </DismissableBanner>
 
         <StatusList

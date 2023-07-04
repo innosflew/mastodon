@@ -1,21 +1,17 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
-import classNames from 'classnames';
-import { Helmet } from 'react-helmet';
-
+import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-
-import { fetchServer, fetchExtendedDescription, fetchDomainBlocks  } from 'mastodon/actions/server';
+import PropTypes from 'prop-types';
 import Column from 'mastodon/components/column';
-import { Icon  }  from 'mastodon/components/icon';
-import { ServerHeroImage } from 'mastodon/components/server_hero_image';
-import { Skeleton } from 'mastodon/components/skeleton';
-import Account from 'mastodon/containers/account_container';
 import LinkFooter from 'mastodon/features/ui/components/link_footer';
+import { Helmet } from 'react-helmet';
+import { fetchServer, fetchExtendedDescription, fetchDomainBlocks } from 'mastodon/actions/server';
+import Account from 'mastodon/containers/account_container';
+import Skeleton from 'mastodon/components/skeleton';
+import Icon from 'mastodon/components/icon';
+import classNames from 'classnames';
+import Image from 'mastodon/components/image';
 
 const messages = defineMessages({
   title: { id: 'column.about', defaultMessage: 'About' },
@@ -45,7 +41,7 @@ const mapStateToProps = state => ({
   domainBlocks: state.getIn(['server', 'domainBlocks']),
 });
 
-class Section extends PureComponent {
+class Section extends React.PureComponent {
 
   static propTypes = {
     title: PropTypes.string,
@@ -84,7 +80,7 @@ class Section extends PureComponent {
 
 }
 
-class About extends PureComponent {
+class About extends React.PureComponent {
 
   static propTypes = {
     server: ImmutablePropTypes.map,
@@ -118,7 +114,7 @@ class About extends PureComponent {
       <Column bindToDocument={!multiColumn} label={intl.formatMessage(messages.title)}>
         <div className='scrollable about'>
           <div className='about__header'>
-            <ServerHeroImage blurhash={server.getIn(['thumbnail', 'blurhash'])} src={server.getIn(['thumbnail', 'url'])} srcSet={server.getIn(['thumbnail', 'versions'])?.map((value, key) => `${value} ${key.replace('@', '')}`).join(', ')} className='about__header__hero' />
+            <Image blurhash={server.getIn(['thumbnail', 'blurhash'])} src={server.getIn(['thumbnail', 'url'])} srcSet={server.getIn(['thumbnail', 'versions'])?.map((value, key) => `${value} ${key.replace('@', '')}`).join(', ')} className='about__header__hero' />
             <h1>{isLoading ? <Skeleton width='10ch' /> : server.get('domain')}</h1>
             <p><FormattedMessage id='about.powered_by' defaultMessage='Decentralized social media powered by {mastodon}' values={{ mastodon: <a href='https://joinmastodon.org' className='about__mail' target='_blank'>Mastodon</a> }} /></p>
           </div>
@@ -161,7 +157,7 @@ class About extends PureComponent {
           </Section>
 
           <Section title={intl.formatMessage(messages.rules)}>
-            {!isLoading && (server.get('rules', []).isEmpty() ? (
+            {!isLoading && (server.get('rules').isEmpty() ? (
               <p><FormattedMessage id='about.not_available' defaultMessage='This information has not been made available on this server.' /></p>
             ) : (
               <ol className='rules-list'>

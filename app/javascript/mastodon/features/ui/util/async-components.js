@@ -22,10 +22,6 @@ export function CommunityTimeline () {
   return import(/* webpackChunkName: "features/community_timeline" */'../../community_timeline');
 }
 
-export function Firehose () {
-  return import(/* webpackChunkName: "features/firehose" */'../../firehose');
-}
-
 export function HashtagTimeline () {
   return import(/* webpackChunkName: "features/hashtag_timeline" */'../../hashtag_timeline');
 }

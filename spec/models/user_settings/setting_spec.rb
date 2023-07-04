@@ -90,7 +90,7 @@ RSpec.describe UserSettings::Setting do
 
   describe '#key' do
     context 'when there is no namespace' do
-      it 'returns a symbol' do
+      it 'returnsn a symbol' do
         expect(subject.key).to eq :foo
       end
     end

@@ -1,19 +1,16 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { FormattedMessage } from 'react-intl';
-
 import ImmutablePropTypes from 'react-immutable-proptypes';
-import { connect } from 'react-redux';
-
-import Button from 'mastodon/components/button';
+import { FormattedMessage } from 'react-intl';
 import { toServerSideType } from 'mastodon/utils/filters';
+import Button from 'mastodon/components/button';
+import { connect } from 'react-redux';
 
 const mapStateToProps = (state, { filterId }) => ({
   filter: state.getIn(['filters', filterId]),
 });
 
-class AddedToFilter extends PureComponent {
+class AddedToFilter extends React.PureComponent {
 
   static propTypes = {
     onClose: PropTypes.func.isRequired,
@@ -33,7 +30,7 @@ class AddedToFilter extends PureComponent {
     let expiredMessage = null;
     if (filter.get('expires_at') && filter.get('expires_at') < new Date()) {
       expiredMessage = (
-        <>
+        <React.Fragment>
           <h4 className='report-dialog-modal__subtitle'><FormattedMessage id='filter_modal.added.expired_title' defaultMessage='Expired filter!' /></h4>
           <p className='report-dialog-modal__lead'>
             <FormattedMessage
@@ -41,14 +38,14 @@ class AddedToFilter extends PureComponent {
               defaultMessage='This filter category has expired, you will need to change the expiration date for it to apply.'
             />
           </p>
-        </>
+        </React.Fragment>
       );
     }
 
     let contextMismatchMessage = null;
     if (contextType && !filter.get('context').includes(toServerSideType(contextType))) {
       contextMismatchMessage = (
-        <>
+        <React.Fragment>
           <h4 className='report-dialog-modal__subtitle'><FormattedMessage id='filter_modal.added.context_mismatch_title' defaultMessage='Context mismatch!' /></h4>
           <p className='report-dialog-modal__lead'>
             <FormattedMessage
@@ -56,7 +53,7 @@ class AddedToFilter extends PureComponent {
               defaultMessage='This filter category does not apply to the context in which you have accessed this post. If you want the post to be filtered in this context too, you will have to edit the filter.'
             />
           </p>
-        </>
+        </React.Fragment>
       );
     }
 
@@ -70,7 +67,7 @@ class AddedToFilter extends PureComponent {
     );
 
     return (
-      <>
+      <React.Fragment>
         <h3 className='report-dialog-modal__title'><FormattedMessage id='filter_modal.added.title' defaultMessage='Filter added!' /></h3>
         <p className='report-dialog-modal__lead'>
           <FormattedMessage
@@ -97,7 +94,7 @@ class AddedToFilter extends PureComponent {
         <div className='report-dialog-modal__actions'>
           <Button onClick={this.handleCloseClick}><FormattedMessage id='report.close' defaultMessage='Done' /></Button>
         </div>
-      </>
+      </React.Fragment>
     );
   }
 

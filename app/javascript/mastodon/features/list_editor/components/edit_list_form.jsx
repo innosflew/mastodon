@@ -1,12 +1,9 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { defineMessages, injectIntl } from 'react-intl';
-
+import React from 'react';
 import { connect } from 'react-redux';
-
+import PropTypes from 'prop-types';
 import { changeListEditorTitle, submitListEditor } from '../../../actions/lists';
-import { IconButton } from '../../../components/icon_button';
+import IconButton from '../../../components/icon_button';
+import { defineMessages, injectIntl } from 'react-intl';
 
 const messages = defineMessages({
   title: { id: 'lists.edit.submit', defaultMessage: 'Change title' },
@@ -22,7 +19,7 @@ const mapDispatchToProps = dispatch => ({
   onSubmit: () => dispatch(submitListEditor(false)),
 });
 
-class ListForm extends PureComponent {
+class ListForm extends React.PureComponent {
 
   static propTypes = {
     value: PropTypes.string.isRequired,

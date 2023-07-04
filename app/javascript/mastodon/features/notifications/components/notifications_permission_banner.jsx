@@ -1,21 +1,18 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
-import { connect } from 'react-redux';
-
+import React from 'react';
+import Icon from 'mastodon/components/icon';
+import Button from 'mastodon/components/button';
+import IconButton from 'mastodon/components/icon_button';
 import { requestBrowserPermission } from 'mastodon/actions/notifications';
 import { changeSetting } from 'mastodon/actions/settings';
-import Button from 'mastodon/components/button';
-import { Icon }  from 'mastodon/components/icon';
-import { IconButton } from 'mastodon/components/icon_button';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 
 const messages = defineMessages({
   close: { id: 'lightbox.close', defaultMessage: 'Close' },
 });
 
-class NotificationsPermissionBanner extends PureComponent {
+class NotificationsPermissionBanner extends React.PureComponent {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,

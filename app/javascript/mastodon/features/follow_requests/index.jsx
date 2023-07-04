@@ -1,22 +1,17 @@
-import PropTypes from 'prop-types';
-
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
-import { Helmet } from 'react-helmet';
-
-import ImmutablePropTypes from 'react-immutable-proptypes';
-import ImmutablePureComponent from 'react-immutable-pure-component';
+import React from 'react';
 import { connect } from 'react-redux';
-
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
+import ImmutablePureComponent from 'react-immutable-pure-component';
+import PropTypes from 'prop-types';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 import { debounce } from 'lodash';
-
-import { fetchFollowRequests, expandFollowRequests } from '../../actions/accounts';
+import Column from '../ui/components/column';
 import ColumnBackButtonSlim from '../../components/column_back_button_slim';
+import AccountAuthorizeContainer from './containers/account_authorize_container';
+import { fetchFollowRequests, expandFollowRequests } from '../../actions/accounts';
 import ScrollableList from '../../components/scrollable_list';
 import { me } from '../../initial_state';
-import Column from '../ui/components/column';
-
-import AccountAuthorizeContainer from './containers/account_authorize_container';
+import { Helmet } from 'react-helmet';
 
 const messages = defineMessages({
   heading: { id: 'column.follow_requests', defaultMessage: 'Follow requests' },
@@ -44,7 +39,7 @@ class FollowRequests extends ImmutablePureComponent {
     multiColumn: PropTypes.bool,
   };
 
-  UNSAFE_componentWillMount () {
+  componentWillMount () {
     this.props.dispatch(fetchFollowRequests());
   }
 

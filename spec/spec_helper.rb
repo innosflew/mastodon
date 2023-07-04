@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+GC.disable
+
 if ENV['DISABLE_SIMPLECOV'] != 'true'
   require 'simplecov'
   SimpleCov.start 'rails' do
@@ -10,6 +12,8 @@ if ENV['DISABLE_SIMPLECOV'] != 'true'
     add_group 'Validators', 'app/validators'
   end
 end
+
+gc_counter = -1
 
 RSpec.configure do |config|
   config.example_status_persistence_file_path = 'tmp/rspec/examples.txt'
@@ -33,7 +37,20 @@ RSpec.configure do |config|
   end
 
   config.after :suite do
-    FileUtils.rm_rf(Dir[Rails.root.join('spec', 'test_files')])
+    gc_counter = 0
+    FileUtils.rm_rf(Dir["#{Rails.root}/spec/test_files/"])
+  end
+
+  config.after :each do
+    gc_counter += 1
+
+    if gc_counter > 19
+      GC.enable
+      GC.start
+      GC.disable
+
+      gc_counter = 0
+    end
   end
 end
 

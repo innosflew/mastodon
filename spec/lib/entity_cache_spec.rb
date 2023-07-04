@@ -7,9 +7,9 @@ RSpec.describe EntityCache do
   let(:remote_account) { Fabricate(:account, domain: 'remote.test', username: 'bob', url: 'https://remote.test/') }
 
   describe '#emoji' do
-    subject { described_class.instance.emoji(shortcodes, domain) }
+    subject { EntityCache.instance.emoji(shortcodes, domain) }
 
-    context 'when called with an empty list of shortcodes' do
+    context 'called with an empty list of shortcodes' do
       let(:shortcodes) { [] }
       let(:domain)     { 'example.org' }
 

@@ -1,9 +1,7 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
+import IconButton from 'mastodon/components/icon_button';
 import { defineMessages, injectIntl } from 'react-intl';
-
-import { IconButton } from 'mastodon/components/icon_button';
 
 const messages = defineMessages({
   compress: { id: 'lightbox.compress', defaultMessage: 'Compress image view box' },
@@ -93,7 +91,7 @@ const normalizeWheel = event => {
   };
 };
 
-class ZoomableImage extends PureComponent {
+class ZoomableImage extends React.PureComponent {
 
   static propTypes = {
     alt: PropTypes.string,
@@ -413,7 +411,7 @@ class ZoomableImage extends PureComponent {
     const zoomButtonTitle = this.state.zoomState === 'compress' ? intl.formatMessage(messages.compress) : intl.formatMessage(messages.expand);
 
     return (
-      <>
+      <React.Fragment>
         <IconButton
           className={`media-modal__zoom-button ${zoomButtonShouldHide}`}
           title={zoomButtonTitle}
@@ -447,7 +445,7 @@ class ZoomableImage extends PureComponent {
             onMouseDown={this.handleMouseDown}
           />
         </div>
-      </>
+      </React.Fragment>
     );
   }
 

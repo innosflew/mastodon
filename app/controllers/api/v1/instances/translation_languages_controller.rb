@@ -5,10 +5,8 @@ class Api::V1::Instances::TranslationLanguagesController < Api::BaseController
 
   before_action :set_languages
 
-  vary_by ''
-
   def show
-    cache_even_if_authenticated!
+    expires_in 1.day, public: true
     render json: @languages
   end
 

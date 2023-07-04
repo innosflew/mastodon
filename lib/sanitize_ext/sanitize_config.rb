@@ -36,11 +36,6 @@ class Sanitize
       node['class'] = class_list.join(' ')
     end
 
-    TRANSLATE_TRANSFORMER = lambda do |env|
-      node = env[:node]
-      node.remove_attribute('translate') unless node['translate'] == 'no'
-    end
-
     UNSUPPORTED_HREF_TRANSFORMER = lambda do |env|
       return unless env[:node_name] == 'a'
 
@@ -68,8 +63,8 @@ class Sanitize
       elements: %w(p br span a del pre blockquote code b strong u i em ul ol li),
 
       attributes: {
-        'a' => %w(href rel class translate),
-        'span' => %w(class translate),
+        'a' => %w(href rel class),
+        'span' => %w(class),
         'ol' => %w(start reversed),
         'li' => %w(value),
       },
@@ -85,7 +80,6 @@ class Sanitize
 
       transformers: [
         CLASS_WHITELIST_TRANSFORMER,
-        TRANSLATE_TRANSFORMER,
         UNSUPPORTED_ELEMENTS_TRANSFORMER,
         UNSUPPORTED_HREF_TRANSFORMER,
       ]

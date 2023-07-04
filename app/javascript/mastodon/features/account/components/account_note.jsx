@@ -1,19 +1,16 @@
-import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
-
-import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-
-import { is } from 'immutable';
+import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
+import PropTypes from 'prop-types';
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import ImmutablePureComponent from 'react-immutable-pure-component';
-
 import Textarea from 'react-textarea-autosize';
+import { is } from 'immutable';
 
 const messages = defineMessages({
   placeholder: { id: 'account_note.placeholder', defaultMessage: 'Click to add a note' },
 });
 
-class InlineAlert extends PureComponent {
+class InlineAlert extends React.PureComponent {
 
   static propTypes = {
     show: PropTypes.bool,
@@ -25,7 +22,7 @@ class InlineAlert extends PureComponent {
 
   static TRANSITION_DELAY = 200;
 
-  UNSAFE_componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps (nextProps) {
     if (!this.props.show && nextProps.show) {
       this.setState({ mountMessage: true });
     } else if (this.props.show && !nextProps.show) {
@@ -61,11 +58,11 @@ class AccountNote extends ImmutablePureComponent {
     saved: false,
   };
 
-  UNSAFE_componentWillMount () {
+  componentWillMount () {
     this._reset();
   }
 
-  UNSAFE_componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps (nextProps) {
     const accountWillChange = !is(this.props.account, nextProps.account);
     const newState = {};
 
