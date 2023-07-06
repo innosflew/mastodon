@@ -229,7 +229,7 @@ Rails.application.routes.draw do
     get '/dashboard', to: 'dashboard#index'
 
     resources :domain_allows, only: [:new, :create, :show, :destroy]
-    resources :domain_blocks, only: [:new, :create, :destroy, :update, :edit] do
+    resources :domain_blocks, only: [:new, :create, :show, :destroy, :update, :edit] do
       collection do
         post :batch
       end
@@ -428,9 +428,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # This line was added by Innos. It provides the sidekiq ruote for the "sidekiq_status_controller.rb" file in the "app/controllers" directory.
-  get 'sidekiq_status', to: 'sidekiq_status#show'
-
   get '/admin', to: redirect('/admin/dashboard', status: 302)
 
   namespace :api, format: false do
@@ -550,7 +547,6 @@ Rails.application.routes.draw do
         resources :domain_blocks, only: [:index], controller: 'instances/domain_blocks'
         resource :privacy_policy, only: [:show], controller: 'instances/privacy_policies'
         resource :extended_description, only: [:show], controller: 'instances/extended_descriptions'
-        resource :translation_languages, only: [:show], controller: 'instances/translation_languages'
         resource :activity, only: [:show], controller: 'instances/activity'
       end
 
@@ -663,33 +659,9 @@ Rails.application.routes.draw do
         resources :ip_blocks, only: [:index, :show, :update, :create, :destroy]
 
         namespace :trends do
-          resources :tags, only: [:index] do
-            member do
-              post :approve
-              post :reject
-            end
-          end
-          resources :links, only: [:index] do
-            member do
-              post :approve
-              post :reject
-            end
-          end
-          resources :statuses, only: [:index] do
-            member do
-              post :approve
-              post :reject
-            end
-          end
-
-          namespace :links do
-            resources :preview_card_providers, only: [:index], path: :publishers do
-              member do
-                post :approve
-                post :reject
-              end
-            end
-          end
+          resources :tags, only: [:index]
+          resources :links, only: [:index]
+          resources :statuses, only: [:index]
         end
 
         post :measures, to: 'measures#create'
