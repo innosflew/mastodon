@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     /mutes
     /followed_tags
     /statuses/(*any)
+    /deck/(*any)
   ).freeze
 
   root 'home#index'

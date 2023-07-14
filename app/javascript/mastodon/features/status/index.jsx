@@ -449,7 +449,7 @@ class Status extends ImmutablePureComponent {
   handleEmbed = (status) => {
     this.props.dispatch(openModal({
       modalType: 'EMBED',
-      modalProps: { url: status.get('url') },
+      modalProps: { id: status.get('id') },
     }));
   };
 
@@ -713,6 +713,7 @@ class Status extends ImmutablePureComponent {
         <Helmet>
           <title>{titleFromStatus(intl, status)}</title>
           <meta name='robots' content={(isLocal && isIndexable) ? 'all' : 'noindex'} />
+          <link rel='canonical' href={status.get('url')} />
         </Helmet>
       </Column>
     );
